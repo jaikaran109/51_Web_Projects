@@ -146,7 +146,7 @@ When an alarm triggers:
 
 ## 📄 License
 
-This project is part of the [100 Days 100 Web Projects](https://github.com/Dipayan-max/100_days_100_web_project) initiative. See the main project license for details.
+This project is part of the [51_Web_Project](https://github.com/jaikaran109/51_Web_Projects) initiative. See the main project license for details.
 
 ---
 
