@@ -20,6 +20,7 @@
   "homepage": "https://github.com/ayush-68789/Summer-E-Commerce-Project-#readme",
   "dependencies": {
     "ejs": "^6.0.1",
+    "ejs-mate": "^4.0.0",
     "express": "^5.2.1",
     "mongoose": "^9.6.3",
     "nodemon": "^3.1.14"

@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplate.ejs') %>
+<%- include ('../partials/navbar') %>
+
+<div class="col-6 mx-auto">
+    <form action="/products" method="POST">
+      <div class="mb-3">
+        <label for="naam" class="form-label">Name: </label>
+        <input type="text" class="form-control" placeholder="Name of the Product"  id="naam" name="name">   <!--provide name attribute as the same name of the schema properites dont use other name like namee or naam-->
+      </div>
+      <div class="mb-3">
+        <label for="img" class="form-label">Image: </label>
+        <input type="text" class="form-control" placeholder="Image Link of the Product" id="img" name="img">
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price: </label>
+        <input type="number" placeholder="Price of the Product"  class="form-control" id="price" name="price">
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">Description: </label>
+        <textarea name="desc" placeholder="Description of the Product" id="desc" rows="3" cols="30"></textarea>
+      </div>
+    
+      <button type="submit" class="btn btn-outline-success">Add Product</button>
+    </form> 
+</div>

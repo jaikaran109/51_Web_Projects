@@ -1,0 +1,17 @@
+<% layout('/layouts/boilerplate.ejs') %>
+<%- include ('../partials/navbar') %>
+ <div>
+    <div class="card" style="width: 18rem;">
+        <img src="<%=prod.img%>" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"><%=prod.name%></h5>
+            <p class="card-text"><%=prod.desc%></p>
+            <p class="card-text"><%=prod.price%></p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <a href="#" class="btn btn-primary">Buy</a>
+        </div>
+    </div>
+    <div class="col-lg-6 mx-auto">
+        <h1 class="display-5">Leave a Review</h1>
+    </div>
+</div>
