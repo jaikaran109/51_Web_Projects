@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="calculator">
+            <input type="text" class="display" id="display" disabled>
+            <div class="buttons">
+                <div class="top">
+                    <button class="sign" data-sign="+">+</button>
+                    <button class="sign" data-sign="-">-</button>
+                    <button class="sign" data-sign="*">&times;</button>
+                    <button class="sign" data-sign="/">&divide;</button>
+                </div>
+                <div id="calculator-body">
+                    <div class="numbers">
+                        <div class="rows">
+                            <button class="number" data-number="7">7</button>
+                            <button class="number" data-number="8">8</button>
+                            <button class="number" data-number="9">9</button>
+                        </div>
+                        <div class="rows">
+                            <button class="number" data-number="4">4</button>
+                            <button class="number" data-number="5">5</button>
+                            <button class="number" data-number="6">6</button>
+                        </div>
+                        <div class="rows">
+                            <button class="number" data-number="1">1</button>
+                            <button class="number" data-number="2">2</button>
+                            <button class="number" data-number="3">3</button>
+                        </div>
+                        <div class="rows">
+                            <button class="number" data-number="0">0</button>
+                            <button class="number" data-number=".">.</button>
+                            <button class="sign" id="clear">AC</button>
+                        </div>
+                    </div>
+                    <button class="equal" data-sign="=">=</button>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
