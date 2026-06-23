@@ -1,5 +1,4 @@
 # Codeforces Clone
-
 A frontend clone of the popular competitive programming platform Codeforces built using pure HTML and CSS.
 
 This project recreates the layout and UI of the Codeforces homepage including:
