@@ -1,0 +1,56 @@
+<% layout('Students/layouts/boilerplate.ejs') %>
+<%- include('partials/navbar') %>
+
+ <div class="row">
+    <div class="col-lg-6 mt-3">
+        <div class="card shadow mx-auto" style="width: 18rem;">
+            <img src="<%=stu.img%>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Name: <%=stu.name%></h5>
+                <p class="card-text">Roll: <%=stu.roll%></p>
+                <p class="card-text">Section: <%=stu.section%></p>
+                <a href="/students" class="btn btn-info">Home</a>
+                <a href="/students/<%=stu._id%>/edit" class="btn btn-primary">Edit</a>
+   
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 mx-auto">
+        <h1 class="display-5">Results</h1>
+        <form action="/students/<%=stu._id%>/marks" method="POST">
+            <fieldset>
+               
+                <div class="mb-3">
+                    <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Subjects</label>
+                    <select class="form-select" id="inputGroupSelect01" name="subject">
+                        <option selected>Choose...</option>
+                        <option value="1">Mathematics</option>
+                        <option value="2">Physics</option>
+                        <option value="3">Chemistry</option>
+                        <option value="4">Biology</option>
+                        <option value="5">Computer Science</option>
+                    </select>
+                    </div>
+                </div>
+               <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Marks</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="grade">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </fieldset>
+        </form>
+        
+
+        <!-- showing marks  -->
+        <div class="my-3">
+            <% for(let x of stu.marks){ %>
+                <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><%=x.subject%> : <%=x.marks%></li>
+                    </ul>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</div>                      

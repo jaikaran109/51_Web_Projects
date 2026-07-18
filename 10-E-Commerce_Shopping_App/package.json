@@ -1,0 +1,33 @@
+{
+  "name": "crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayush-68789/Summer-E-Commerce-Project-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ayush-68789/Summer-E-Commerce-Project-/issues"
+  },
+  "homepage": "https://github.com/ayush-68789/Summer-E-Commerce-Project-#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.4.2",
+    "ejs": "^6.0.1",
+    "ejs-mate": "^4.0.0",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^9.6.3",
+    "nodemon": "^3.1.14"
+  }
+}

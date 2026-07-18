@@ -1,0 +1,30 @@
+<% layout('Students/layouts/boilerplate.ejs') %>
+<%- include('partials/navbar') %>
+
+<div class="col-6 mx-auto">
+    <form action="/students/<%=stu.id%>?_method=PATCH" method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name: </label>
+            <input type="text" class="form-control" placeholder="Name of the Student"  id="name" name="name" value="<%=stu.name%>">   <!--provide name attribute as the same name of the schema properites dont use other name like namee or naam-->
+        </div>
+        <div class="mb-3">
+            <label for="img" class="form-label">Image: </label>
+            <input type="text" class="form-control" placeholder="Image Link of Student" id="img" name="img" value="<%=stu.img%>">
+        </div>
+      
+        <div class="mb-3">
+          <label for="roll" class="form-label">Roll: </label>
+          <input type="number" placeholder="Roll number"  class="form-control" id="roll" name="roll" value="<%=stu.roll%>">
+        </div>
+        
+        <div class="mb-3">
+          <label for="section" class="form-label">Section: </label>
+          <input type="text" class="form-control" placeholder="Section of Student" id="section" name="section" value="<%=stu.section%>">
+        </div>
+    
+      <button type="submit" class="btn btn-outline-success">Save Changes</button>
+    </form> 
+    <a href="/students/<%=stu.id%>">
+      <button class="btn btn-outline-danger">Discard</button>
+    </a>
+</div>

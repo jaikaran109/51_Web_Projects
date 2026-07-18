@@ -1,0 +1,21 @@
+{
+  "name": "student-management-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "ejs-mate": "^4.0.0",
+    "express": "^5.2.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^9.7.0",
+    "nodemon": "^3.1.14"
+  }
+}

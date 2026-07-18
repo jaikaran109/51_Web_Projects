@@ -1,0 +1,32 @@
+<% layout('layouts/boilerplate.ejs') %>
+    <div class="d-flex justify-content-center mt-5">
+        <form class="w-25" action="/login" method="POST">
+            <div class="mb-3">
+                <label for="exampleInput" class="form-label"
+                >Username</label
+                >
+                <input
+                    type="text"
+                    class="form-control"
+        
+                    name="username"
+                />
+            </div>
+           
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                    >Password</label
+                >
+                <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    name="password"
+                />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    </body>
+</html>

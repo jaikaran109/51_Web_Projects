@@ -1,0 +1,20 @@
+<% layout('layouts/boilerplate.ejs') %>
+<%- include ('../partials/navbar') %>
+    <div class="row">
+        <% for(let x of data){ %>
+            <div class="col-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="<%=x.img%>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><%=x.name%></h5>
+                        <p class="card-text"><%=x.desc%></p>
+                        <p class="card-text">₹<%=x.price%></p>
+                        <a href="/products/<%= x._id%>" class="btn btn-primary">View Product</a>
+                        <form action="/products/<%=x._id%>?_method=DELETE" method="POST">
+                            <button class="submit btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
