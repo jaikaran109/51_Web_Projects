@@ -6,20 +6,6 @@ body{
     height: 100%;
     width: 100%;
 }
-
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 2px solid rgb(102, 142, 212);
-    border-radius: 10px;
-    height: 500px;
-}
-
-
-h1{
     text-align: center;
     font-size: 60px;
 }
@@ -45,16 +31,6 @@ h1{
     width : 100%;
     margin-top : 20px;
     margin-bottom : 20px;
-}
-
-button{
-    padding:10px 20px;
-    font-size: x-large;
-    border-radius: 10px;
-    background-color: rgb(183, 206, 226);
-    color: rgb(50, 50, 178);
-    margin: 20px;
-    border: 1px solid rgb(50,50,178);
 }
 
 select{
