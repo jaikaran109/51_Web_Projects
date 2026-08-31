@@ -16,20 +16,7 @@ const winPatterns = [
     [2, 4, 6],
     [3, 4, 5],
     [6, 7, 8]
-];
-
-        box.disabled = true;  // agr box ek baar click ho jaye to usko dubara na click kr paye
-        count++;
-        let isWinner = checkWinner();
-        if (count === 9 && !isWinner) {
-            gameDraw();
-        }
-    });
-});
-
-
-const gameDraw = () => {
-    msg.innerText = `Game was a Draw.`;
+];t = `Game was a Draw.`;
     msgContainer.classList.remove("hide"); 
 
 const checkWinner = () => {
