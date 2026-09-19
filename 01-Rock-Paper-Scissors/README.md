@@ -12,7 +12,7 @@ A fun and interactive **Rock Paper Scissors** game built using **HTML, CSS, and 
 
 ## ✨ Features
 
-* 🖱️ Click-based gameplay
+* 🖱️ Click-based gameplay 
 * 🤖 Smart random computer moves
 * 📊 Real-time score tracking
 * 🎨 Dynamic result messages (Win/Lose/Draw)
