@@ -68,8 +68,8 @@ const App = () => {
           return (
             <div className="card h-70 bg-cover bg-[url('https://static.vecteezy.com/system/resources/previews/013/521/799/original/dusty-pink-sticky-note-free-png.png')] text-wrap text-xl w-100 rounded-2xl">
               <button
-                onClick={(idx) => {
-                  deleteNote();
+                onClick={() => {
+                  deleteNote(idx);
                 }}
                 className="ml-85 mt-12  hover:bg-red-500 px-2 cursor-pointer active:scale-95"
               >
