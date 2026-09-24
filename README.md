@@ -1,6 +1,6 @@
 # 🚀 51 Web Projects  
 
-![GitHub stars](https://img.shields.io/github/stars/jaikaran109/51_Web_Projects?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/jaikaran109/51_Web_Projects?style=for-the-badge) 
 ![GitHub forks](https://img.shields.io/github/forks/jaikaran109/51_Web_Projects?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/jaikaran109/51_Web_Projects?style=for-the-badge)
 ![GitHub license](https://img.shields.io/github/license/jaikaran109/51_Web_Projects?style=for-the-badge)
