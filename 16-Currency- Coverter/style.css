@@ -1,51 +1,67 @@
-body{
-    background-color: yellow;
-    height: 100vh;  /* give 100% of view height */
+body {
+    background-color: #eef4f3;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.container{
-    background-color: darkcyan;
-    color: aliceblue;
-    padding: 20px;
+.container {
+    background-color: #356f73;
+    color: #ffffff;
+    padding: 30px;
     text-align: center;
-    border-radius: 40px;
+    border-radius: 24px;
+    width: min(100%, 500px);
+    box-sizing: border-box;
 }
 
-.currency-container{
-    padding: 20px;
+.currency-container {
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 15px;
 }
 
-.currency-container select{
-    padding: 5px;
+.currency-container select {
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f5f8f7;
+    color: #333333;
 }
 
-.currency-container input{
+.currency-container input {
     border: 0;
     background-color: transparent;
     font-size: 25px;
     text-align: right;
-    color: aliceblue;
+    color: #ffffff;
+    width: 60%;
 }
 
-.exchange-rate{
+.currency-container input::placeholder {
+    color: #ffffff;
+}
+
+.exchange-rate {
     font-size: 16px;
     font-weight: 600;
+    margin-top: 10px;
 }
 
+.error-message {
+    font-size: 14px;
+    margin-top: 10px;
+    min-height: 20px;
+}
 
 select:focus,
-input:focus{
-    outline: none;
+input:focus {
+    outline: 2px solid #dceeed;
 }
-
-
-
-/* Let me check the code once there is an issue bcz as u see the box is not  in center */
