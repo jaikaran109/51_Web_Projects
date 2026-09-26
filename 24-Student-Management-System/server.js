@@ -7,7 +7,7 @@ const app = express() ;
 const connectDB = require('./config/db') ;
 const Students = require('./models/Student') ;
 const studentRoutes = require('./routes/Student') ;
-const seedDB = require('../Student Management System/seed') ;
+const seedDB = require("./seed")
 
 connectDB() ; 
 // seedDB() ; 
