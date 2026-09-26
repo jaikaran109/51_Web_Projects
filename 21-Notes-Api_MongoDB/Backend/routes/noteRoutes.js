@@ -1,66 +1,135 @@
-const express = require('express') ;
-const Router = express.Router() ; // mini-instance
-let notes = require('../models/Note.js') ; 
+const express = require('express');
+const Router = express.Router();
 
-Router.get('/notes', async (req ,res) => {
-    const data = await notes.find({}) ;
+const notes = require('../models/Note.js');
+const authMiddleware = require('../middleware/authMiddleware');
+
+// Get only logged-in user's notes
+Router.get('/notes', authMiddleware, async (req, res) => {
+    const data = await notes.find({
+        user: req.user.userId
+    });
+
     res.status(200).json({
-        message : "Data Fetched", 
-        data : data
-    }) 
-})
+        message: 'Data Fetched',
+        data: data
+    });
+});
 
-Router.post('/create-notes', async (req ,res) => {
-    console.log(req.body) ; 
-    let {title, desc} = req.body ; 
-    await notes.insertOne({title, desc}) ; 
+// Create note for logged-in user
+Router.post('/create-notes', authMiddleware, async (req, res) => {
+    const { title, desc } = req.body;
+
+    await notes.create({
+        title,
+        desc,
+        user: req.user.userId
+    });
+
     res.status(201).json({
-        message : "Data Added"
-    })
-})
+        message: 'Data Added'
+    });
+});
 
-Router.get('/notes/:id', async (req , res)=> {
-    let {id} = req.params ; 
-    let data = await notes.findById(id) ;
+// Get one note only if it belongs to logged-in user
+Router.get('/notes/:id', authMiddleware, async (req, res) => {
+    const { id } = req.params;
+
+    const data = await notes.findOne({
+        _id: id,
+        user: req.user.userId
+    });
+
+    if (!data) {
+        return res.status(404).json({
+            message: 'Note not found'
+        });
+    }
+
     res.status(200).json({
-        message : "Data fetched", 
-        data : data
-    }) 
-})
+        message: 'Data fetched',
+        data: data
+    });
+});
 
-// Router.get('/notes', async (req , res)=> {
-//     let {id} = req.query ; 
-//     let data = await notes.findById(id) ;
-//     res.status(200).json({
-//         message : "Data fetched", 
-//         data : data
-//     }) 
-// })
+// Delete only user's own note
+Router.delete('/notes/:id', authMiddleware, async (req, res) => {
+    const { id } = req.params;
 
-Router.delete('/notes/:id', async (req, res) => {
-    let {id} = req.params ;
-    await notes.findByIdAndDelete(id) ;
+    const data = await notes.findOneAndDelete({
+        _id: id,
+        user: req.user.userId
+    });
+
+    if (!data) {
+        return res.status(404).json({
+            message: 'Note not found'
+        });
+    }
+
     res.status(200).json({
-        message : "Deleted"
-    })
-})
+        message: 'Deleted'
+    });
+});
 
-Router.put('/notes/:id', async (req ,res) => {
-    let {id} = req.params ; 
-    let {title, desc} = req.body ; 
-    await notes.findByIdAndUpdate(id ,{title, desc}) ; 
+// Update only user's own note
+Router.put('/notes/:id', authMiddleware, async (req, res) => {
+    const { id } = req.params;
+    const { title, desc } = req.body;
+
+    const data = await notes.findOneAndUpdate(
+        {
+            _id: id,
+            user: req.user.userId
+        },
+        {
+            title,
+            desc
+        },
+        {
+            new: true
+        }
+    );
+
+    if (!data) {
+        return res.status(404).json({
+            message: 'Note not found'
+        });
+    }
+
     res.status(200).json({
-        message : "Updated"
-    })
-})
+        message: 'Updated'
+    });
+});
 
-Router.patch('/notes/:id', async (req ,res) => {
-    let {id} = req.params ; 
-    let {title, desc} = req.body ; 
-    await notes.findByIdAndUpdate(id ,{title, desc}) ; 
+// Patch only user's own note
+Router.patch('/notes/:id', authMiddleware, async (req, res) => {
+    const { id } = req.params;
+    const { title, desc } = req.body;
+
+    const data = await notes.findOneAndUpdate(
+        {
+            _id: id,
+            user: req.user.userId
+        },
+        {
+            title,
+            desc
+        },
+        {
+            new: true
+        }
+    );
+
+    if (!data) {
+        return res.status(404).json({
+            message: 'Note not found'
+        });
+    }
+
     res.status(200).json({
-        message : "Updated"
-    })
-})
+        message: 'Updated'
+    });
+});
 
-module.exports = Router ; 
+module.exports = Router;
