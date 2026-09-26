@@ -1,18 +1,18 @@
-// Select elements from HTML
 const currencyFirstE1 = document.getElementById("currency-first");
 const worthFirstE1 = document.getElementById("worth-first");
-
 const currencySecondE1 = document.getElementById("currency-second");
 const worthSecondE1 = document.getElementById("worth-second");
-
 const exchangeRateE1 = document.getElementById("exchange-rate");
 const errorMessageE1 = document.getElementById("error-message");
 
 const CACHE_KEY = "currencyExchangeRates";
+let requestId = 0;
 
 updateRate();
 
 async function updateRate() {
+    const currentRequestId = ++requestId;
+
     const firstCurrency = currencyFirstE1.value;
     const secondCurrency = currencySecondE1.value;
     const amount = Number(worthFirstE1.value);
@@ -34,43 +34,79 @@ async function updateRate() {
             throw new Error("Invalid exchange rate data");
         }
 
-        // Save latest successful rates to localStorage
-        localStorage.setItem(
-            `${CACHE_KEY}-${firstCurrency}`,
-            JSON.stringify(data)
-        );
+        // Ignore this response if a newer request has started.
+        if (currentRequestId !== requestId) {
+            return;
+        }
+
+        // Save latest successful rates to localStorage.
+        try {
+            localStorage.setItem(
+                `${CACHE_KEY}-${firstCurrency}`,
+                JSON.stringify(data)
+            );
+        } catch (storageError) {
+            console.warn("Unable to cache exchange rates:", storageError);
+        }
 
         convertCurrency(data, firstCurrency, secondCurrency, amount);
-
     } catch (error) {
         console.error("Currency API error:", error);
 
-        // Try cached data
-        const cachedData = localStorage.getItem(
-            `${CACHE_KEY}-${firstCurrency}`
-        );
+        // Ignore errors from an outdated request.
+        if (currentRequestId !== requestId) {
+            return;
+        }
+
+        let cachedData = null;
+
+        try {
+            cachedData = localStorage.getItem(
+                `${CACHE_KEY}-${firstCurrency}`
+            );
+        } catch (storageError) {
+            console.warn("Unable to read cached exchange rates:", storageError);
+        }
 
         if (cachedData) {
-            const data = JSON.parse(cachedData);
+            try {
+                const data = JSON.parse(cachedData);
 
-            convertCurrency(data, firstCurrency, secondCurrency, amount);
+                if (
+                    data.conversion_rates &&
+                    currentRequestId === requestId
+                ) {
+                    convertCurrency(
+                        data,
+                        firstCurrency,
+                        secondCurrency,
+                        amount
+                    );
 
-            errorMessageE1.innerText =
-                "Using previously saved exchange rates.";
-        } else {
-            worthSecondE1.value = "";
-            exchangeRateE1.innerText = "Exchange rate unavailable";
-
-            errorMessageE1.innerText =
-                "Unable to fetch exchange rates. Please try again.";
+                    errorMessageE1.innerText =
+                        "Using previously saved exchange rates.";
+                    return;
+                }
+            } catch (cacheError) {
+                console.warn("Invalid cached exchange rates:", cacheError);
+            }
         }
+
+        worthSecondE1.value = "";
+        exchangeRateE1.innerText = "Exchange rate unavailable";
+        errorMessageE1.innerText =
+            "Unable to fetch exchange rates. Please try again.";
     }
 }
 
 function convertCurrency(data, firstCurrency, secondCurrency, amount) {
     const rate = data.conversion_rates[secondCurrency];
 
-    if (!rate) {
+    if (
+        typeof rate !== "number" ||
+        !Number.isFinite(rate) ||
+        rate <= 0
+    ) {
         throw new Error("Exchange rate not available");
     }
 
@@ -80,12 +116,6 @@ function convertCurrency(data, firstCurrency, secondCurrency, amount) {
     worthSecondE1.value = (amount * rate).toFixed(2);
 }
 
-
-// Update when first currency changes
 currencyFirstE1.addEventListener("change", updateRate);
-
-// Update when second currency changes
 currencySecondE1.addEventListener("change", updateRate);
-
-// Update when amount changes
 worthFirstE1.addEventListener("input", updateRate);
