@@ -34,7 +34,7 @@ A fun and interactive **Rock Paper Scissors** game built using **HTML, CSS, and 
 ```
 Rock-Paper-Scissors/
 │── index.html
-│── script.css
+│── style.css
 │── app.js
 │── images/
 │     ├── rock.png

@@ -65,9 +65,9 @@ All user data is saved to `localStorage`:
 
 ```
 digital_clock/
-├── digitalclock.html      # Main HTML — semantic structure
-├── digitalclock.css       # Styles — light theme, custom properties, responsive
-├── digitalclock.js        # Logic — clock, alarms, world clocks, themes
+├── index.html      # Main HTML — semantic structure
+├── style.css       # Styles — light theme, custom properties, responsive
+├── app.js        # Logic — clock, alarms, world clocks, themes
 ├── alarm.mp3             # Fallback alarm audio file
 └── Readme.md             # This file
 ```
@@ -77,10 +77,10 @@ digital_clock/
 ## 🚀 How to Use
 
 ### 1. Open the App
-Open `digitalclock.html` in any modern browser. No build tools or server required.
+Open `index.html` in any modern browser. No build tools or server required.
 
 ```bash
-open digitalclock.html
+open index.html
 ```
 
 
