@@ -7,119 +7,190 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <div class="apply-box">
-            <h1>Job Application 
+            <h1>Job Application
                 <span class="title-small">
                     (web)
                 </span>
             </h1>
-            <form action="">
+
+            <p class="required-note">Fields marked with <span class="required-mark" aria-hidden="true">*</span><span class="sr-only">an asterisk</span> are required.</p>
+
+            <!-- Filled in by script.js when the form has problems -->
+            <div id="error-summary" class="error-summary" tabindex="-1" hidden>
+                <h2 id="error-summary-title"></h2>
+                <ul id="error-summary-list"></ul>
+            </div>
+
+            <!-- Filled in by script.js after a successful submit -->
+            <p id="form-status" class="form-status" role="status"></p>
+
+            <form id="application-form" action="" novalidate>
                 <div class="form-container">
                     <div class="form-control">
                         <label for="first_name">
-                            First Name
+                            First Name <span class="required-mark" aria-hidden="true">*</span>
                         </label>
-                        <input 
-                        id="first_name"
-                        name="first_name"
-                        type="text"
-                        placeholder="Enter First Name"
+                        <input
+                            id="first_name"
+                            name="first_name"
+                            type="text"
+                            placeholder="Enter First Name"
+                            autocomplete="given-name"
+                            maxlength="50"
+                            required
+                            aria-describedby="first_name-error"
                         >
+                        <p class="error-message" id="first_name-error" hidden></p>
                     </div>
-                <div class="form-control">
-                    <label for="last_name">
-                        Second Name
-                    </label>
-                    <input 
-                    id="last_name"
-                    name="last_name"
-                    type="text"
-                    placeholder="Enter Last Name"
-                    >
+
+                    <div class="form-control">
+                        <label for="last_name">
+                            Last Name <span class="required-mark" aria-hidden="true">*</span>
+                        </label>
+                        <input
+                            id="last_name"
+                            name="last_name"
+                            type="text"
+                            placeholder="Enter Last Name"
+                            autocomplete="family-name"
+                            maxlength="50"
+                            required
+                            aria-describedby="last_name-error"
+                        >
+                        <p class="error-message" id="last_name-error" hidden></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="email">
+                            Email <span class="required-mark" aria-hidden="true">*</span>
+                        </label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="Enter Email"
+                            autocomplete="email"
+                            required
+                            aria-describedby="email-error"
+                        >
+                        <p class="error-message" id="email-error" hidden></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="job_role">
+                            Job Role <span class="required-mark" aria-hidden="true">*</span>
+                        </label>
+                        <select
+                            id="job_role"
+                            name="job_role"
+                            required
+                            aria-describedby="job_role-error"
+                        >
+                            <option value="">Select Job Role</option>
+                            <option value="frontend">Frontend Developer</option>
+                            <option value="backend">Backend Developer</option>
+                            <option value="full_stack">Full Stack Developer</option>
+                            <option value="ui_ux">UI UX Developer</option>
+                        </select>
+                        <p class="error-message" id="job_role-error" hidden></p>
+                    </div>
+
+                    <div class="textarea_control">
+                        <label for="address">
+                            Address <span class="required-mark" aria-hidden="true">*</span>
+                        </label>
+                        <textarea
+                            id="address"
+                            name="address"
+                            rows="4"
+                            cols="50"
+                            placeholder="Enter Address"
+                            autocomplete="street-address"
+                            maxlength="200"
+                            required
+                            aria-describedby="address-error"
+                        ></textarea>
+                        <p class="error-message" id="address-error" hidden></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="city">
+                            City <span class="required-mark" aria-hidden="true">*</span>
+                        </label>
+                        <input
+                            id="city"
+                            name="city"
+                            type="text"
+                            placeholder="Enter City"
+                            autocomplete="address-level2"
+                            maxlength="50"
+                            required
+                            aria-describedby="city-error"
+                        >
+                        <p class="error-message" id="city-error" hidden></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="pin_code">
+                            Pin Code <span class="required-mark" aria-hidden="true">*</span>
+                        </label>
+                        <!-- type="text" + inputmode keeps the numeric keypad on mobile
+                             without the spinner and without dropping leading digits -->
+                        <input
+                            id="pin_code"
+                            name="pin_code"
+                            type="text"
+                            inputmode="numeric"
+                            placeholder="Enter Pin Code"
+                            autocomplete="postal-code"
+                            maxlength="6"
+                            pattern="[1-9][0-9]{5}"
+                            required
+                            aria-describedby="pin_code-hint pin_code-error"
+                        >
+                        <p class="hint" id="pin_code-hint">6 digits, e.g. 110001</p>
+                        <p class="error-message" id="pin_code-error" hidden></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="date">
+                            Start Date <span class="required-mark" aria-hidden="true">*</span>
+                        </label>
+                        <input
+                            id="date"
+                            name="date"
+                            type="date"
+                            required
+                            aria-describedby="date-error"
+                        >
+                        <p class="error-message" id="date-error" hidden></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="cv">
+                            Upload Your CV <span class="required-mark" aria-hidden="true">*</span>
+                        </label>
+                        <input
+                            id="cv"
+                            name="cv"
+                            type="file"
+                            accept=".pdf,.doc,.docx"
+                            required
+                            aria-describedby="cv-hint cv-error"
+                        >
+                        <p class="hint" id="cv-hint">PDF, DOC or DOCX, up to 5 MB</p>
+                        <p class="error-message" id="cv-error" hidden></p>
+                    </div>
                 </div>
-                <div class="form-control">
-                    <label for="email">
-                        Email
-                    </label>
-                    <input 
-                    id="email"
-                    name="email"
-                    type="email" 
-                    placeholder="Enter Email"
-                    >
-                </div>
-                <div class="form-control">
-                    <label for="job_role">
-                        Job Role
-                    </label>
-                    <select>
-                        <option value="">Select Job Role</option>
-                        <option value="frontend">Frontend Developer</option>
-                        <option value="backend">Backend Developer</option>
-                        <option value="full_stack">Full Stack Developer</option>
-                        <option value="ui_ux">UI UX Developer</option>
-                    </select>
-                </div>
-                <div class="textarea_control">
-                    <label for="address"> Address </label>
-                    <textarea
-                        id="address" 
-                        name="address" 
-                        row="4" 
-                        cols="50" 
-                        type="text"
-                        placeholder="Enter Address"
-                    >
-                    </textarea>
-                </div>
-                <div class="form-control">
-                    <label for="city">
-                        City
-                    </label>
-                    <input 
-                    id="city"
-                    name="city"
-                    type="text"
-                    placeholder="Enter City"
-                    >
-                </div>
-                <div class="form-control">
-                    <label for="pin_code">
-                        Pin Code
-                    </label>
-                    <input 
-                    id="pin_code"
-                    name="pin_code"
-                    type = "number"
-                    placeholder="Enter Pin Code"
-                    >
-                    
-                </div>
-                <div class="form-control">
-                    <label for="date">
-                        Start Date
-                    </label>
-                    <input 
-                    value="2022-01-10"
-                    id="date"
-                    name="date"
-                    type = "date"
-                    >
-                </div>
-                <div class="form-control">
-                    <label for="cv">
-                        Upload Your CV
-                    </label>
-                    <input type="file" id="upload" type="file" name="upload">
-                </div>
-                </div>
+
                 <div class="button-container">
                     <button type="submit">Apply Now</button>
                 </div>
-                
             </form>
         </div>
-    </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
