@@ -3,30 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A quick shape-matching game. Find as many targets as you can in 30 seconds.">
     <title>Shapes Game</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
-    <h1 id="heading">Shapes Game</h1>
-    <div id="main">
-        <div id="box">
-            <div id="square" class="shape"> 
-            <h1>
-                1
-            </h1>
+    <main class="game">
+        <header class="game__header">
+            <p class="eyebrow">Quick challenge</p>
+            <h1>Shapes Game</h1>
+            <p class="game__intro">Find the shape shown below before the timer runs out.</p>
+        </header>
+
+        <section class="game__stats" aria-label="Game statistics">
+            <div class="stat">
+                <span class="stat__label">Time left</span>
+                <strong id="timer" class="stat__value" aria-live="off">30s</strong>
+            </div>
+            <div class="stat">
+                <span class="stat__label">Score</span>
+                <strong id="score" class="stat__value">0</strong>
+            </div>
+            <div class="stat">
+                <span class="stat__label">Best</span>
+                <strong id="best-score" class="stat__value">0</strong>
+            </div>
+        </section>
+
+        <section class="target-panel">
+            <p class="target-panel__label">Find this shape</p>
+            <h2 id="target">Press Start to play</h2>
+            <p id="feedback" class="feedback">You have 30 seconds. Choose the matching shape.</p>
+        </section>
+
+        <section class="shapes" aria-label="Choose a shape">
+            <button class="shape shape--square" type="button" data-shape="square" aria-label="Square">
+                <span>Square</span>
+            </button>
+            <button class="shape shape--diamond" type="button" data-shape="diamond" aria-label="Diamond">
+                <span>Diamond</span>
+            </button>
+            <button class="shape shape--circle" type="button" data-shape="circle" aria-label="Circle">
+                <span>Circle</span>
+            </button>
+        </section>
+
+        <div class="game__actions">
+            <button id="start-button" class="start-button" type="button">Start game</button>
         </div>
-        <div id="diamond" class="shape">
-            <h1>
-                2
-            </h1>
-        </div>
-        </div>
-        <div id="circle" class="shape">
-            <h1>
-                3
-            </h1>
-        </div>
-        
-    </div>
+        <p id="game-status" class="sr-only" role="status" aria-live="polite"></p>
+    </main>
 </body>
 </html>
