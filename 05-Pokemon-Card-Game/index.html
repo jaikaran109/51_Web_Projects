@@ -3,38 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon Cards Project</title>
+    <title>Pokemon Card Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Pokemon Gallery</h1>
+        <h1>Pokemon Card Game</h1>
     </header>
 
-    <main id="main">
-        <div class="shape">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu">
-            <h3>Pikachu</h3>
-            <p>Type: Electric</p>
+    <main>
+        <div class="game-stats">
+            <div class="stat">Moves: <span id="moves">0</span></div>
+            <div class="stat">Time: <span id="timer">0:00</span></div>
         </div>
 
-        <div class="shape">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png" alt="Charmander">
-            <h3>Charmander</h3>
-            <p>Type: Fire</p>
-        </div>
+        <div class="game-board" id="game-board"></div>
 
-        <div class="shape">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Bulbasaur">
-            <h3>Bulbasaur</h3>
-            <p>Type: Grass/Poison</p>
-        </div>
+        <button class="play-again" id="play-again" hidden>Play Again</button>
 
-        <div class="shape">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png" alt="Squirtle">
-            <h3>Squirtle</h3>
-            <p>Type: Water</p>
-        </div>
+        <div class="win-message" id="win-message" hidden aria-live="polite"></div>
     </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
