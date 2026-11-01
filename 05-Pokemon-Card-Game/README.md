@@ -1,28 +1,53 @@
-# 05-Pokemon-Card-Game
-# Pokemon Card Game
 
-## About
-Pokemon Card Game is a browser-based project inspired by Pokemon cards. It provides an interactive interface for viewing and playing with Pokemon cards.
+# Pokémon Card Game
+
+## Overview
+Pokémon Card Game is an interactive web project inspired by Pokémon cards. It demonstrates frontend development concepts through a card-based interface and game-related interactions.
+
+## Live Demo
+Not currently published.
+
+## Source Code
+https://github.com/jaikaran109/51_Web_Projects/tree/main/05-Pokemon-Card-Game
 
 ## Features
-- Pokemon card display.
-- Card-based user interface.
-- Interactive gameplay elements.
-- Visual card layouts.
-- Beginner-friendly design.
+- Pokémon-themed card interface.
+- Card-based visual presentation.
+- Interactive game elements.
+- Dynamic content using JavaScript.
+- Simple and engaging interface.
 
 ## Technologies Used
 - HTML5
 - CSS3
 - JavaScript
 
-## How to Run
-1. Open the project folder.
-2. Locate index.html.
-3. Open it in your web browser.
-4. Interact with the Pokemon cards.
-
 ## Project Structure
-- index.html - Main webpage.
-- CSS files - Card styling and layout.
-- JavaScript files - Game functionality.
+- HTML file – Main game structure.
+- CSS file – Card design and styling.
+- JavaScript file – Game interactions and logic.
+- Images – Card-related visual assets.
+
+## How to Run
+1. Clone the repository.
+2. Open the `05-Pokemon-Card-Game` folder.
+3. Locate `index.html`.
+4. Open it in a modern browser.
+
+## Learning Outcomes
+- JavaScript event handling.
+- DOM manipulation.
+- CSS card layouts.
+- Interactive frontend development.
+
+## Future Improvements
+- Add more Pokémon cards.
+- Improve card animations.
+- Add game scoring.
+- Improve mobile responsiveness.
+
+## Author
+Jai Karan Gupta
+
+## Contributing
+Contributions are welcome. Fork the repository, create a feature branch, and submit a Pull Request.
