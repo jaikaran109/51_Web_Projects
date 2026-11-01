@@ -1,10 +1,41 @@
+<<<<<<< HEAD:16-Currency-Converter/style.css
+body{
+    background-color: yellow;
+    height: 100vh;  /* give 100% of view height */
+=======
 body {
     background-color: #eef4f3;
     height: 100vh;
+>>>>>>> be133af22faf9ea1c593901bcab023b3b2506cf1:16-Currency- Coverter/style.css
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
+<<<<<<< HEAD:16-Currency-Converter/style.css
+    margin: 0%;
+    padding: 0%;
+}
+
+.container{
+    background-color: darkcyan;
+    color: aliceblue;
+    padding: 20px;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.currency-container{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.currency-container select{
+    padding: 5px;
+}
+
+.currency-container input{
+=======
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
@@ -37,10 +68,30 @@ body {
 }
 
 .currency-container input {
+>>>>>>> be133af22faf9ea1c593901bcab023b3b2506cf1:16-Currency- Coverter/style.css
     border: 0;
     background-color: transparent;
     font-size: 25px;
     text-align: right;
+<<<<<<< HEAD:16-Currency-Converter/style.css
+    color: aliceblue;
+}
+
+.exchange-rate{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+select:focus,
+input:focus{
+    outline: none;
+}
+
+
+
+/* Let me check the code once there is an issue bcz as u see the box is not  in center */
+=======
     color: #ffffff;
     width: 60%;
 }
@@ -65,3 +116,4 @@ select:focus,
 input:focus {
     outline: 2px solid #dceeed;
 }
+>>>>>>> be133af22faf9ea1c593901bcab023b3b2506cf1:16-Currency- Coverter/style.css
