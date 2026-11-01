@@ -52,7 +52,24 @@ main {
 .card {
     width: 100%;
     aspect-ratio: 3/4;
+    border: none;
+    background: transparent;
+    padding: 0;
     cursor: pointer;
+}
+
+.card:focus-visible {
+    outline: 3px solid #667eea;
+    outline-offset: 4px;
+    border-radius: 14px;
+}
+
+.card.matched .card-inner {
+    box-shadow: 0 0 0 3px #28a745, 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card.matched .card-front {
+    box-shadow: 0 0 0 3px #28a745;
 }
 
 .card-inner {
@@ -141,6 +158,28 @@ main {
 
 .play-again[hidden] {
     display: none !important;
+}
+
+.win-message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745;
+    background: #e8f5e9;
+    border-radius: 8px;
+    border: 2px solid #28a745;
+    animation: fadeIn 0.5s ease;
+}
+
+.win-message[hidden] {
+    display: none !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 700px) {
