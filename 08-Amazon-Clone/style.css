@@ -6,6 +6,8 @@
 }
 
 #navbar{
+    position:sticky;
+    top:0;
     height:60px;
     background:#131921;
     color:white;
@@ -13,6 +15,7 @@
     align-items:center;
     gap:20px;
     padding:0 20px;
+    z-index:100;
 }
 
 #logo{
@@ -32,6 +35,7 @@
 #search{
     flex:1;
     max-width:850px;
+    min-width:200px;
     display:flex;
 }
 
@@ -71,7 +75,9 @@
 
 #hero img{
     width:100%;
+    height:auto;
     display:block;
+    object-fit:cover;
 }
 
 #msg{
@@ -129,7 +135,22 @@ footer{
 .foot-panel{
     display:flex;
     justify-content:space-evenly;
+    flex-wrap:wrap;
     padding:40px 0;
+}
+
+@media(max-width:899px) and (min-width:601px){
+    #search{
+        min-width:150px;
+    }
+}
+
+@media(max-width:600px){
+    .foot-panel{
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+    }
 }
 
 .foot-panel p{
