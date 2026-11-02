@@ -1,58 +1,42 @@
-<<<<<<< HEAD:16-Currency-Converter/style.css
-body{
-    background-color: yellow;
-    height: 100vh;  /* give 100% of view height */
-=======
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #eef4f3;
-    height: 100vh;
->>>>>>> be133af22faf9ea1c593901bcab023b3b2506cf1:16-Currency- Coverter/style.css
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
-<<<<<<< HEAD:16-Currency-Converter/style.css
-    margin: 0%;
-    padding: 0%;
-}
-
-.container{
-    background-color: darkcyan;
-    color: aliceblue;
-    padding: 20px;
-    text-align: center;
-    border-radius: 40px;
-}
-
-.currency-container{
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.currency-container select{
-    padding: 5px;
-}
-
-.currency-container input{
-=======
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.container {
-    background-color: #356f73;
     color: #ffffff;
+    background:
+        radial-gradient(circle at 15% 20%, #3fb5a8 0%, transparent 45%),
+        radial-gradient(circle at 85% 80%, #5b6ee1 0%, transparent 45%),
+        #14363a;
+}
+
+/* Frosted-glass card */
+.container {
+    width: min(100%, 520px);
     padding: 30px;
     text-align: center;
     border-radius: 24px;
-    width: min(100%, 500px);
-    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: 1.6rem;
 }
 
 .currency-container {
-    padding: 20px 0;
+    padding: 14px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,60 +44,136 @@ body {
 }
 
 .currency-container select {
-    padding: 8px;
-    border: none;
-    border-radius: 6px;
-    background-color: #f5f8f7;
-    color: #333333;
+    max-width: 55%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.92);
+    color: #1d2b2d;
+    font-family: inherit;
 }
 
 .currency-container input {
->>>>>>> be133af22faf9ea1c593901bcab023b3b2506cf1:16-Currency- Coverter/style.css
+    width: 45%;
     border: 0;
     background-color: transparent;
+    font-family: inherit;
     font-size: 25px;
     text-align: right;
-<<<<<<< HEAD:16-Currency-Converter/style.css
-    color: aliceblue;
-}
-
-.exchange-rate{
-    font-size: 16px;
-    font-weight: 600;
-}
-
-
-select:focus,
-input:focus{
-    outline: none;
-}
-
-
-
-/* Let me check the code once there is an issue bcz as u see the box is not  in center */
-=======
     color: #ffffff;
-    width: 60%;
 }
 
-.currency-container input::placeholder {
+.currency-container input:disabled {
+    -webkit-text-fill-color: #ffffff;
+    opacity: 1;
+}
+
+.swap-row {
+    display: flex;
+    justify-content: center;
+}
+
+.swap-button {
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
     color: #ffffff;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 0.35s ease, background-color 0.2s ease;
+}
+
+.swap-button:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.swap-button.flipped {
+    transform: rotate(180deg);
 }
 
 .exchange-rate {
+    margin: 14px 0 0;
     font-size: 16px;
     font-weight: 600;
-    margin-top: 10px;
+}
+
+.status {
+    min-height: 20px;
+    margin: 6px 0 0;
+    font-size: 13px;
+    opacity: 0.9;
 }
 
 .error-message {
-    font-size: 14px;
-    margin-top: 10px;
     min-height: 20px;
+    margin: 4px 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffe08a;
 }
 
-select:focus,
-input:focus {
-    outline: 2px solid #dceeed;
+.attribution {
+    margin: 14px 0 0;
+    font-size: 12px;
+    opacity: 0.8;
 }
->>>>>>> be133af22faf9ea1c593901bcab023b3b2506cf1:16-Currency- Coverter/style.css
+
+.attribution a {
+    color: inherit;
+}
+
+select:focus-visible,
+input:focus-visible,
+button:focus-visible,
+.attribution a:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* Visible to screen readers only: the labels for the dropdowns and inputs */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 420px) {
+    .container {
+        padding: 20px;
+    }
+
+    .currency-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .currency-container select {
+        max-width: none;
+    }
+
+    .currency-container input {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .swap-button {
+        transition: none;
+    }
+}
+
+/* Browsers without backdrop-filter get a more opaque card so the text stays readable */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .container {
+        background: rgba(20, 54, 58, 0.85);
+    }
+}
