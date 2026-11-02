@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO Meta Tags -->
+    <title>51 Web Projects | Frontend HTML, CSS &amp; JavaScript</title>
+    <meta name="title" content="51 Web Projects | Frontend HTML, CSS &amp; JavaScript">
+    <meta name="description" content="A curated collection of 51 beginner to intermediate frontend web development projects built with HTML, CSS, and JavaScript. Explore live demos and source code.">
+    <meta name="keywords" content="web development, frontend projects, html css javascript, coding practice, beginner web projects, open source, hacktoberfest, gssoc">
+    <meta name="author" content="Jaikaran and Open Source Contributors">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jaikaran109.github.io/51_Web_Projects/">
+    <meta name="theme-color" content="#4f46e5">
+
+    <!-- Open Graph / Facebook / LinkedIn / Discord -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jaikaran109.github.io/51_Web_Projects/">
+    <meta property="og:site_name" content="51 Web Projects">
+    <meta property="og:title" content="51 Web Projects | Frontend HTML, CSS &amp; JavaScript">
+    <meta property="og:description" content="A curated collection of 51 beginner to intermediate frontend web development projects with interactive live demos and source code.">
+    <meta property="og:image" content="https://jaikaran109.github.io/51_Web_Projects/assets/og-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="51 Web Projects showcase preview banner">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://jaikaran109.github.io/51_Web_Projects/">
+    <meta name="twitter:title" content="51 Web Projects | Frontend HTML, CSS &amp; JavaScript">
+    <meta name="twitter:description" content="Explore 51 interactive frontend projects with live demos and clean code. Perfect for hands-on practice.">
+    <meta name="twitter:image" content="https://jaikaran109.github.io/51_Web_Projects/assets/og-preview.png">
+    <meta name="twitter:image:alt" content="51 Web Projects showcase preview banner">
+
+    <!-- Favicon and Manifest -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/favicon.svg">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- JSON-LD Structured Data for Google Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "51 Web Projects",
+      "url": "https://jaikaran109.github.io/51_Web_Projects/",
+      "description": "A curated collection of 51 beginner to intermediate frontend web development projects built with HTML, CSS, and JavaScript.",
+      "author": {
+        "@type": "Organization",
+        "name": "51 Web Projects Community",
+        "url": "https://github.com/jaikaran109/51_Web_Projects"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="https://jaikaran109.github.io/51_Web_Projects/" class="brand-link" aria-label="51 Web Projects Home">
+                <img src="assets/favicon.svg" alt="51 Web Projects Logo" class="brand-logo" width="36" height="36">
+                <span>51 Web Projects</span>
+            </a>
+            <div class="header-actions">
+                <button id="theme-toggle" class="btn-icon" type="button" aria-label="Toggle dark and light theme">
+                    <span id="theme-icon">🌙</span>
+                </button>
+                <a href="https://github.com/jaikaran109/51_Web_Projects" class="btn-icon" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+                    ⭐ GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-wrapper">
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-pill">
+                    <span>✦</span> Open-Source Frontend Showcase
+                </div>
+                <h1 class="hero-title">
+                    Master Web Development with <span class="gradient-text">51 Real Projects</span>
+                </h1>
+                <p class="hero-description">
+                    Practice HTML, CSS, and JavaScript with interactive projects ranging from beginner games to full-stack applications. Explore live demos or contribute your own.
+                </p>
+
+                <div class="controls-container">
+                    <div class="search-box">
+                        <span class="search-icon" aria-hidden="true">🔍</span>
+                        <input type="search" id="project-search" class="search-input" placeholder="Search projects by name, technology, or tag (e.g. game, clone, api)..." aria-label="Search projects">
+                    </div>
+
+                    <div class="filters-row" role="group" aria-label="Filter projects by category">
+                        <button class="filter-btn active" data-filter="all" type="button">All Projects</button>
+                        <button class="filter-btn" data-filter="game" type="button">Games</button>
+                        <button class="filter-btn" data-filter="clone" type="button">Clones</button>
+                        <button class="filter-btn" data-filter="utility" type="button">Utilities</button>
+                        <button class="filter-btn" data-filter="ui" type="button">UI / Components</button>
+                        <button class="filter-btn" data-filter="fullstack" type="button">Full Stack</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="stats-bar">
+            <span id="project-count">Showing 26 projects</span>
+            <span>Beginner to Intermediate</span>
+        </div>
+
+        <section class="main-content" aria-label="Project Gallery">
+            <div id="projects-grid" class="projects-grid">
+                <!-- Project cards generated by JavaScript and crawlable fallback anchors -->
+            </div>
+
+            <div id="empty-state" class="empty-state">
+                <h2>No projects found</h2>
+                <p>Try searching with another keyword or selecting a different category filter.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <ul class="footer-links" aria-label="Footer Navigation">
+                <li><a href="https://github.com/jaikaran109/51_Web_Projects" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+                <li><a href="https://github.com/jaikaran109/51_Web_Projects/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Contributing Guide</a></li>
+                <li><a href="sitemap.xml">Sitemap.xml</a></li>
+                <li><a href="robots.txt">Robots.txt</a></li>
+            </ul>
+            <p>Licensed under MIT. Built with vanilla HTML, CSS &amp; JavaScript for the open-source community.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Project Data Store
+        const projectsData = [
+            {
+                id: "01",
+                title: "Rock Paper Scissors",
+                desc: "Classic interactive hand game with score tracking and theme toggle against the computer.",
+                category: "game",
+                difficulty: "Beginner",
+                tags: ["HTML5", "CSS3", "JavaScript"],
+                demoUrl: "01-Rock-Paper-Scissors/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/01-Rock-Paper-Scissors"
+            },
+            {
+                id: "02",
+                title: "Tic Tac Toe",
+                desc: "Turn-based 3x3 strategy game featuring win-detection algorithms and reset capabilities.",
+                category: "game",
+                difficulty: "Beginner",
+                tags: ["HTML5", "CSS3", "JavaScript"],
+                demoUrl: "02-Tic-Tac-Toe/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/02-Tic-Tac-Toe"
+            },
+            {
+                id: "03",
+                title: "CodeForces Clone",
+                desc: "Competitive programming platform homepage recreation featuring contest lists and problem sets.",
+                category: "clone",
+                difficulty: "Intermediate",
+                tags: ["HTML5", "CSS3", "JavaScript"],
+                demoUrl: "03-CodeForces-Clone/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/03-CodeForces-Clone"
+            },
+            {
+                id: "04",
+                title: "Job Application Form",
+                desc: "Comprehensive multi-field job portal registration form with responsive input validations.",
+                category: "ui",
+                difficulty: "Beginner",
+                tags: ["HTML5", "CSS3", "Forms"],
+                demoUrl: "04-Job-Application/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/04-Job-Application"
+            },
+            {
+                id: "05",
+                title: "Pokemon Card Game",
+                desc: "Dynamic Pokemon battle card game generating randomized stats and winner calculations.",
+                category: "game",
+                difficulty: "Beginner",
+                tags: ["HTML5", "CSS3", "JavaScript"],
+                demoUrl: "05-Pokemon-Card-Game/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/05-Pokemon-Card-Game"
+            },
+            {
+                id: "06",
+                title: "Shapes Game",
+                desc: "Visual geometric puzzle game challenging user reaction times and pattern matching.",
+                category: "game",
+                difficulty: "Beginner",
+                tags: ["HTML5", "CSS3", "JavaScript"],
+                demoUrl: "06-Shapes-Games/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/06-Shapes-Games"
+            },
+            {
+                id: "07",
+                title: "Tribute Website",
+                desc: "Informative biographical tribute page dedicated to Dr. A.P.J. Abdul Kalam.",
+                category: "ui",
+                difficulty: "Beginner",
+                tags: ["HTML5", "CSS3", "Typography"],
+                demoUrl: "07-Tribute-Website/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/07-Tribute-Website"
+            },
+            {
+                id: "08",
+                title: "Amazon Clone",
+                desc: "Responsive frontend replica of Amazon e-commerce storefront with navigation and hero sliders.",
+                category: "clone",
+                difficulty: "Intermediate",
+                tags: ["HTML5", "CSS3", "JavaScript"],
+                demoUrl: "08-Amazon-Clone/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/08-Amazon-Clone"
+            },
+            {
+                id: "09",
+                title: "Digital Clock",
+                desc: "Real-time digital clock display with 12/24-hour modes, date format, and alarm options.",
+                category: "utility",
+                difficulty: "Beginner",
+                tags: ["HTML5", "CSS3", "JavaScript"],
+                demoUrl: "09-Digital-Clock/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/09-Digital-Clock"
+            },
+            {
+                id: "10",
+                title: "E-Commerce Shopping App",
+                desc: "Full-stack shopping application with product catalogs, shopping cart logic, and routing.",
+                category: "fullstack",
+                difficulty: "Intermediate",
+                tags: ["Node.js", "Express", "MVC"],
+                demoUrl: "10-E-Commerce_Shopping_App/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/10-E-Commerce_Shopping_App"
+            },
+            {
+                id: "11",
+                title: "Square Game",
+                desc: "Interactive canvas board game testing accuracy, speed, and point accumulation.",
+                category: "game",
+                difficulty: "Beginner",
+                tags: ["HTML5", "CSS3", "JavaScript"],
+                demoUrl: "11-Square-Game/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/11-Square-Game"
+            },
+            {
+                id: "12",
+                title: "Pokemon Card Collection",
+                desc: "Filterable gallery showcase of Pokemon collectible cards with detailed stats.",
+                category: "ui",
+                difficulty: "Beginner",
+                tags: ["HTML5", "CSS3", "JavaScript"],
+                demoUrl: "12-Pokemon-Card-Collection/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/12-Pokemon-Card-Collection"
+            },
+            {
+                id: "13",
+                title: "Personal Portfolio",
+                desc: "Clean personal developer portfolio showcasing skills, project highlights, and contact forms.",
+                category: "ui",
+                difficulty: "Beginner",
+                tags: ["HTML5", "CSS3", "Responsive"],
+                demoUrl: "13-Portfolio/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/13-Portfolio"
+            },
+            {
+                id: "14",
+                title: "BMI Calculator",
+                desc: "Health metric calculator providing instant Body Mass Index calculation and weight classification.",
+                category: "utility",
+                difficulty: "Beginner",
+                tags: ["HTML5", "CSS3", "JavaScript"],
+                demoUrl: "14-BMI-Calculator/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/14-BMI-Calculator"
+            },
+            {
+                id: "15",
+                title: "Interactive Calculator",
+                desc: "Functional mathematical calculator supporting arithmetic operations with keyboard support.",
+                category: "utility",
+                difficulty: "Beginner",
+                tags: ["HTML5", "CSS3", "JavaScript"],
+                demoUrl: "15-Calculator/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/15-Calculator"
+            },
+            {
+                id: "16",
+                title: "Currency Converter",
+                desc: "Real-time currency exchange tool calculating rate transformations across global currencies.",
+                category: "utility",
+                difficulty: "Beginner",
+                tags: ["HTML5", "CSS3", "API", "JavaScript"],
+                demoUrl: "16-Currency-Converter/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/16-Currency-Converter"
+            },
+            {
+                id: "17",
+                title: "Portfolio v2",
+                desc: "Alternative creative layout for developer personal resume and experience showcase.",
+                category: "ui",
+                difficulty: "Beginner",
+                tags: ["HTML5", "CSS3", "Grid"],
+                demoUrl: "17-Portfolio-ll/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/17-Portfolio-ll"
+            },
+            {
+                id: "18",
+                title: "Cards Component Project",
+                desc: "Modular UI card components demonstrating props architecture and reusable layout patterns.",
+                category: "ui",
+                difficulty: "Beginner",
+                tags: ["JavaScript", "Components", "CSS"],
+                demoUrl: "18-Cards-Project-Using-ComponentsAndProps/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/18-Cards-Project-Using-ComponentsAndProps"
+            },
+            {
+                id: "19",
+                title: "Gallery Project",
+                desc: "Full-width responsive image gallery with category filtering and interactive modal lightbox.",
+                category: "ui",
+                difficulty: "Beginner",
+                tags: ["HTML5", "CSS3", "JavaScript"],
+                demoUrl: "19-Gallery-Project/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/19-Gallery-Project"
+            },
+            {
+                id: "20",
+                title: "Insta App",
+                desc: "Social media interface clone recreating profile grids, feed scrolling, and post cards.",
+                category: "clone",
+                difficulty: "Intermediate",
+                tags: ["Frontend", "React", "CSS3"],
+                demoUrl: "20-Insta-App/Frontend/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/20-Insta-App"
+            },
+            {
+                id: "21",
+                title: "Notes API & MongoDB",
+                desc: "RESTful CRUD API service for note-taking with MongoDB database persistence.",
+                category: "fullstack",
+                difficulty: "Intermediate",
+                tags: ["Node.js", "Express", "MongoDB"],
+                demoUrl: "21-Notes-Api_MongoDB/Frontend/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/21-Notes-Api_MongoDB"
+            },
+            {
+                id: "22",
+                title: "Interactive Notes App",
+                desc: "Rich client-side note creation and deletion tool leveraging localStorage for data saving.",
+                category: "utility",
+                difficulty: "Beginner",
+                tags: ["HTML5", "CSS3", "LocalStorage"],
+                demoUrl: "22-Notes-App/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/22-Notes-App"
+            },
+            {
+                id: "23",
+                title: "Spotify Project",
+                desc: "Music player client and backend featuring audio stream controllers and album playlists.",
+                category: "clone",
+                difficulty: "Intermediate",
+                tags: ["Node.js", "Express", "Media"],
+                demoUrl: "23-Spotify-Project/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/23-Spotify-Project"
+            },
+            {
+                id: "24",
+                title: "Student Management System",
+                desc: "Administrative portal for student enrollment, grade evaluation, and records management.",
+                category: "fullstack",
+                difficulty: "Intermediate",
+                tags: ["Node.js", "Express", "Database"],
+                demoUrl: "24-Student-Management-System/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/24-Student-Management-System"
+            },
+            {
+                id: "25",
+                title: "UI Project Using Tailwind",
+                desc: "Modern utility-first responsive dashboard interface created entirely with Tailwind CSS.",
+                category: "ui",
+                difficulty: "Beginner",
+                tags: ["Tailwind CSS", "HTML5", "Modern UI"],
+                demoUrl: "25-UI-Project-Using-Tailwind/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/25-UI-Project-Using-Tailwind"
+            },
+            {
+                id: "26",
+                title: "AI Smart Food Donation System",
+                desc: "Smart distribution platform connecting food donors with NGOs using intelligent allocation.",
+                category: "fullstack",
+                difficulty: "Intermediate",
+                tags: ["AI/Web", "Full Stack", "Civic Tech"],
+                demoUrl: "26-AI-Powered-Smart-Food-Donation-Distribution-System/frontend/",
+                codeUrl: "https://github.com/jaikaran109/51_Web_Projects/tree/main/26-AI-Powered-Smart-Food-Donation-Distribution-System"
+            }
+        ];
+
+        // Theme Management
+        (function initTheme() {
+            let savedTheme = localStorage.getItem('theme');
+            if (!savedTheme) {
+                savedTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            }
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        })();
+
+        function updateThemeIcon(theme) {
+            const icon = document.getElementById('theme-icon');
+            if (icon) {
+                icon.textContent = theme === 'light' ? '☀️' : '🌙';
+            }
+        }
+
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+            const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', nextTheme);
+            localStorage.setItem('theme', nextTheme);
+            updateThemeIcon(nextTheme);
+        });
+
+        // Gallery Render & Filtering
+        const grid = document.getElementById('projects-grid');
+        const countSpan = document.getElementById('project-count');
+        const emptyState = document.getElementById('empty-state');
+        const searchInput = document.getElementById('project-search');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        let currentFilter = 'all';
+        let searchQuery = '';
+
+        function getBadgeClass(diff) {
+            if (diff === 'Beginner') return 'badge-beginner';
+            if (diff === 'Intermediate') return 'badge-intermediate';
+            return 'badge-advanced';
+        }
+
+        function renderProjects() {
+            const filtered = projectsData.filter(p => {
+                const matchesFilter = currentFilter === 'all' || p.category === currentFilter;
+                const q = searchQuery.toLowerCase();
+                const matchesSearch = !q ||
+                    p.title.toLowerCase().includes(q) ||
+                    p.desc.toLowerCase().includes(q) ||
+                    p.tags.some(t => t.toLowerCase().includes(q)) ||
+                    p.id.includes(q);
+                return matchesFilter && matchesSearch;
+            });
+
+            countSpan.textContent = `Showing ${filtered.length} of ${projectsData.length} projects`;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyState.style.display = 'block';
+                return;
+            }
+
+            emptyState.style.display = 'none';
+            grid.innerHTML = filtered.map(p => `
+                <article class="project-card">
+                    <div>
+                        <div class="card-header">
+                            <span class="card-num">#${p.id}</span>
+                            <span class="card-badge ${getBadgeClass(p.difficulty)}">${p.difficulty}</span>
+                        </div>
+                        <h2 class="project-title">${p.title}</h2>
+                        <p class="project-desc">${p.desc}</p>
+                    </div>
+                    <div>
+                        <div class="tags-list" aria-label="Technologies used">
+                            ${p.tags.map(t => `<span class="tag-item">${t}</span>`).join('')}
+                        </div>
+                        <div class="card-actions">
+                            <a href="${p.demoUrl}" class="btn-primary" aria-label="Launch live demo of ${p.title}">
+                                🚀 Live Demo
+                            </a>
+                            <a href="${p.codeUrl}" class="btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View source code of ${p.title} on GitHub">
+                                💻 Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value.trim();
+            renderProjects();
+        });
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                renderProjects();
+            });
+        });
+
+        // Initial Render
+        renderProjects();
+    </script>
+</body>
+</html>
