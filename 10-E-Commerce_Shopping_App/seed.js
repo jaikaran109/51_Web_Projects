@@ -1,5 +1,6 @@
 const mongoose = require('mongoose'); 
 const Product = require('./models/Product') ; 
+require('dotenv').config() ;
 
 let data = [
     {
@@ -22,3 +23,13 @@ async function seedDB() {
 }
 
 module.exports = seedDB ;
+
+if (require.main === module) {
+    mongoose.connect(process.env.MONGO_URI)
+        .then(seedDB)
+        .then(() => mongoose.disconnect())
+        .catch((err) => {
+            console.error('Database seeding failed:', err) ;
+            process.exitCode = 1 ;
+        }) ;
+}
