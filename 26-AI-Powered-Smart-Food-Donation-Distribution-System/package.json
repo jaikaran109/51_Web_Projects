@@ -1,0 +1,31 @@
+{
+  "name": "smart-food-donation-platform",
+  "version": "1.0.0",
+  "description": "Full Stack MERN Smart Food Donation Platform connecting Donors and NGOs with AI Demand Prediction and Real-time Logistics Tracking",
+  "main": "backend/src/server.js",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "server": "npm run dev --prefix backend",
+    "client": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "seed": "npm run seed --prefix backend",
+    "build": "npm run build --prefix frontend",
+    "start": "node backend/src/server.js"
+  },
+  "keywords": [
+    "food-donation",
+    "mern-stack",
+    "react",
+    "nodejs",
+    "express",
+    "mongodb",
+    "zero-hunger",
+    "ngo-logistics",
+    "sustainability"
+  ],
+  "author": "Smart Food Donation Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

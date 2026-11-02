@@ -63,6 +63,7 @@ const enableBoxes = () => {
     for (let box of boxes) {
         box.disabled = false;
         box.innerText = "";
+        box.classList.remove("win");
     }
 };
 
@@ -74,18 +75,22 @@ const showWinner = (winner) => {
 };
 
 const checkWinner = () => {
-    for(pattern of winPatterns){
+    for (let pattern of winPatterns) {
         let pos1val = boxes[pattern[0]].innerText;
         let pos2val = boxes[pattern[1]].innerText;
         let pos3val = boxes[pattern[2]].innerText;  // boxes me konse position pe konsi value h
         
         if(pos1val != "" && pos2val != "" && pos3val != ""){
             if(pos1val === pos2val && pos2val === pos3val){
+                boxes[pattern[0]].classList.add("win");
+                boxes[pattern[1]].classList.add("win");
+                boxes[pattern[2]].classList.add("win");
                 showWinner(pos1val);
                 return true;
             }
         }
     }
+    return false;
 };
 
 

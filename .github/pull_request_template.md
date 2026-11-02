@@ -4,11 +4,16 @@
 
 Please provide a brief summary of the changes made.
 
+- **What**: ...
+- **Why**: ...
+- **How**: ...
+
 ---
 
 ## Related Issue
 
 Fixes #
+Closes #
 
 ---
 
@@ -24,7 +29,11 @@ Fixes #
 
 ## Screenshots
 
-Attach screenshots or screen recordings if applicable.
+> 📌 **Screenshot required for UI/UX changes.** Attach before/after screenshots below.
+
+| Before | After |
+|--------|--------|
+| ![Before](./before.png) | ![After](./after.png) |
 
 ---
 
@@ -40,3 +49,4 @@ Attach screenshots or screen recordings if applicable.
 ## Additional Notes
 
 Add any additional information here.
+

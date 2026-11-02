@@ -38,21 +38,7 @@ A fun and interactive **Rock Paper Scissors** game built using **HTML, CSS, and 
 
 ## 📂 Project Structure
 
-```
-Rock-Paper-Scissors/
-│── index.html      # Page structure and theme toggle button
-│── script.css      # Styles, theme variables and responsive layout
-│── app.js          # Game logic, keyboard shortcuts and theme handling
-│── images/
-│     ├── rock.png
-│     ├── paper.png
-│     └── scissors.png
-│── .github/
-│     └── workflows/
-│           └── deploy.yml
-```
 
----
 
 ## 🎯 How to Play
 

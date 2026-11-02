@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
-    <link rel="stylesheet" href="script.css">
-    
+    <link rel="stylesheet" href="style.css">
+
     <script>
         (function () {
             var theme;
-            try { theme = localStorage.getItem("theme"); } catch (e) {}
+            try { theme = localStorage.getItem("theme"); } catch (e) { }
             if (theme !== "light" && theme !== "dark") {
                 theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
             }
@@ -17,6 +18,7 @@
         })();
     </script>
 </head>
+
 <body>
     <h1>Rock Paper Scissors</h1>
     <button id="theme-toggle" type="button" aria-label="Switch to dark mode">🌙</button>
@@ -50,4 +52,5 @@
     <p class="shortcut-hint">Tip: press <kbd>R</kbd>, <kbd>P</kbd> or <kbd>S</kbd> to play</p>
     <script src="app.js"></script>
 </body>
+
 </html>

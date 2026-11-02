@@ -1,73 +1,58 @@
-# Contributing to 51 Web Projects 🚀
+# Contributing to 51 Web Projects
 
-First of all, thank you for considering contributing to this project! 🎉
+Thanks for taking the time to contribute! 🚀  
+This guide explains the exact contribution format. Follow it for every **Issue** and **Pull Request (PR)**.
 
-We welcome contributions from developers of all skill levels. Whether you're fixing bugs, improving documentation, enhancing UI, or adding new features, your contribution is valuable.
+---
 
 ## 📌 Before You Start
 
-* Star the repository ⭐
-* Read the README.md carefully
-* Check existing Issues and Pull Requests
-* Follow the repository structure and coding standards
+- ⭐ Star the repository
+- 📖 Read the [README.md](README.md)
+- 🔍 Check existing [Issues](https://github.com/jaikaran109/51_Web_Projects/issues) and [PRs](https://github.com/jaikaran109/51_Web_Projects/pulls)
+- 📁 Follow the repository structure and coding standards
 
 ---
 
-## 🍴 Fork the Repository
-
-Click the **Fork** button at the top-right corner of this repository.
-
----
-
-## 💻 Clone Your Fork
+## 🍴 Fork & Clone
 
 ```bash
-git clone https://github.com/your-github-username/51_Web_Projects.git
-```
-
-Navigate to the project:
-
-```bash
+# Fork the repo on GitHub, then:
+git clone https://github.com/<your-github-username>/51_Web_Projects.git
 cd 51_Web_Projects
 ```
 
 ---
 
-## 🌿 Create a New Branch
+## 🌿 Create a Branch
 
 ```bash
 git checkout -b feature/your-feature-name
-```
-
-Examples:
-
-```bash
-git checkout -b feature/add-dark-mode
-git checkout -b fix/navbar-bug
-git checkout -b docs/update-readme
+# or
+git checkout -b fix/your-bug-fix
 ```
 
 ---
 
-## ✨ Make Your Changes
+## ✨ Make Changes
 
 You can contribute by:
 
-* Fixing bugs
-* Improving UI/UX
-* Adding responsive designs
-* Improving accessibility
-* Optimizing code
-* Updating documentation
-* Adding new features
+- Fixing bugs
+- Improving UI/UX
+- Adding responsive designs
+- Improving accessibility
+- Optimizing code
+- Updating documentation
+- Adding new features
+
+> 💡 Keep PRs focused on a **single issue/feature**.
 
 ---
 
-## 📝 Commit Your Changes
+## 📝 Commit Changes
 
-Write meaningful commit messages.
-
-Examples:
+Use clear, conventional commit messages:
 
 ```bash
 git commit -m "Fix: navbar responsiveness issue"
@@ -77,43 +62,63 @@ git commit -m "Docs: update contributing guide"
 
 ---
 
-## 🚀 Push Your Changes
+## 🚀 Push & Open a PR
 
 ```bash
 git push origin feature/your-feature-name
 ```
 
----
+Then open a Pull Request against `main`.
 
-## 🔥 Create a Pull Request
-
-1. Go to your forked repository.
-2. Click **Compare & Pull Request**.
-3. Add a clear title and description.
-4. Submit the Pull Request.
+Please read this file before opening a PR.
 
 ---
 
-## 📋 Pull Request Guidelines
+## 📋 Pull Request Format
 
-* Keep PRs focused on a single issue.
-* Ensure your code works properly.
-* Follow existing code style.
-* Update documentation when required.
-* Avoid unnecessary file changes.
-* Link the related issue if applicable.
+Every PR should include:
+
+### 1. PR Title
+Use a clear prefix:
+
+- `Fix:` for bug fixes
+- `Add:` for new features
+- `Refactor:` for code improvements
+- `Docs:` for documentation updates
+- `UI:` for UI/UX changes
+
+Example:
+```text
+Fix: navbar responsiveness issue on mobile
+```
+
+### 2. PR Description
+- **What**: Brief summary of changes
+- **Why**: The issue or motivation
+- **How**: How you fixed/implemented it
+- **Screenshots**: Attach before/after screenshots (if UI changes)
+- **Checklist**:
+  - [ ] My code follows the project guidelines
+  - [ ] I have tested my changes locally
+  - [ ] I have updated documentation if needed
+  - [ ] My changes do not break existing functionality
+
+### 3. Attach a Screenshot
+> 📌 **Screenshot required for UI/UX changes.** Attach a clear before/after screenshot in the PR description.
 
 ---
 
 ## 🐛 Reporting Issues
 
-When creating an issue, please include:
+When creating an issue, include:
 
-* Clear title
-* Steps to reproduce
-* Expected behavior
-* Actual behavior
-* Screenshots (if applicable)
+- Clear title
+- Steps to reproduce
+- Expected behavior
+- Actual behavior
+- Screenshots (if applicable)
+
+Use issue templates: **Bug Report** or **Feature Request**.
 
 ---
 
@@ -121,27 +126,25 @@ When creating an issue, please include:
 
 Issues may be marked with labels such as:
 
-* good first issue
-* beginner
-* bug
-* documentation
-* enhancement
-* level 1
-* level 2
-* level 3
+- `good first issue`
+- `beginner`
+- `bug`
+- `documentation`
+- `enhancement`
+- `level 1`
+- `level 2`
+- `level 3`
 
 ---
 
 ## 🤝 Code of Conduct
 
-By participating in this project, you agree to follow our Code of Conduct.
-
-Please be respectful and maintain a positive environment for everyone.
+By participating, you agree to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ---
 
 ## ⭐ Thank You
 
-Thank you for contributing to 51 Web Projects and helping make this repository better for the community.
-
+Thank you for contributing to 51 Web Projects!  
 Happy Coding! 🚀
+

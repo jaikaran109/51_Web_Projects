@@ -1,0 +1,33 @@
+# Auto-generate file associations and attribute settings for consistent Git behavior across platforms.
+
+# Mark files as text to prevent CRLF issues
+* text=auto
+
+# Mark specific file types
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+
+# Mark shell scripts as executable
+*.sh text eol=lf
+
+# Mark Windows batch files
+*.bat text eol=crlf
+
+# Mark source files with specific charset and line endings
+*.cs text
+*.java text
+*.py text
+*.js text
+*.ts text
+*.html text
+*.css text
+*.scss text
+*.json text
+*.md text
+
+# Use LF for all text files
+*.txt text eol=lf

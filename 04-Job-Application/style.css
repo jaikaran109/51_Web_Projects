@@ -3,15 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-.apply-box{
+
+.apply-box {
     max-width: 600px;
     padding: 20px;
     background-color: white;
-    margin: 0 auto;
-    margin-top:50px;
-    box-shadow: 4px 3px 5px rgba(1,1,1,0.1);
+    margin: 50px auto 32px;
+    box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
     border-radius: 10px;
 }
+
 .title-small{
     font-size: 20px;
 }
@@ -34,9 +35,14 @@ input,select,textarea{
     border-radius: 4px;
     font-size: 15px;
 }
-input:focus{
-    outline-color: red;
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #1a56db;
+    outline-offset: 2px;
 }
+
 .button-container{
     display: flex;
     justify-content: flex-end;
@@ -50,13 +56,15 @@ button{
     border-radius: 8px;
     transition: 0.3s ease-in;
 }
-button:hover{
-    background-color: #ccc;
-    border: 2px solid red;
-    color: black;
+
+button:hover {
+    background-color: #b91c1c;
+    border: 2px solid #aa2222;
+    color: white;
     transition: 0.3s ease-out;
     cursor: pointer;
 }
+
 .textarea_control{
     grid-column: 1 / span 2;
 }
@@ -67,4 +75,82 @@ button:hover{
     .textarea_control{
         grid-column: 1 / span 1;
 }
+
+.apply-box {
+    margin: 16px 12px 24px;
+    padding: 16px;
+}
+
+}
+
+/* ---------- Accessibility & validation ---------- */
+[hidden]{
+    display: none !important;
+}
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+.required-note{
+    margin-top: 10px;
+    font-size: 14px;
+}
+.required-mark{
+    color: #b00020;
+}
+.hint{
+    margin-top: 4px;
+    font-size: 13px;
+    color: #555;
+}
+.error-message{
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #b00020;
+}
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"]{
+    border: 2px solid #b00020;
+}
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible{
+    outline: 3px solid #1a56db;
+    outline-offset: 2px;
+}
+.error-summary{
+    margin-top: 16px;
+    padding: 12px 16px;
+    border: 2px solid #b00020;
+    border-radius: 6px;
+    background-color: #fff5f5;
+}
+.error-summary h2{
+    font-size: 16px;
+    color: #b00020;
+}
+.error-summary ul{
+    margin-top: 8px;
+    padding-left: 20px;
+}
+.error-summary a{
+    color: #b00020;
+}
+.form-status{
+    margin-top: 16px;
+    font-weight: 600;
+    color: #146c2e;
+}
+.form-status:empty{
+    display: none;
 }
