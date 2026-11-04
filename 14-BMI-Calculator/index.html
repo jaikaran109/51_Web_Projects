@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,32 +10,38 @@
     <main>
         <h1>Body Mass Index (BMI) Calculator</h1>
         <div class="container">
-            <div id="wts">
-                <p>Weight: <span style="color: red;">*</span></p>
-                <input type="number" class="input" id="wt">
-
-                <p>unit <span style="color: red;">*</span></p>
-                <select id="wt-unit">
-                    <option>kgs</option>
-                    <option>lbs</option>
-                </select>
+            <div class="input-group" id="wts">
+                <label for="wt">Weight <span class="required">*</span></label>
+                <div class="input-wrapper">
+                    <input type="number" class="input" id="wt" placeholder="Enter weight" min="0" step="0.1">
+                    <select id="wt-unit">
+                        <option value="kgs">kg</option>
+                        <option value="lbs">lbs</option>
+                    </select>
+                </div>
             </div>
-            
-            <div id="hgt">
-                <p>Height: <span style="color: red;">*</span></p>
-                <input type="text" class="input" id="ht">
 
-                <p id="unit">unit <span style="color: red;">*</span> </p>
-                
-                <select id="ht-unit">
-                    <option>m</option>
-                    <option>cm</option>
-                    <option>ft/in</option>
-
-                </select>
+            <div class="input-group" id="hgt">
+                <label for="ht">Height <span class="required">*</span></label>
+                <div class="input-wrapper">
+                    <input type="text" class="input" id="ht" placeholder="Enter height">
+                    <select id="ht-unit">
+                        <option value="m">m</option>
+                        <option value="cm">cm</option>
+                        <option value="ft/in">ft/in</option>
+                    </select>
+                </div>
             </div>
-            <button>Calculate</button>
+            <button id="calc-btn">Calculate</button>
             <div id="res"></div>
+
+            <div class="history-section">
+                <div class="history-header">
+                    <h2>Calculation History</h2>
+                    <button id="clear-history" class="clear-btn">Clear History</button>
+                </div>
+                <div id="history-list"></div>
+            </div>
         </div>
     </main>
     <script src="./app.js"></script>
