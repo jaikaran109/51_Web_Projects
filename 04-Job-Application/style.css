@@ -71,16 +71,15 @@ button:hover {
 .textarea_control textarea{
     width:100%;
 }
-@media(max-width:460px){
-    .textarea_control{
+@media (max-width: 460px) {
+    .textarea_control {
         grid-column: 1 / span 1;
-}
+    }
 
-.apply-box {
-    margin: 16px 12px 24px;
-    padding: 16px;
-}
-
+    .apply-box {
+        margin: 16px 12px 24px;
+        padding: 16px;
+    }
 }
 
 /* ---------- Accessibility & validation ---------- */
