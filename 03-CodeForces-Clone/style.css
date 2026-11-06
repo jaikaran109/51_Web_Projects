@@ -432,3 +432,483 @@ th{
 
     cursor: pointer;
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+#search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+#contest-search {
+    width: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+#contest-search:focus {
+    outline: 2px solid #3978d4;
+    outline-offset: 2px;
+}
+
+/* =========================================
+   1. Page width and spacing
+   ========================================= */
+
+html {
+    min-height: 100%;
+    width: 100%;
+}
+
+body {
+    width: auto;
+    max-width: 100%;
+    margin: 0 16px;
+}
+
+#main {
+    width: 100%;
+    min-width: 0;
+}
+
+/* =========================================
+   2. Header layout
+   ========================================= */
+
+#headings {
+    min-height: 80px;
+    height: auto;
+    gap: 16px;
+}
+
+#logo {
+    min-width: 0;
+}
+
+#logo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#right-section {
+    flex-shrink: 0;
+}
+
+/* =========================================
+   3. Navigation and search bar
+   ========================================= */
+
+#header {
+    width: 100%;
+    min-width: 0;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px;
+}
+
+#texts {
+    display: flex;
+    flex: 1 1 650px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+    min-width: 0;
+}
+
+#texts a {
+    margin-left: 0;
+    white-space: nowrap;
+}
+
+#search {
+    display: flex;
+    flex: 0 1 230px;
+    align-items: center;
+    gap: 8px;
+    width: 230px;
+    min-width: 180px;
+    padding: 8px 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    background-color: #f1efef;
+}
+
+/* Hide the accessible label visually, not from screen readers. */
+#search label.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+#contest-search {
+    display: block;
+    flex: 1 1 0;
+    width: 0;
+    min-width: 0;
+    padding: 4px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font: inherit;
+}
+
+#contest-search:focus {
+    outline: 2px solid #3978d4;
+    outline-offset: 3px;
+}
+
+#contest-search::placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+/* =========================================
+   4. Main content and sidebar
+   ========================================= */
+
+#content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#informations {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+}
+
+#rankings {
+    flex: 0 1 320px;
+    width: 25%;
+    min-width: 0;
+}
+
+#informations img {
+    max-width: 100%;
+    height: auto;
+}
+
+#Neta img {
+    width: min(350px, 100%);
+}
+
+#spectral {
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+#spectral-content {
+    flex: 1 1 250px;
+    min-width: 0;
+}
+
+#spectral-logo {
+    flex: 1 1 200px;
+    min-width: 0;
+}
+
+#spectral-logo img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Keep tables inside the sidebar. */
+#top-rated,
+#top-contributors,
+#user-card,
+#pay-attention,
+#find-user {
+    width: 100%;
+    min-width: 0;
+}
+
+#top-rated table,
+#top-contributors table {
+    table-layout: auto;
+    overflow-wrap: anywhere;
+}
+
+#user-content {
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#user-left,
+#user-right {
+    min-width: 0;
+}
+
+/* =========================================
+   5. Search result messages
+   ========================================= */
+
+#contest-empty,
+#find-result {
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+}
+
+/* =========================================
+   6. Tablet layout
+   ========================================= */
+
+@media (max-width: 1000px) {
+    #content {
+        gap: 16px;
+    }
+
+    #rankings {
+        flex-basis: 280px;
+        width: 32%;
+    }
+
+    #texts {
+        flex-basis: 100%;
+    }
+
+    #search {
+        flex: 1 1 220px;
+        width: auto;
+        max-width: 100%;
+    }
+}
+
+/* =========================================
+   7. Mobile layout
+   ========================================= */
+
+@media (max-width: 700px) {
+    body {
+        margin: 0 10px;
+    }
+
+    #headings {
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+
+    #logo img {
+        width: min(280px, 100%);
+        margin-left: 0;
+    }
+
+    #right-section {
+        margin-right: 0;
+    }
+
+    #header {
+        align-items: stretch;
+        padding: 10px;
+    }
+
+    #texts {
+        flex: 1 1 100%;
+        gap: 12px;
+    }
+
+    #texts a {
+        font-size: 14px;
+    }
+
+    #search {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    #content {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    #informations,
+    #rankings {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+
+    #informations {
+        padding-left: 10px;
+    }
+
+    #informations h2 {
+        font-size: 22px;
+        overflow-wrap: anywhere;
+    }
+
+    #spectral {
+        flex-direction: column;
+    }
+
+    #spectral-content,
+    #spectral-logo {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    #spectral-logo img {
+        margin-top: 10px;
+    }
+
+    #handle-box {
+        flex-wrap: wrap;
+    }
+
+    #handle-box input {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #top-rated,
+    #top-contributors {
+        overflow-x: auto;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 6px 4px;
+    }
+}
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    color: #000;
+}
+
+#texts a {
+    color: black;
+    text-decoration: none;
+}
+
+#logo img {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid grey;
+}
+/* Announcement content utility classes */
+.announcement-spacing {
+    margin-top: 30px;
+}
+
+.announcement-list-spacing {
+    margin-top: 20px;
+}
+
+.announcement-item-spacing {
+    margin-top: 5px;
+}
+
+.announcement-bold {
+    font-weight: bold;
+}
+.announcement-participant {
+    margin-left: 40px;
+    font-weight: bold;
+}
+
+.announcement-list-indent {
+    margin-left: 35px;
+}
+/* Announcement author and heading */
+.announcement-author-meta {
+    display: flex;
+    margin-top: 5px;
+}
+
+.announcement-author {
+    color: rgb(243, 172, 41);
+    margin-left: 5px;
+}
+
+.announcement-greeting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+        'Trebuchet MS', sans-serif;
+}
+
+.announcement-featured-names {
+    font-weight: bold;
+    color: brown;
+}
+
+.announcement-score-distribution {
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+        sans-serif;
+}
+
+.announcement-editorial {
+    color: skyblue;
+}
+
+.announcement-sponsor-title {
+    color: aqua;
+}
+
+/* Job roles and closing announcement */
+.announcement-role-item {
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.announcement-list-indent-wide {
+    margin-left: 40px;
+}
+
+.announcement-closing {
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.announcement-link-spacing {
+    display: inline-block;
+    margin-top: 30px;
+}
+.contest-empty {
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.find-result {
+    margin-top: 12px;
+}
