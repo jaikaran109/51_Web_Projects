@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     // ----------------------------------------
     // 1. Contest search
@@ -14,8 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             emptyMessage = document.createElement("p");
             emptyMessage.id = "contest-empty";
             emptyMessage.setAttribute("role", "status");
-            emptyMessage.textContent = "No matching contests found.";
-            emptyMessage.hidden = true;
+            emptyMessage.setAttribute("aria-live", "polite");
             emptyMessage.classList.add("contest-empty");
 
             contestSection.parentNode.insertBefore(
@@ -28,12 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
         searchInput.addEventListener("input", () => {
             const query = searchInput.value.trim().toLowerCase();
             const content = contestSection.textContent.toLowerCase();
-
-            const matches =
-                query === "" || content.includes(query);
+            const matches = query === "" || content.includes(query);
 
             contestSection.hidden = !matches;
-            emptyMessage.hidden = matches;
+            emptyMessage.textContent = matches
+                ? ""
+                : "No matching contests found.";
         });
     }
 
@@ -43,43 +43,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // These are sample values, not live API data.
     const mockUsers = {
-        "jaikaran109": {
+        jaikaran109: {
             rating: 408,
             contribution: 0,
             rank: "Newbie"
         },
-
-        "benq": {
+        benq: {
             rating: 3792,
             contribution: 0,
             rank: "Legendary Grandmaster"
         },
-
-        "vivaciousaubergine": {
+        vivaciousaubergine: {
             rating: 3647,
             contribution: 0,
             rank: "Legendary Grandmaster"
         },
-
-        "jiangly": {
+        jiangly: {
             rating: 3631,
             contribution: 0,
             rank: "Legendary Grandmaster"
         },
-
-        "kevin114514": {
+        kevin114514: {
             rating: 3574,
             contribution: 0,
             rank: "Legendary Grandmaster"
         },
-
-        "maroonrk": {
+        maroonrk: {
             rating: 3521,
             contribution: 0,
             rank: "Legendary Grandmaster"
         },
-
-        "um_nik": {
+        um_nik: {
             rating: 3000,
             contribution: 146,
             rank: "Legendary Grandmaster"
@@ -120,13 +114,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Validate empty input.
         if (!handle) {
-            result.textContent =
-                "Please enter a Codeforces handle.";
+            result.textContent = "Please enter a Codeforces handle.";
             return;
         }
 
         // Search without considering uppercase/lowercase.
-        const user = mockUsers[handle.toLowerCase()];
+        const normalizedHandle = handle.toLowerCase();
+        const user = Object.prototype.hasOwnProperty.call(
+            mockUsers,
+            normalizedHandle
+        )
+            ? mockUsers[normalizedHandle]
+            : undefined;
 
         // Display a message if the handle is not in our demo data.
         if (!user) {
@@ -149,6 +148,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Also run the search when Enter is pressed.
     handleInput.addEventListener("keydown", (event) => {
+        if (event.isComposing || event.keyCode === 229) {
+            return;
+        }
+
         if (event.key === "Enter") {
             findUser();
         }

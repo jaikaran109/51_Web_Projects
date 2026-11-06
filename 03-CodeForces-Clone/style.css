@@ -74,21 +74,6 @@ body{
 
 }
 
-#search{
-    padding: 2px 6px;
-    display: flex;
-    border : 1px solid gray;
-    width: 150px;
-    background-color: #f1efef;
-    border-radius: 5px;
-}
-
-#search input{
-    border: none;
-    width: 120px;
-    background-color: #f1efef;
-}
-
 #content{
     display: flex;
     justify-content: center;
@@ -445,25 +430,6 @@ th{
     border: 0;
 }
 
-
-#search {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    min-width: 0;
-}
-
-#contest-search {
-    width: 100%;
-    min-width: 100%;
-    box-sizing: border-box;
-}
-
-#contest-search:focus {
-    outline: 2px solid #3978d4;
-    outline-offset: 2px;
-}
-
 /* =========================================
    1. Page width and spacing
    ========================================= */
@@ -500,6 +466,7 @@ body {
 
 #logo img {
     display: block;
+    width: 400px;
     max-width: 100%;
     height: auto;
 }
@@ -513,11 +480,15 @@ body {
    ========================================= */
 
 #header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     min-width: 0;
     flex-wrap: wrap;
     gap: 12px;
     padding: 12px;
+    border: 1px solid grey;
 }
 
 #texts {
@@ -540,7 +511,7 @@ body {
     align-items: center;
     gap: 8px;
     width: 230px;
-    min-width: 180px;
+    min-width: min(180px,100%);
     padding: 8px 10px;
     border: 1px solid #999;
     border-radius: 5px;
@@ -808,19 +779,6 @@ body {
 #texts a {
     color: black;
     text-decoration: none;
-}
-
-#logo img {
-    width: 400px;
-    max-width: 100%;
-    height: auto;
-}
-
-#header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid grey;
 }
 /* Announcement content utility classes */
 .announcement-spacing {
