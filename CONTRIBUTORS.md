@@ -123,7 +123,7 @@ Thanks to all these amazing people who have contributed to this project! 🎉
             </td>
             <td align="center">
                 <a href="https://github.com/Ritesh007-max">
-                    <img src="https://github.com/Ritesh007-max.png" width="96;" alt="shreyanshrajpoot"/>
+                    <img src="https://avatars.githubusercontent.com/u/211916753?v=4" width="96;" alt="riteshgabale"/>
                     <br />
                     <sub><b>Ritesh Gabale</b></sub>
                 </a>
