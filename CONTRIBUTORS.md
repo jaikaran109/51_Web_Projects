@@ -121,6 +121,13 @@ Thanks to all these amazing people who have contributed to this project! 🎉
                     <sub><b>shreyanshrajpoot</b></sub>
                 </a>
             </td>
+            <td align="center">
+                <a href="https://github.com/Ritesh007-max">
+                    <img src="https://avatars.githubusercontent.com/u/211916753?v=4" width="96;" alt="riteshgabale"/>
+                    <br />
+                    <sub><b>Ritesh Gabale</b></sub>
+                </a>
+            </td>
 </tr>
 </tbody>
 </table>
