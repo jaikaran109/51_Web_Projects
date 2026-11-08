@@ -143,6 +143,17 @@ img {
     padding: 0 1rem 2rem;
 }
 
+.default-msg-style {
+    background-color: var(--surface);
+    color: var(--surface-text);
+    display: inline-block;
+    max-width: 100%;
+    padding: 1rem;
+    font-size: clamp(1.1rem, 4.5vw, 2rem);
+    border-radius: 1rem;
+    transition: background-color 0.3s ease;
+}
+
 #msg {
     background-color: var(--surface);
     color: var(--surface-text);
@@ -212,4 +223,58 @@ kbd {
     .msg-container {
         margin-top: 1.5rem;
     }
+}
+
+
+.reset-container {
+    display: flex;
+    justify-content: center;
+    margin: 22px 0;
+}
+
+#reset-btn {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+
+    background: transparent;
+    color: var(--text-color);
+
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: background 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.reset-icon {
+    font-size: 19px;
+    line-height: 1;
+    transition: transform 0.4s ease;
+}
+
+#reset-btn:hover {
+    background: var(--button-hover);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+#reset-btn:hover .reset-icon {
+    transform: rotate(-180deg);
+}
+
+#reset-btn:active {
+    transform: scale(0.96);
+}
+
+#reset-btn:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
 }

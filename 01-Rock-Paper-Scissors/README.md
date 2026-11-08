@@ -24,6 +24,7 @@ A fun and interactive **Rock Paper Scissors** game built using **HTML, CSS, and 
 * 🎨 Dynamic result messages (Win/Lose/Draw)
 * 📱 **Fully responsive** — works on phones, tablets and desktops, including landscape mode
 * ♿ **Accessible** — image alt text, labelled theme toggle, keyboard shortcut hints for screen readers and visible focus styles
+* 🔄 **Reset Game** — reset both scores and restore the initial game state with one click
 
 ---
 
