@@ -44,7 +44,6 @@ https://github.com/jaikaran109/51_Web_Projects/tree/main/08-Amazon-Clone
 ## Future Improvements
 - Add product search.
 - Add shopping cart functionality.
-- Improve responsive design.
 - Add product filtering.
 
 ## Author
