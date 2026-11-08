@@ -8,8 +8,15 @@ const clear = document.querySelector("#clear");
 const equal = document.querySelector(".equal");
 const backspace = document.querySelector("#backspace");
 
+
+localStorage.setItem("output-status","not-generated");
+
 numbers.forEach(button => {
     button.addEventListener("click", () => {
+            if(localStorage.getItem("output-status")==="generated"){
+            clearAll();
+            localStorage.setItem("output-status","not-generated");
+        }
         expression += button.dataset.number;
         display.value = expression;
     });
@@ -17,6 +24,7 @@ numbers.forEach(button => {
 
 signs.forEach(button => {
     button.addEventListener("click", () => {
+        localStorage.setItem("output-status","not-generated");
         if (button.id === "clear" || button.id === "backspace") return;
 
         expression += button.dataset.sign;
@@ -25,11 +33,17 @@ signs.forEach(button => {
 });
 
 clear.addEventListener("click", () => {
-    expression = "";
-    display.value = "";
+    clearAll();
 });
 
+function clearAll(){
+    expression = "";
+    display.value = "";
+    localStorage.setItem("output-status","not-generated");
+}
+
 backspace.addEventListener("click", () => {
+    localStorage.setItem("output-status","not-generated");
     expression = expression.slice(0, -1);
     display.value = expression;
 });
@@ -48,6 +62,7 @@ function calculate() {
 
         display.value = answer;
         expression = answer.toString();
+        localStorage.setItem("output-status","generated");
     } catch (error) {
         display.value = "Error";
         expression = "";
@@ -57,13 +72,19 @@ function calculate() {
 equal.addEventListener("click", calculate);
 
 document.addEventListener("keydown", event => {
+    
     if (/^[0-9.]$/.test(event.key)) {
+        if(localStorage.getItem("output-status")==="generated"){
+            clearAll();
+            localStorage.setItem("output-status","not-generated");
+        }
         expression += event.key;
         display.value = expression;
         return;
     }
 
     if (["+", "-", "*", "/"].includes(event.key)) {
+        localStorage.setItem("output-status","not-generated");
         expression += event.key;
         display.value = expression;
         return;
@@ -78,10 +99,12 @@ document.addEventListener("keydown", event => {
     if (event.key === "Escape") {
         expression = "";
         display.value = "";
+        localStorage.setItem("output-status","not-generated");
         return;
     }
 
     if (event.key === "Backspace") {
+        localStorage.setItem("output-status","not-generated");
         expression = expression.slice(0, -1);
         display.value = expression;
     }
