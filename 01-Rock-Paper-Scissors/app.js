@@ -7,7 +7,17 @@ const msg = document.querySelector("#msg");
 const userScorePara = document.querySelector("#user-score");
 const compScorePara = document.querySelector("#computer-score");
 
+const resestBtn=document.querySelector("#reset-btn");
+resestBtn.addEventListener('click',(e)=>{
+     userScore = 0;
+compScore = 0;
 
+    userScorePara.textContent=0;
+    compScorePara.textContent=0;
+    msg.textContent="Pick your Move !";
+    msg.classList.remove("win", "lose");
+    msg.classList.add("default-msg-style");
+})
 
 const genCompChoice = () => {
     const options = ["rock", "paper", "scissors"];
