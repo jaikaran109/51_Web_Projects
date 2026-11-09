@@ -51,9 +51,13 @@ function clearAll(){
 backspace.addEventListener("click", () => {
     operatorStatus=false;
     expression = expression.slice(0, -1);
-    if(expression==="")
-         operatorUsage=false;
+    if (expression === "") {
+    operatorUsage = false;
+} else {
+    operatorUsage = true;
+}
     display.value = expression;
+    
 });
 
 function calculate() {
@@ -113,14 +117,19 @@ expression += event.key;
         expression = "";
         display.value = "";
         operatorStatus=false;
+        operatorUsage = false;
         return;
     }
 
     if (event.key === "Backspace") {
         operatorStatus=false;
         expression = expression.slice(0, -1);
-        if(expression==="")
-         operatorUsage=false;
+        if (expression === "") {
+    operatorUsage = false;
+} else {
+    operatorUsage = true;
+}
         display.value = expression;
+        
     }
 });
