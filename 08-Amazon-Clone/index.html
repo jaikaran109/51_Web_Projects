@@ -1,160 +1,285 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Amazon Clone | Online Shopping</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div id="navbar">
+    <!-- Main Navbar -->
+    <header>
 
-        <div id="logo">
-            <img src="image/amazon_logo.png" alt="">
+        <nav class="navbar">
+
+            <div class="nav-logo nav-border">
+                <img src="image/amazon_logo.png" alt="Amazon">
+            </div>
+
+            <div class="nav-location nav-border">
+                <span class="location-top">Deliver to</span>
+                <div class="location-bottom">
+                    <span>📍</span>
+                    <strong>India</strong>
+                </div>
+            </div>
+
+            <form class="search-bar">
+
+                <select aria-label="Search category">
+                    <option>All</option>
+                    <option>Electronics</option>
+                    <option>Clothing</option>
+                    <option>Books</option>
+                    <option>Home</option>
+                </select>
+
+                <input
+                    type="search"
+                    placeholder="Search Amazon"
+                    aria-label="Search Amazon"
+                >
+
+                <button type="submit" aria-label="Search">
+                    🔍
+                </button>
+
+            </form>
+
+            <div class="nav-language nav-border">
+                <span>🇺🇸</span>
+                <strong>EN</strong>
+                <span class="dropdown">▾</span>
+            </div>
+
+            <div class="nav-account nav-border">
+                <span>Hello, sign in</span>
+                <strong>Account & Lists <small>▾</small></strong>
+            </div>
+
+            <div class="nav-orders nav-border">
+                <span>Returns</span>
+                <strong>& Orders</strong>
+            </div>
+
+            <div class="nav-cart nav-border">
+                <span class="cart-icon">🛒</span>
+                <strong>Cart</strong>
+            </div>
+
+        </nav>
+
+        <!-- Secondary Navbar -->
+        <div class="sub-navbar">
+
+            <a href="#" class="all-menu">☰ All</a>
+            <a href="#">Today's Deals</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Registry</a>
+            <a href="#">Gift Cards</a>
+            <a href="#">Sell</a>
+
         </div>
 
-        <div id="location">
-            Deliver to India
-        </div>
+    </header>
 
-        <div id="search">
 
-            <select>
-                <option>All</option>
-            </select>
+    <!-- Hero Section -->
+    <main>
 
-            <input type="text" placeholder="Search Amazon">
+        <section class="hero">
 
-            <button>🔍</button>
+            <img src="image/hero_image.jpg" alt="Explore amazing shopping deals">
 
-        </div>
+            <div class="hero-message">
+                <p>
+                    You are on amazon.com. You can also shop on
+                    <a href="#">Amazon India</a> for millions of products.
+                </p>
+            </div>
 
-        <div class="nav-box">
-            <p>Hello, sign in</p>
-            <h5>Account & Lists</h5>
-        </div>
+        </section>
 
-        <div class="nav-box">
-            <p>Returns</p>
-            <h5>& Orders</h5>
-        </div>
 
-        <div id="cart">
-            Cart
-        </div>
+        <!-- Shopping Categories -->
+        <section class="shopping-section">
 
-    </div>
+            <div class="shopping-grid">
 
-    <div id="panel">
+                <article class="product-card">
 
-        <a href="">All</a>
-        <a href="">Today's Deals</a>
-        <a href="">Customer Service</a>
-        <a href="">Registry</a>
-        <a href="">Gift Cards</a>
-        <a href="">Sell</a>
+                    <h2>Clothes</h2>
 
-    </div>
+                    <img src="image/box1_image.jpg" alt="Clothing collection">
 
-    <div id="hero">
-        <img src="image/hero_image.jpg" alt="">
-    </div>
+                    <a href="#">See more</a>
 
-    <div id="msg">
-        You are on amazon.com. You can also shop on Amazon India.
-    </div>
+                </article>
 
-    <div id="shopping">
 
-        <div class="box">
-            <h2>Clothes</h2>
-            <img src="image/box1_image.jpg">
-            <a href="">see more</a>
-        </div>
+                <article class="product-card">
 
-        <div class="box">
-            <h2>Health & Personal Care</h2>
-            <img src="image/box2_image.jpg">
-            <a href="">see more</a>
-        </div>
+                    <h2>Health & Personal Care</h2>
 
-        <div class="box">
-            <h2>Furniture</h2>
-            <img src="image/box3_image.jpg">
-            <a href="">see more</a>
-        </div>
+                    <img src="image/box2_image.jpg" alt="Health and personal care products">
 
-        <div class="box">
-            <h2>Electronics</h2>
-            <img src="image/box4_image.jpg">
-            <a href="">see more</a>
-        </div>
+                    <a href="#">See more</a>
 
-        <div class="box">
-            <h2>Beauty Picks</h2>
-            <img src="image/box5_image.jpg">
-            <a href="">see more</a>
-        </div>
+                </article>
 
-        <div class="box">
-            <h2>Pet Care</h2>
-            <img src="image/box6_image.jpg">
-            <a href="">see more</a>
-        </div>
 
-        <div class="box">
-            <h2>New Arrival in Toys</h2>
-            <img src="image/box7_image.jpg">
-            <a href="">see more</a>
-        </div>
+                <article class="product-card">
 
-        <div class="box">
-            <h2>Discover Fashion Trends</h2>
-            <img src="image/box8_image.jpg">
-            <a href="">see more</a>
-        </div>
+                    <h2>Furniture</h2>
 
-    </div>
+                    <img src="image/box3_image.jpg" alt="Furniture collection">
 
-    <div id="back">
-        Back to Top
-    </div>
+                    <a href="#">See more</a>
 
+                </article>
+
+
+                <article class="product-card">
+
+                    <h2>Electronics</h2>
+
+                    <img src="image/box4_image.jpg" alt="Electronic products">
+
+                    <a href="#">See more</a>
+
+                </article>
+
+
+                <article class="product-card">
+
+                    <h2>Beauty Picks</h2>
+
+                    <img src="image/box5_image.jpg" alt="Beauty products">
+
+                    <a href="#">See more</a>
+
+                </article>
+
+
+                <article class="product-card">
+
+                    <h2>Pet Care</h2>
+
+                    <img src="image/box6_image.jpg" alt="Pet care products">
+
+                    <a href="#">See more</a>
+
+                </article>
+
+
+                <article class="product-card">
+
+                    <h2>New Arrivals in Toys</h2>
+
+                    <img src="image/box7_image.jpg" alt="New toys">
+
+                    <a href="#">See more</a>
+
+                </article>
+
+
+                <article class="product-card">
+
+                    <h2>Discover Fashion Trends</h2>
+
+                    <img src="image/box8_image.jpg" alt="Fashion trends">
+
+                    <a href="#">See more</a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Back To Top -->
+    <a href="#" class="back-to-top">
+        Back to top ↑
+    </a>
+
+
+    <!-- Footer -->
     <footer>
 
-        <div class="foot-panel">
+        <div class="footer-content">
 
-            <div>
-                <h4>Get to Know Us</h4>
-                <p>Careers</p>
-                <p>Blog</p>
-                <p>About Amazon</p>
+            <div class="footer-column">
+
+                <h3>Get to Know Us</h3>
+
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+                <a href="#">About Amazon</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Amazon Devices</a>
+
             </div>
 
-            <div>
-                <h4>Make Money with Us</h4>
-                <p>Sell products</p>
-                <p>Affiliate</p>
-                <p>Advertise</p>
+
+            <div class="footer-column">
+
+                <h3>Make Money with Us</h3>
+
+                <a href="#">Sell products</a>
+                <a href="#">Sell on Amazon Business</a>
+                <a href="#">Become an Affiliate</a>
+                <a href="#">Advertise Your Products</a>
+                <a href="#">Self-Publish with Us</a>
+
             </div>
 
-            <div>
-                <h4>Amazon Payment Products</h4>
-                <p>Business Card</p>
-                <p>Shop with Points</p>
+
+            <div class="footer-column">
+
+                <h3>Amazon Payment Products</h3>
+
+                <a href="#">Amazon Business Card</a>
+                <a href="#">Shop with Points</a>
+                <a href="#">Reload Your Balance</a>
+                <a href="#">Amazon Currency Converter</a>
+
             </div>
 
-            <div>
-                <h4>Let Us Help You</h4>
-                <p>Your Orders</p>
-                <p>Returns</p>
-                <p>Help</p>
+
+            <div class="footer-column">
+
+                <h3>Let Us Help You</h3>
+
+                <a href="#">Your Account</a>
+                <a href="#">Your Orders</a>
+                <a href="#">Shipping Rates & Policies</a>
+                <a href="#">Returns & Replacements</a>
+                <a href="#">Help</a>
+
             </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <img src="image/amazon_logo.png" alt="Amazon">
+
+            <p>© 2026 Amazon Clone. Educational project.</p>
 
         </div>
 
     </footer>
 
 </body>
+
 </html>

@@ -18,6 +18,7 @@ https://github.com/jaikaran109/51_Web_Projects/tree/main/08-Amazon-Clone
 - Product-oriented layout.
 - Shopping website interface.
 - CSS-based page styling.
+- 📱 **Responsive Design** — adapts to desktop, tablet, and mobile screen sizes.
 
 ## Technologies Used
 - HTML5
@@ -43,7 +44,6 @@ https://github.com/jaikaran109/51_Web_Projects/tree/main/08-Amazon-Clone
 ## Future Improvements
 - Add product search.
 - Add shopping cart functionality.
-- Improve responsive design.
 - Add product filtering.
 
 ## Author
