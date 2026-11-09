@@ -1,5 +1,61 @@
 
 document.addEventListener("DOMContentLoaded", () => {
+    const MAX_HISTORY_ITEMS = 10;
+
+    function safeReadHistory(storageKey) {
+        try {
+            const savedHistory = localStorage.getItem(storageKey);
+            return savedHistory ? JSON.parse(savedHistory) : [];
+        } catch (error) {
+            return [];
+        }
+    }
+
+    function saveCommandHistory(storageKey, command) {
+        const trimmedCommand = command.trim();
+
+        if (!trimmedCommand) {
+            return [];
+        }
+
+        const previousHistory = safeReadHistory(storageKey);
+        const uniqueHistory = previousHistory.filter(
+            (storedCommand) => storedCommand.toLowerCase() !== trimmedCommand.toLowerCase()
+        );
+        const updatedHistory = [trimmedCommand, ...uniqueHistory].slice(0, MAX_HISTORY_ITEMS);
+
+        try {
+            localStorage.setItem(storageKey, JSON.stringify(updatedHistory));
+        } catch (error) {
+            // Ignore localStorage failures (private mode / quota exceeded).
+        }
+
+        return updatedHistory;
+    }
+
+    function createHistoryList(storageKey, label) {
+        const container = document.createElement("ul");
+        container.classList.add("command-history");
+        container.setAttribute("aria-label", label);
+
+        const items = safeReadHistory(storageKey);
+
+        if (items.length === 0) {
+            const emptyItem = document.createElement("li");
+            emptyItem.textContent = "No saved history yet.";
+            container.appendChild(emptyItem);
+            return container;
+        }
+
+        items.forEach((command) => {
+            const item = document.createElement("li");
+            item.textContent = command;
+            container.appendChild(item);
+        });
+
+        return container;
+    }
+
     // ----------------------------------------
     // 1. Contest search
     // ----------------------------------------
@@ -24,8 +80,16 @@ document.addEventListener("DOMContentLoaded", () => {
             );
         }
 
-        // Filter the announcement when the user types.
-        searchInput.addEventListener("input", () => {
+        const contestHistory = createHistoryList(
+            "codeforces-contest-history",
+            "Saved contest search history"
+        );
+        searchInput.parentNode.parentNode.insertBefore(
+            contestHistory,
+            searchInput.parentNode.nextSibling
+        );
+
+        function updateContestSearch() {
             const query = searchInput.value.trim().toLowerCase();
             const content = contestSection.textContent.toLowerCase();
             const matches = query === "" || content.includes(query);
@@ -34,6 +98,37 @@ document.addEventListener("DOMContentLoaded", () => {
             emptyMessage.textContent = matches
                 ? ""
                 : "No matching contests found.";
+        }
+
+        // Filter the announcement when the user types.
+        searchInput.addEventListener("input", updateContestSearch);
+
+        searchInput.addEventListener("keydown", (event) => {
+            if (event.isComposing || event.keyCode === 229) {
+                return;
+            }
+
+            if (event.key === "Enter") {
+                const history = saveCommandHistory(
+                    "codeforces-contest-history",
+                    searchInput.value
+                );
+
+                contestHistory.innerHTML = "";
+
+                if (history.length === 0) {
+                    const emptyItem = document.createElement("li");
+                    emptyItem.textContent = "No saved history yet.";
+                    contestHistory.appendChild(emptyItem);
+                    return;
+                }
+
+                history.forEach((command) => {
+                    const item = document.createElement("li");
+                    item.textContent = command;
+                    contestHistory.appendChild(item);
+                });
+            }
         });
     }
 
@@ -105,6 +200,12 @@ document.addEventListener("DOMContentLoaded", () => {
         findContent.appendChild(result);
     }
 
+    const handleHistory = createHistoryList(
+        "codeforces-handle-history",
+        "Saved handle search history"
+    );
+    findContent.appendChild(handleHistory);
+
     // ----------------------------------------
     // 4. Find a user by handle
     // ----------------------------------------
@@ -117,6 +218,23 @@ document.addEventListener("DOMContentLoaded", () => {
             result.textContent = "Please enter a Codeforces handle.";
             return;
         }
+
+        // Save the last successful search in localStorage for future sessions.
+        const history = saveCommandHistory("codeforces-handle-history", handle);
+        handleHistory.innerHTML = "";
+
+        if (history.length === 0) {
+            const emptyItem = document.createElement("li");
+            emptyItem.textContent = "No saved history yet.";
+            handleHistory.appendChild(emptyItem);
+            return;
+        }
+
+        history.forEach((command) => {
+            const item = document.createElement("li");
+            item.textContent = command;
+            handleHistory.appendChild(item);
+        });
 
         // Search without considering uppercase/lowercase.
         const normalizedHandle = handle.toLowerCase();

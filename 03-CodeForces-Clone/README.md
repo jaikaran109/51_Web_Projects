@@ -29,6 +29,7 @@ Built mainly for improving:
 - Sponsor section
 - Custom buttons and forms
 - Flexbox-based layout
+- Search history is saved in the browser with `localStorage`
 
 ---
 

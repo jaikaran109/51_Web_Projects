@@ -647,6 +647,19 @@ body {
     line-height: 1.5;
 }
 
+.command-history {
+    margin-top: 10px;
+    padding-left: 18px;
+    list-style: disc;
+    color: #333;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.command-history li {
+    margin-bottom: 4px;
+}
+
 /* =========================================
    6. Tablet layout
    ========================================= */
