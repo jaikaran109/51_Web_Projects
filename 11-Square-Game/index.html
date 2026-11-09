@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Square Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="main">
+        <header class="top">
+            <h2 class="title">Square Game</h2>
+            <p class="tagline">Pick a square. Make your move.</p>
+        </header>
+
         <div id="box">
             <div class="rec">
                 <div id="sq1" class="square"><h1>1</h1></div>
@@ -18,7 +25,36 @@
                 <div id="sq4" class="square"><h1>4</h1></div>
             </div>
         </div>
+
+        <button id="about-btn" type="button">ⓘ About this game</button>
     </div>
+
+    <!-- Overlay (outside #main so it never gets blurred) -->
+    <div id="about-overlay" aria-hidden="true">
+    <div class="about-card" role="dialog" aria-labelledby="about-title">
+
+        <h3 id="about-title">How to Play</h3>
+        <p class="about-sub">Explore all four squares and discover their unique interactions.</p>
+
+        <ul>
+            <li>🔢 <strong>Square 1:</strong> Hover to generate a random number (0–99). Double-click to change its background colour.</li>
+
+            <li>🎨 <strong>Square 2:</strong> Hover to switch between green and red backgrounds.</li>
+
+            <li>🌈 <strong>Square 3:</strong> Hover to generate a random RGB background colour.</li>
+
+            <li>🪄 <strong>Square 4:</strong> Click to change the background colours of the first three squares.</li>
+        </ul>
+
+        <p class="about-note">
+            Move your cursor away from a square to reset its colour or number where applicable.
+        </p>
+
+        <button id="about-close" type="button">Got it!</button>
+
+    </div>
+</div>
+
     <script src="./script.js"></script>
 </body>
-</html> 
+</html>
