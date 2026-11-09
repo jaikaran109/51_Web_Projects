@@ -48,7 +48,6 @@ https://github.com/jaikaran109/51_Web_Projects/tree/main/17-Portfolio-ll
 - Include additional projects.
 - Improve animations.
 - Add a contact form.
-- Enhance responsive design.
 
 ## Author
 Jai Karan Gupta

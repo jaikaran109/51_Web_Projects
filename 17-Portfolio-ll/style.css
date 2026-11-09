@@ -260,6 +260,219 @@ body{
 }
 
 
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Large Tablets and Small Laptops */
+@media (max-width: 1024px) {
+    .header {
+        padding: 20px 6%;
+    }
+
+    .home {
+        padding: 100px 6% 40px;
+        gap: 35px;
+    }
+
+    .home-content {
+        max-width: 550px;
+    }
+
+    .home-content h1 {
+        font-size: 46px;
+    }
+
+    .home-content h3 {
+        font-size: 27px;
+    }
+
+    .home .home-img img {
+        width: 260px;
+        height: 260px;
+        margin-left: 0;
+    }
+
+    .navbar a {
+        margin-left: 22px;
+        font-size: 16px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .header {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+        background-color: #1f242d;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 10px 18px;
+    }
+
+    .navbar a {
+        font-size: 15px;
+        margin-left: 0;
+    }
+
+    .home {
+        min-height: 100vh;
+        height: auto;
+        padding: 150px 7% 60px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .home-content {
+        max-width: 600px;
+    }
+
+    .home-content h1 {
+        font-size: 43px;
+        margin: 8px 0;
+    }
+
+    .home-content h3 {
+        font-size: 25px;
+    }
+
+    .home-content p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .home .home-img img {
+        width: 230px;
+        height: 230px;
+        margin: 0;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .social-media a {
+        margin: 20px 8px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .header {
+        justify-content: center;
+        padding: 15px 4%;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .navbar {
+        width: 100%;
+        justify-content: center;
+        gap: 10px 16px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .home {
+        padding: 155px 6% 45px;
+        gap: 28px;
+    }
+
+    .home .home-img img {
+        width: 190px;
+        height: 190px;
+        border-width: 4px;
+    }
+
+    .home-content h3 {
+        font-size: 20px;
+    }
+
+    .home-content h1 {
+        font-size: clamp(30px, 9vw, 38px);
+        line-height: 1.2;
+        margin: 10px 0;
+    }
+
+    .home-content h3:nth-of-type(2) {
+        margin-bottom: 18px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+        letter-spacing: 0.3px;
+        line-height: 1.7;
+    }
+
+    .social-media {
+        margin-top: 8px;
+    }
+
+    .social-media a {
+        width: 38px;
+        height: 38px;
+        font-size: 19px;
+        margin: 15px 6px 22px;
+    }
+
+    .btn {
+        padding: 11px 24px;
+        font-size: 14px;
+    }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 350px) {
+    .navbar {
+        gap: 9px 12px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .home {
+        padding-top: 165px;
+    }
+
+    .home .home-img img {
+        width: 165px;
+        height: 165px;
+    }
+
+    .home-content h1 {
+        font-size: 29px;
+    }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 
 /* Dekho CSS me explain krne wala kuch h nhi bss animations h vo dekh ke samjh aa rha h */
 
