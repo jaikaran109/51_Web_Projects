@@ -3,33 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codeforces</title>
+
+    <title>Codeforces Clone</title>
+
     <link rel="stylesheet" href="style.css">
+
     <link
         href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
         rel="stylesheet"
     />
 </head>
+
 <body>
     <div id="main">
+
+        <!-- Header and logo -->
         <div id="headings">
             <div id="logo">
-                <img src="image/codeforces-sponsored-by-ton.webp">
+                <img
+                    src="image/codeforces-sponsored-by-ton.webp"
+                    alt="Codeforces logo"
+                >
             </div>
+
             <div id="right-section">
                 <div id="icons">
                     <i class="ri-notification-2-fill"></i>
                     <span>|</span>
-                    <img src="image/england.webp">
-                    <img src="image/france.webp">
+                    <img src="image/england.webp" alt="English">
+                    <img src="image/france.webp" alt="French">
                 </div>
+
                 <div id="login">
-                    <a href="https://codeforces.com/profile/jaikaran109">jaikaran109</a>
+                    <a href="https://codeforces.com/profile/jaikaran109">
+                        jaikaran109
+                    </a>
                     <span> | </span>
                     <a href="https://codeforces.com/enter">Logout</a>
                 </div>
             </div>
         </div>
+
+        <!-- Navigation and contest search -->
         <div id="header">
             <nav id="texts" aria-label="Main navigation">
                 <a href="https://codeforces.com/">HOME</a>
@@ -45,141 +60,314 @@
                 <a href="https://codeforces.com/calendar">CALENDAR</a>
                 <a href="https://codeforces.com/help">HELP</a>
             </nav>
+
             <div id="search">
-                <i class="ri-search-line"></i>
-                <label class="visually-hidden" for="contest-search">Search contests</label>
-                <input id="contest-search" type="search" placeholder="Search contests">
+                <i class="ri-search-line" aria-hidden="true"></i>
+
+                <label for="contest-search" class="visually-hidden">
+                    Search contests
+                </label>
+
+                <input
+                    id="contest-search"
+                    type="search"
+                    placeholder="Search contests"
+                    aria-label="Search contests"
+                >
             </div>
         </div>
+
+        <!-- Main contest announcement -->
         <div id="content">
-            <div id="informations">
+            <div id="informations" data-contest-item>
 
-                <section id="contest-list" aria-label="Contests">
-<article class="contest-item" data-contest-item>
-<h2 class="contest-title" data-contest-title>Spectral::Cup 2026 Round 2 (Codeforces Round 1100, Div. 1 + Div. 2)</h2>
-                
+                <h2>
+                    Spectral::Cup 2026 Round 2
+                    (Codeforces Round 1100, Div. 1 + Div. 2)
+                </h2>
 
-                <p class="byline">By <span class="byline-author"> Intellegent </span>, 8 days ago,<img src="image/england.webp" alt=""></p>
+                <p class="announcement-author-meta">
+                    By
+                    <span class="announcement-author">
+                        Intellegent
+                    </span>,
+                    8 days ago,
+                    <img src="image/england.webp" alt="English">
+                </p>
 
                 <div id="Neta">
-                    <img src="image/a30d2d6f3f423f0f542e4e7833fb700197ea86c8.webp" alt="">
+                    <img
+                        src="image/a30d2d6f3f423f0f542e4e7833fb700197ea86c8.webp"
+                        alt="Contest announcement banner"
+                    >
                 </div>
 
-                <h1 class="greeting-title">Greetings Codeforces!</h1>
+                <h1 class="announcement-greeting">
+                    Greetings Codeforces!
+                </h1>
 
-                <p> <span>sammyuri, myst-6</span> and I are absolutely chuffed to bits to invite you all to have a go at Codeforces Round 1210
-                    (Spectral::Cup 2026 Round 2 (Codeforces Round 1100, Div. 1 + Div. 2)), kicking off at Saturday, May 23, 2026 at 20:05UTC+5.5.</p>
+                <p class="announcement-spacing">
+                    <span class="announcement-featured-names">
+                        sammyuri, myst-6
+                    </span>
+                    and I are absolutely chuffed to bits to invite you all to
+                    have a go at Codeforces Round 1210
+                    (Spectral::Cup 2026 Round 2
+                    (Codeforces Round 1100, Div. 1 + Div. 2)),
+                    kicking off at Saturday, May 23, 2026 at 20:05 UTC+5.5.
+                </p>
 
-                <p>There will be <span>9</span> absolute cinema problems for you to solve over the course of <span>3 hours</span>,
-                    some problems will have multiple parts. This round will be combined for Division 1 and Division 2 and will be rated for everyone.</p>
-                
-                <p>I’d like to raise a glass to the following brilliant minds for making this whole thing possible:</p>
+                <p class="announcement-spacing">
+                    There will be <span class="announcement-bold">9</span>
+                    absolute cinema problems for you to solve over the course
+                    of <span class="announcement-bold">3 hours</span>,
+                    some problems will have multiple parts. This round will
+                    be combined for Division 1 and Division 2 and will be
+                    rated for everyone.
+                </p>
 
-                <ul>
-                    <li><span >Dominater069</span> for splendid coordination.</li>
-                    <li><span>Um_nik</span> for preliminary review.</li>
-                    <li>The fine assembly of testers: <span>arvindf232, EvenImage, Geothermal, Sana, Wansur, p0tato, __baozii__, Aotsuki, Dragos, catgirl, Monogon, nifeshe, Proof_by_QED, lucaski2, efishel, is_i, Argentum47, reirugan, naneosmic, chromate00, Nyemot, simplelife, eric899.</span></li>
-                    <li><span>moonpole</span> for remembering to test.</li>
-                    <li><span>Alexdat2000</span> for Russian translation.</li>
-                    <li><span>MikeMirzayanov and KAN</span> for Codeforces and Polygon.</li>
-                    <li>You for participating.</li>
+                <p class="announcement-spacing">
+                    I’d like to raise a glass to the following brilliant minds
+                    for making this whole thing possible:
+                </p>
+
+                <ul class="announcement-list-spacing announcement-list-indent">
+                    <li class="announcement-item-spacing">
+                        <span class="announcement-bold announcement-blue">
+                            Dominater069
+                        </span>
+                        for splendid coordination.
+                    </li>
+
+                    <li class="announcement-item-spacing">
+                        <span class="announcement-bold announcement-pink">
+                            Um_nik
+                        </span>
+                        for preliminary review.
+                    </li>
+
+                    <li class="announcement-item-spacing">
+                        The fine assembly of testers:
+                        <span class="announcement-bold announcement-red">
+                            arvindf232, EvenImage, Geothermal, Sana, Wansur,
+                            p0tato, __baozii__, Aotsuki, Dragos, catgirl,
+                            Monogon, nifeshe, Proof_by_QED, lucaski2, efishel,
+                            is_i, Argentum47, reirugan, naneosmic,
+                            chromate00, Nyemot, simplelife, eric899.
+                        </span>
+                    </li>
+
+                    <li class="announcement-item-spacing">
+                        <span class="announcement-bold announcement-green">
+                            moonpole
+                        </span>
+                        for remembering to test.
+                    </li>
+
+                    <li class="announcement-item-spacing">
+                        <span class="announcement-bold announcement-orange">
+                            Alexdat2000
+                        </span>
+                        for Russian translation.
+                    </li>
+
+                    <li class="announcement-item-spacing">
+                        <span class="announcement-bold announcement-cyan">
+                            MikeMirzayanov and KAN
+                        </span>
+                        for Codeforces and Polygon.
+                    </li>
+
+                    <li class="announcement-item-spacing">You for participating.</li>
                 </ul>
 
-                <p>Score distribution: <span>500−750−(750+1250)−2000−2500−2500−3250−4000−5000</span></p>
+                <p class="announcement-spacing">
+                    Score distribution:
+                    <span class="announcement-score-distribution">
+                        500−750−(750+1250)−2000−2500−2500−3250−4000−5000
+                    </span>
+                </p>
 
-                <p>UPD: <span>editorial</span></p>
+                <p class="announcement-spacing">
+                    UPD: <span class="announcement-editorial">editorial</span>
+                </p>
 
-                <p>UPD2: Congratulations to the winners!</p>
-                
-                <ol>
-                    <li>maroonrk</li>
-                    <li>jiangly</li>
-                    <li>ksun48</li>
-                    <li>jaikaran109</li>
-                    <li>Radewoosh</li>
-                    <li>kakul22</li>
-                    <li>anshikaSingh</li>
-                    <li>starSilk</li>
-                    <li>ecnerwala</li>
-                    <li>NanYan</li>
+                <p class="announcement-spacing">
+                    UPD2: Congratulations to the winners!
+                </p>
+
+                <ol class="announcement-spacing">
+                    <li class="announcement-participant">maroonrk</li>
+                    <li class="announcement-participant">jiangly</li>
+                    <li class="announcement-participant">ksun48</li>
+                    <li class="announcement-participant">jaikaran109</li>
+                    <li class="announcement-participant">Radewoosh</li>
+                    <li class="announcement-participant">kakul22</li>
+                    <li class="announcement-participant">anshikaSingh</li>
+                    <li class="announcement-participant">starSilk</li>
+                    <li class="announcement-participant">ecnerwala</li>
+                    <li class="announcement-participant">NanYan</li>
                 </ol>
 
-                <p>Now a few words from our sponsor.</p>
+                <p class="announcement-spacing">
+                    Now a few words from our sponsor.
+                </p>
 
                 <div id="spectral">
                     <div id="spectral-content">
-                        <h3 class="sponsor-title">Spectral::Technologies</h3>
-                        <p>is an HFT fund – we build trading strategies and low-latency infrastructure for global markets. The people doing this: IMO, IOI, IPhO and All-Russian Olympiad medalists and top engineers – people who love the challenge and always want a bigger one. That's who Spectral was built for.</p>
+                        <h3 class="announcement-sponsor-title">Spectral::Technologies</h3>
 
+                        <p>
+                            is an HFT fund – we build trading strategies and
+                            low-latency infrastructure for global markets.
+                            The people doing this: IMO, IOI, IPhO and
+                            All-Russian Olympiad medalists and top engineers –
+                            people who love the challenge and always want a
+                            bigger one. That's who Spectral was built for.
+                        </p>
                     </div>
+
                     <div id="spectral-logo">
-                        <img src="image/9b5bd2cb8efc932da2742d0fbb1ab589202373f4.webp" >
+                        <img
+                            src="image/9b5bd2cb8efc932da2742d0fbb1ab589202373f4.webp"
+                            alt="Spectral Technologies logo"
+                        >
                     </div>
                 </div>
 
-                <p>We are actively hiring! <span>Check out our Quant roles:</span></p>
+                <p class="announcement-spacing">
+                    We are actively hiring!
+                    <span class="announcement-bold">
+                        Check out our Quant roles:
+                    </span>
+                </p>
 
                 <ul>
-                    <li><span>Junior Quant</span> – 150–180k USD + profit sharing</li>
-                    <li><span>Middle Quant </span>– 240–320k USD + profit sharing</li>
-                    <li><span>Senior Quant</span> – 360–500k USD + profit sharing</li>
+                    <li class="announcement-role-item">
+                        <span class="announcement-bold announcement-blue">
+                            Junior Quant
+                        </span>
+                        – 150–180k USD + profit sharing
+                    </li>
+
+                    <li class="announcement-role-item">
+                        <span class="announcement-bold announcement-blue">
+                            Middle Quant
+                        </span>
+                        – 240–320k USD + profit sharing
+                    </li>
+
+                    <li class="announcement-role-item">
+                        <span class="announcement-bold announcement-blue">
+                            Senior Quant
+                        </span>
+                        – 360–500k USD + profit sharing
+                    </li>
                 </ul>
 
-                <p>We’re also hiring for C++, ML, and DevOps roles. Complete the application form to explore career opportunities with us.</p>
+                <p class="announcement-spacing">
+                    We’re also hiring for C++, ML, and DevOps roles.
+                    Complete the application form to explore career
+                    opportunities with us.
+                </p>
 
                 <div id="btn-box">
                     <button id="apply-btn">Apply</button>
                 </div>
 
-                <p>We are excited to sponsor our second Round as part of <span> Spectral::Cup 2026 </span> — a three-round tournament where prizes get more valuable with every round.</p>
+                <p>
+                    We are excited to sponsor our second Round as part of
+                    <span class="announcement-bold">Spectral::Cup 2026</span>
+                    — a three-round tournament where prizes get more valuable
+                    with every round.
+                </p>
 
-                <p>Prizes for Round 2:</p>
+                <p class="announcement-closing">
+                    Prizes for Round 2:
+                </p>
 
-                <p>Top 30 will get laptop cases (390x290mm) + Codeforces-inspired anti-stress toys.</p>
+                <p class="announcement-spacing">
+                    Top 30 will get laptop cases (390x290mm) +
+                    Codeforces-inspired anti-stress toys.
+                </p>
 
-                <p>Make sure that you take part in at least two rounds to improve your chances to win the main prizes. We prepared <span> bigger prizes for top performers by their final score in Spectral::Cup 2026 </span>. The final score is the sum of your best 2 results according to the GP500.</p>
+                <p class="announcement-spacing">
+                    Make sure that you take part in at least two rounds to
+                    improve your chances to win the main prizes. We prepared
+                    <span class="announcement-bold">
+                        bigger prizes for top performers by their final score
+                        in Spectral::Cup 2026
+                    </span>.
+                    The final score is the sum of your best 2 results
+                    according to the GP500.
+                </p>
 
-                <ul>
-                    <li>Top-3 by final score will get (1st) MacBook Pro, (2nd) iPad Pro, (3rd) Whoop — or USDT equivalent to the prize value</li>
-                    <li>Top-15 by final score will get Claude subscription</li>
-                    <li>30 random participants among top 500 based on the final score will get additional prizes</li>
+                <ul class="announcement-list-spacing announcement-list-indent-wide">
+                    <li class="announcement-item-spacing">
+                        Top-3 by final score will get (1st) MacBook Pro,
+                        (2nd) iPad Pro, (3rd) Whoop — or USDT equivalent to
+                        the prize value
+                    </li>
+
+                    <li class="announcement-item-spacing">
+                        Top-15 by final score will get Claude subscription
+                    </li>
+
+                    <li class="announcement-item-spacing">
+                        30 random participants among top 500 based on the
+                        final score will get additional prizes
+                    </li>
                 </ul>
 
-                <p>Code fast, think faster – see you in the next round of Spectral::Cup 2026!</p>
+                <p class="announcement-closing">
+                    Code fast, think faster – see you in the next round of
+                    Spectral::Cup 2026!
+                </p>
 
-                <a href="https://codeforces.com/contests/1100">Full text and comments »</a>
+                <a
+                    class="announcement-link-spacing"
+                    href="https://codeforces.com/blog/entry/153802"
+                >
+                    Full text and comments »
+                </a>
 
-                <p> Announcement of Spectral::Cup 2026 Round 2 (Codeforces Round 1100, Div. 1 + Div. 2)</p>
+                <p class="announcement-spacing">
+                    Announcement of Spectral::Cup 2026 Round 2
+                    (Codeforces Round 1100, Div. 1 + Div. 2)
+                </p>
 
-                <p>Tags div1, 1100, round</p>
-                </article>
-                <article class="contest-item" data-contest-item><h2 class="contest-title">Codeforces Round (Div. 2)</h2><p>Upcoming rated contest for Division 2 participants.</p><p>Tags div2, round</p></article>
-                <article class="contest-item" data-contest-item><h2 class="contest-title">Educational Codeforces Round</h2><p>Practice and compete in an educational round.</p><p>Tags educational, round</p></article>
-                <p id="contest-empty" class="search-result" role="status" hidden>No contests match your search.</p>
+                <p class="announcement-spacing">
+                    Tags div1, 1100, round
+                </p>
 
             </div>
 
-
-
+            <!-- Right sidebar -->
             <div id="rankings">
-                <div id="pay-attention">
 
+                <div id="pay-attention">
                     <div id="pay-heading">
                         → Pay attention
                     </div>
 
                     <div id="pay-content">
                         <h2>Before contest</h2>
-                        <a href="https://codeforces.com/contests">Codeforces Round (Div. 2)</a>
+
+                        <a href="https://codeforces.com/contests">
+                            Codeforces Round (Div. 2)
+                        </a>
+
                         <p id="days">4 days</p>
-                        <a id="register" href="https://codeforces.com/contests">Register now »</a>
+
+                        <a id="register" href="https://codeforces.com/contests">
+                            Register now »
+                        </a>
+
                         <p id="extra">*has extra registration</p>
                     </div>
-
                 </div>
 
                 <div id="user-card">
-
                     <div id="user-heading">
                         → jaikaran109
                     </div>
@@ -190,54 +378,88 @@
                             <p>⭐ Contribution: <b>0</b></p>
 
                             <ul>
-                                <li><a href="https://codeforces.com/settings">Settings</a></li>
-                                <li><a href="https://codeforces.com/blog">Blog</a></li>
-                                <li><a href="https://codeforces.com/teams">Teams</a></li>
-                                <li><a href="https://codeforces.com/submissions/jaikaran109">Submissions</a></li>
-                                <li><a href="https://codeforces.com/favourites">Favourites</a></li>
-                                <li><a href="https://codeforces.com/talks">Talks</a></li>
-                                <li><a href="https://codeforces.com/contests">Contests</a></li>
+                                <li>
+                                    <a href="https://codeforces.com/settings/social">
+                                        Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://codeforces.com/blog">
+                                        Blog
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://codeforces.com/groups">
+                                        Teams
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://codeforces.com/submissions/jaikaran109">
+                                        Submissions
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://codeforces.com/favourites">
+                                        Favourites
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://codeforces.com/talks">
+    Talks
+</a>
+                                </li>
+                                <li>
+                                    <a href="https://codeforces.com/contests">
+                                        Contests
+                                    </a>
+                                </li>
                             </ul>
-
                         </div>
 
                         <div id="user-right">
-                            <img src="image/DP.jpg" alt="">
+                            <img src="image/DP.jpg" alt="User profile">
                             <h3>jaikaran109</h3>
                         </div>
                     </div>
                 </div>
 
+                <!-- Top-rated users -->
                 <div id="top-rated">
                     <div id="top-heading">
                         → Top rated
                     </div>
+
                     <table>
                         <tr>
                             <th>#</th>
                             <th>User</th>
                             <th>Rating</th>
                         </tr>
+
                         <tr>
                             <td>1</td>
                             <td class="red">Benq</td>
                             <td>3792</td>
                         </tr>
+
                         <tr>
                             <td>2</td>
                             <td class="red">VivaciousAubergine</td>
                             <td>3647</td>
                         </tr>
+
                         <tr>
                             <td>3</td>
                             <td class="red">jiangly</td>
                             <td>3631</td>
                         </tr>
+
                         <tr>
                             <td>4</td>
                             <td class="red">Kevin114514</td>
                             <td>3574</td>
                         </tr>
+
                         <tr>
                             <td>5</td>
                             <td class="red">maroonrk</td>
@@ -246,23 +468,27 @@
                     </table>
 
                     <div id="bottom-links">
-                        <a href="https://codeforces.com/ratings/country">Countries</a>
+                        <a href="https://codeforces.com/ratings/countries">
+                            Countries
+                        </a>
                         <span>|</span>
-                        <a href="https://codeforces.com/ratings/city">Cities</a>
+                        <a href="https://codeforces.com/ratings/cities">
+                            Cities
+                        </a>
                         <span>|</span>
-                        <a href="https://codeforces.com/ratings/organization">Organizations</a>
+                        <a href="https://codeforces.com/ratings/organizations">
+                            Organizations
+                        </a>
                     </div>
                 </div>
 
-
+                <!-- Top contributors -->
                 <div id="top-contributors">
-
                     <div id="contributors-heading">
                         → Top contributors
                     </div>
 
                     <table>
-
                         <tr>
                             <th>#</th>
                             <th>User</th>
@@ -328,38 +554,46 @@
                             <td class="orange">soulless</td>
                             <td>133</td>
                         </tr>
-
                     </table>
 
                     <div id="contributors-bottom">
-                        <a id="contributors-view" href="https://codeforces.com/ratings">View all →</a>
+                        <a
+                            id="contributors-view"
+                            href="https://codeforces.com/ratings"
+                        >
+                            View all →
+                        </a>
                     </div>
-
                 </div>
 
+                <!-- Find user -->
                 <div id="find-user">
-
                     <div id="find-heading">
                         → Find user
                     </div>
 
                     <div id="find-content">
-
                         <div id="handle-box">
                             <label for="handle-input">Handle:</label>
-                            <input id="handle-input" type="text" placeholder="Try jaikaran109">
+
+                            <input
+                                id="handle-input"
+                                type="text"
+                                placeholder="Enter a Codeforces handle"
+                            >
                         </div>
 
-                        <button id="find-btn" type="button">Find</button>
-                        <p id="find-result" class="search-result" role="status" aria-live="polite"></p>
-
+                        <button id="find-btn" type="button">
+                            Find
+                        </button>
                     </div>
-
                 </div>
-                
+
             </div>
         </div>
     </div>
-    <script src="app.js" defer></script>
+
+    <!-- Load JavaScript after the page elements -->
+    <script src="app.js"></script>
 </body>
 </html>
