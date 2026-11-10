@@ -389,3 +389,127 @@ button:focus-visible,
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* Success Toast */
+
+.toast-notification {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 9999;
+
+    width: min(380px, calc(100vw - 30px));
+    padding: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    background: rgba(17, 26, 43, 0.96);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    border-radius: 14px;
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(30px);
+
+    transition: all 0.35s ease;
+    overflow: hidden;
+}
+
+.toast-notification.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.toast-icon {
+    min-width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    background: rgba(74, 222, 128, 0.15);
+    color: #4ade80;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.toast-content {
+    flex: 1;
+}
+
+.toast-content h3 {
+    font-size: 14px;
+    color: #f1f5f9;
+    margin-bottom: 4px;
+}
+
+.toast-content p {
+    font-size: 12px;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+.toast-close {
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.toast-close:hover {
+    color: white;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+}
+
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #4ade80;
+    transform-origin: left;
+}
+
+.toast-notification.show .toast-progress {
+    animation: toastTimer 4s linear forwards;
+}
+
+@keyframes toastTimer {
+    from {
+        transform: scaleX(1);
+    }
+    to {
+        transform: scaleX(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .toast-notification {
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .toast-notification {
+        transition: none;
+    }
+
+    .toast-notification.show .toast-progress {
+        animation: none;
+    }
+}
