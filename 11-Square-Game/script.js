@@ -8,12 +8,14 @@ const defaultBg = "rgba(255, 255, 255, 0.06)";
 aboutBtn.addEventListener('click',(e)=>{
     aboutOverlay.classList.add("show");
     main.classList.add("blurred");
+    aboutOverlay.setAttribute("aria-hidden", "false");
 })
 
 if(aboutClose){
     aboutClose.addEventListener('click',(e)=>{
     aboutOverlay.classList.remove("show");
     main.classList.remove("blurred");
+    aboutOverlay.setAttribute("aria-hidden", "true");
     })
 }
 
