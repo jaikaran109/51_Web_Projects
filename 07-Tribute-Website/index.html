@@ -1,107 +1,432 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Tribute Website | A.P.J Abdul Kalam</title>
+
+    <meta name="description" content="A tribute to Dr. A.P.J. Abdul Kalam — India's Missile Man, scientist, teacher and former President.">
+
+    <meta name="theme-color" content="#080d19">
+
+    <title>Dr. A.P.J. Abdul Kalam | A Tribute</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
-
 </head>
+
 <body>
-    
 
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
 
-    <div class="container">
-        <div class="content">
-            <section class="top_section">
-                <div class="image_container">
-                    <img src="./A._P._J._Abdul_Kalam.jpg.webp" alt="tribute"/>
-                </div>
-                <div>
-                    <h1>A. P. J Abdul Kalam</h1>
-                    <h4>1931 - 2015</h4>
-                </div>
-            </section>
-            <section class="about_section">
-                <h2>Missile Man of India</h2>
-                <p>
-                    <b>Avul Pakir Jainulabdeen Abdul Kalam</b>(
-                    15 October 1931 – 27 July 2015) was 
-                    an Indian aerospace scientist and statesman 
-                    who served as the president of India from 2002 to 2007.
-                    Born and raised in a Muslim family in Rameswaram, 
-                    Tamil Nadu, Kalam studied physics and aerospace engineering. He spent the next four decades as a scientist and science administrator, mainly at the Defence Research and Development Organisation (DRDO) and Indian Space Research Organisation (ISRO) and was intimately involved in India's civilian space programme and military missile development efforts. He was known as the "Missile Man of India" for his work on the development of ballistic missile and launch vehicle technology. He also played a pivotal organisational, technical, and political role in Pokhran-II nuclear tests in 1998, India's second such test after the first test in 1974.
-                </p>
-            </section>
-            <section class="biography_section">
-                <h3>Biographies</h3>
-                <ul>
-                    <li>
-                        Etern<ul>
-                                    <li>
-                                    Eternal Quest: Life and Times of Dr Kalam by S Chandra; Pentagon
-                                    Publishers, 2002.
-                                    </li>
-                                    <li>
-                                    President A P J Abdul Kalam by R K Pruthi; Anmol Publications,
-                                    2002.
-                                    </li>
-                                    <li>
-                                    A P J Abdul Kalam: The Visionary of India by K Bhushan, G Katyal;
-                                    A P H Pub Corp, 2002.
-                                    </li>
-                                    <li>
-                                    A Little Dream (documentary film) by P. Dhanapal; Minveli Media
-                                    Works Private Limited, 2008.
-                                    </li>
-                                    <li>
-                                    The Kalam Effect: My Years with the President by P M Nair; Harper
-                                    Collins, 2008.
-                                    </li>
-                                    <li>
-                                    My Days With Mahatma Abdul Kalam by Fr A K George; Novel
-                                    Corporation, 2009.
-                                    </li>
-                                    <li>
-                                    A.P.J. Abdul Kalam: A Life by Arun Tiwari; Haper Collins, 2015.
-                                    </li>
-                                    <li>
-                                    The People's President: Dr A P J Abdul Kalam by S M Khan;
-                                    Bloomsbury Publishing, 2016.
-                                    </li>
-                                </ul>al Quest: Life and Times of Dr Kalam by S Chandra; Pentagon
-                        Publishers, 2002.
-                    </li>
-                    <li>
-                        President A P J Abdul Kalam by R K Pruthi; Anmol Publications,
-                    2002.
-                    </li>
-                    <li>
-                        A P J Abdul Kalam: The Visionary of India by K Bhushan, G Katyal;
-                        A P H Pub Corp, 2002.
-                    </li>
-                    <li>
-                        A Little Dream (documentary film) by P. Dhanapal; Minveli Media
-                        Works Private Limited, 2008.
-                    </li>
-                    <li>
-                        The Kalam Effect: My Years with the President by P M Nair; Harper
-                        Collins, 2008.
-                    </li>
-                    <li>
-                        My Days With Mahatma Abdul Kalam by Fr A K George; Novel
-                        Corporation, 2009.
-                    </li>
-                    <li>
-                        A.P.J. Abdul Kalam: A Life by Arun Tiwari; Haper Collins, 2015.
-                    </li>
-                    <li>
-                        The People's President: Dr A P J Abdul Kalam by S M Khan;
-                        Bloomsbury Publishing, 2016.
-                    </li>
-                </ul>   
-            </section>
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="#" class="logo" aria-label="Tribute home">
+                <span>APJ</span>
+                <span class="logo-dot">.</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#timeline">Timeline</a>
+                <a href="#quotes">Quotes</a>
+                <a href="#legacy">Legacy</a>
+            </nav>
+
+            <span class="nav-label">1931 — 2015</span>
         </div>
-    </div>
+    </header>
+
+    <main id="main-content">
+
+        <div class="container">
+            <div class="content">
+
+                <!-- HERO -->
+
+                <section class="hero" aria-labelledby="hero-title">
+
+                    <div class="hero-text">
+
+                        <span class="eyebrow">
+                            <span class="dot"></span>
+                            A TRIBUTE TO AN ICON
+                        </span>
+
+                        <h1 id="hero-title">
+                            Dr. A.P.J.
+                            <span>Abdul Kalam</span>
+                        </h1>
+
+                        <p class="hero-description">
+                            The visionary who inspired millions to dream,
+                            believe, and achieve.
+                        </p>
+
+                        <div class="life-dates" aria-label="Lived from 1931 to 2015">
+                            <span>1931</span>
+                            <span class="date-line"></span>
+                            <span>2015</span>
+                        </div>
+
+                        <p class="hero-role">
+                            THE MISSILE MAN OF INDIA
+                        </p>
+
+                        <a href="#timeline" class="explore-link">
+                            Explore his journey
+                            <span aria-hidden="true">↗</span>
+                        </a>
+
+                    </div>
+
+                    <div class="image-wrapper">
+
+                        <div class="image-glow"></div>
+
+                        <div class="image-container">
+                            <img
+                                src="./A._P._J._Abdul_Kalam.jpg.webp"
+                                alt="Dr. A.P.J. Abdul Kalam, former President of India"
+                            >
+                        </div>
+
+                        <div class="image-caption">
+                            <span>THE PEOPLE'S PRESIDENT</span>
+                            <span>OF INDIA</span>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- INTRO QUOTE -->
+
+                <section class="featured-quote" aria-label="Inspirational quotation">
+
+                    <span class="quote-symbol" aria-hidden="true">“</span>
+
+                    <blockquote>
+                        Dream, dream, dream. Dreams transform into thoughts
+                        and thoughts result in action.
+                    </blockquote>
+
+                    <p>— Dr. A.P.J. Abdul Kalam</p>
+
+                </section>
+
+                <!-- ABOUT -->
+
+                <section class="about-section" id="about"
+                    aria-labelledby="about-title">
+
+                    <div class="section-heading">
+                        <span class="section-label">01 / HIS JOURNEY</span>
+                        <h2 id="about-title">
+                            A Life of <span>Purpose.</span>
+                        </h2>
+                    </div>
+
+                    <p>
+                        <strong>Avul Pakir Jainulabdeen Abdul Kalam</strong>
+                        (15 October 1931 – 27 July 2015) was an Indian
+                        aerospace scientist and statesman who served as
+                        the 11th President of India from 2002 to 2007.
+
+                        Born in Rameswaram, Tamil Nadu, Kalam studied
+                        physics and aerospace engineering. He spent
+                        decades contributing to India's scientific
+                        development through the Defence Research and
+                        Development Organisation (DRDO) and the Indian
+                        Space Research Organisation (ISRO).
+
+                        He played an important role in India's civilian
+                        space programme and military missile development.
+                        His contributions to science and technology
+                        earned him the title "Missile Man of India".
+
+                        Beyond his scientific achievements, he was a
+                        teacher, author and inspirational figure who
+                        encouraged generations of young Indians to dream
+                        big and work towards a better future.
+                    </p>
+
+                </section>
+
+                <!-- ACHIEVEMENTS -->
+
+                <section class="highlights" aria-label="Key achievements">
+
+                    <article class="highlight-card">
+                        <span>11th</span>
+                        <p>President of India</p>
+                    </article>
+
+                    <article class="highlight-card">
+                        <span>2002–07</span>
+                        <p>Presidential Tenure</p>
+                    </article>
+
+                    <article class="highlight-card">
+                        <span>1997</span>
+                        <p>Bharat Ratna Award</p>
+                    </article>
+
+                </section>
+
+                <!-- TIMELINE -->
+
+                <section class="timeline-section" id="timeline"
+                    aria-labelledby="timeline-title">
+
+                    <div class="section-heading">
+                        <span class="section-label">02 / THE MILESTONES</span>
+                        <h2 id="timeline-title">
+                            A Journey Through <span>Time.</span>
+                        </h2>
+                        <p class="section-description">
+                            Every great journey begins with a dream.
+                            Here are the moments that shaped his legacy.
+                        </p>
+                    </div>
+
+                    <div class="timeline">
+
+                        <article class="timeline-item">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+
+                            <div class="timeline-card">
+                                <span class="timeline-year">1931</span>
+                                <h3>A Humble Beginning</h3>
+                                <p>
+                                    Born on 15 October in Rameswaram,
+                                    Tamil Nadu, into a modest family.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+
+                            <div class="timeline-card">
+                                <span class="timeline-year">1954</span>
+                                <h3>Academic Foundation</h3>
+                                <p>
+                                    Completed his physics degree at
+                                    St. Joseph's College, Tiruchirappalli.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+
+                            <div class="timeline-card">
+                                <span class="timeline-year">1960</span>
+                                <h3>The Beginning of Flight</h3>
+                                <p>
+                                    Graduated in aeronautical engineering
+                                    from the Madras Institute of Technology.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+
+                            <div class="timeline-card">
+                                <span class="timeline-year">1980</span>
+                                <h3>A Historic Achievement</h3>
+                                <p>
+                                    Under his leadership, India's SLV-III
+                                    successfully placed the Rohini satellite
+                                    into orbit.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+
+                            <div class="timeline-card">
+                                <span class="timeline-year">1983</span>
+                                <h3>Missile Development</h3>
+                                <p>
+                                    Led the Integrated Guided Missile
+                                    Development Programme, advancing
+                                    India's defence capabilities.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+
+                            <div class="timeline-card">
+                                <span class="timeline-year">1997</span>
+                                <h3>Bharat Ratna</h3>
+                                <p>
+                                    Honoured with India's highest civilian
+                                    award for his outstanding contributions.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+
+                            <div class="timeline-card">
+                                <span class="timeline-year">2002</span>
+                                <h3>The People's President</h3>
+                                <p>
+                                    Became the 11th President of India,
+                                    serving the nation until 2007.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+
+                            <div class="timeline-card">
+                                <span class="timeline-year">2015</span>
+                                <h3>An Eternal Legacy</h3>
+                                <p>
+                                    Passed away on 27 July while delivering
+                                    a lecture at IIM Shillong. His legacy
+                                    continues to inspire millions.
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </section>
+
+                <!-- QUOTATIONS -->
+
+                <section class="quotes-section" id="quotes"
+                    aria-labelledby="quotes-title">
+
+                    <div class="section-heading">
+                        <span class="section-label">03 / WORDS OF WISDOM</span>
+                        <h2 id="quotes-title">
+                            Thoughts That <span>Inspire.</span>
+                        </h2>
+                        <p class="section-description">
+                            A few timeless ideas from a man who believed
+                            in the extraordinary power of dreams.
+                        </p>
+                    </div>
+
+                    <div class="quotes-grid">
+
+                        <article class="quote-card quote-featured">
+                            <span class="quote-index">01 / DREAMS</span>
+                            <span class="quote-icon" aria-hidden="true">“</span>
+
+                            <blockquote>
+                                You have to dream before your dreams
+                                can come true.
+                            </blockquote>
+
+                            <p>— Dr. A.P.J. Abdul Kalam</p>
+                        </article>
+
+                        <article class="quote-card">
+                            <span class="quote-index">02 / SUCCESS</span>
+                            <span class="quote-icon" aria-hidden="true">“</span>
+
+                            <blockquote>
+                                If you want to shine like a sun,
+                                first burn like a sun.
+                            </blockquote>
+
+                            <p>— Dr. A.P.J. Abdul Kalam</p>
+                        </article>
+
+                        <article class="quote-card">
+                            <span class="quote-index">03 / LEARNING</span>
+                            <span class="quote-icon" aria-hidden="true">“</span>
+
+                            <blockquote>
+                                Learning gives creativity, creativity
+                                leads to thinking, thinking provides
+                                knowledge, knowledge makes you great.
+                            </blockquote>
+
+                            <p>— Dr. A.P.J. Abdul Kalam</p>
+                        </article>
+
+                        <article class="quote-card">
+                            <span class="quote-index">04 / ACTION</span>
+                            <span class="quote-icon" aria-hidden="true">“</span>
+
+                            <blockquote>
+                                Excellence is a continuous process
+                                and not an accident.
+                            </blockquote>
+
+                            <p>— Dr. A.P.J. Abdul Kalam</p>
+                        </article>
+
+                    </div>
+
+                </section>
+
+                <!-- LEGACY -->
+
+                <section class="legacy-section" id="legacy"
+                    aria-labelledby="legacy-title">
+
+                    <span class="section-label">04 / BEYOND A LIFETIME</span>
+
+                    <h2 id="legacy-title">
+                        His life was an inspiration.
+                        <span>His legacy is eternal.</span>
+                    </h2>
+
+                    <p>
+                        A scientist who dreamed of a stronger India.
+                        A teacher who believed in young minds.
+                        A President who remained one of the people.
+                    </p>
+
+                    <span class="legacy-signature">
+                        Remembering Dr. A.P.J. Abdul Kalam
+                    </span>
+
+                </section>
+
+                <!-- FOOTER -->
+
+                <footer class="site-footer">
+
+                    <div class="footer-line"></div>
+
+                    <p>
+                        "A dream is not that which you see while sleeping;
+                        it is something that does not let you sleep."
+                    </p>
+
+                    <span>IN LOVING MEMORY · 1931 — 2015</span>
+
+                    <a href="#main-content" class="back-to-top">
+                        Back to top ↑
+                    </a>
+
+                </footer>
+
+            </div>
+        </div>
+
+    </main>
+
 </body>
 </html>

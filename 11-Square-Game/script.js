@@ -1,4 +1,24 @@
 let s1 = document.getElementById("sq1");
+let aboutOverlay = document.getElementById("about-overlay");
+let aboutBtn = document.getElementById("about-btn");
+let main = document.getElementById("main");
+let aboutClose = document.getElementById("about-close");
+const defaultBg = "rgba(255, 255, 255, 0.06)";
+
+aboutBtn.addEventListener('click',(e)=>{
+    aboutOverlay.classList.add("show");
+    main.classList.add("blurred");
+    aboutOverlay.setAttribute("aria-hidden", "false");
+})
+
+if(aboutClose){
+    aboutClose.addEventListener('click',(e)=>{
+    aboutOverlay.classList.remove("show");
+    main.classList.remove("blurred");
+    aboutOverlay.setAttribute("aria-hidden", "true");
+    })
+}
+
 s1.addEventListener("mouseenter",function(){
     let r = Math.floor(Math.random()*100);
     s1.innerHTML = `<h1>${r}</h1>`;
@@ -16,7 +36,7 @@ s1.addEventListener("dblclick",function(){
     s1.style.backgroundColor = `rgb(${r1},${r2},${r3})`;
 });
 s1.addEventListener("mouseleave",function(){
-    s1.style.backgroundColor = "white";
+    s1.style.backgroundColor = defaultBg;
 });
 
 
@@ -35,7 +55,7 @@ s2.addEventListener("mouseenter",function(){
     }
 });
 s2.addEventListener("mouseleave",function(){
-    s2.style.backgroundColor = "white";
+    s2.style.backgroundColor = defaultBg;
 });
 
 
@@ -49,7 +69,7 @@ s3.addEventListener("mouseenter",function(){
     s3.style.backgroundColor = `rgb(${r1},${r2},${r3})`;
 });
 s3.addEventListener("mouseleave",function(){
-    s3.style.backgroundColor = "white";
+    s3.style.backgroundColor = defaultBg;
 });
 
 
@@ -60,12 +80,12 @@ s4.addEventListener("click",function(){
     let r1 = Math.floor(Math.random()*256);
     let r2 = Math.floor(Math.random()*256);
     let r3 = Math.floor(Math.random()*256);
-    s1.style.backgroundColor = `rgb(${r1},255,255`;
+    s1.style.backgroundColor = `rgb(${r1},255,255)`;
     s2.style.backgroundColor = `rgb(255,${r2},255)`;
     s3.style.backgroundColor = `rgb(255,255,${r3})`;
 });
 s4.addEventListener("mouseleave",function(){
-    s1.style.backgroundColor = "white";
-    s2.style.backgroundColor = "white";
-    s3.style.backgroundColor = "white";    
+    s1.style.backgroundColor = defaultBg;
+    s2.style.backgroundColor = defaultBg;
+    s3.style.backgroundColor = defaultBg;    
 });

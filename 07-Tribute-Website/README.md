@@ -11,11 +11,20 @@ Not currently published.
 https://github.com/jaikaran109/51_Web_Projects/tree/main/07-Tribute-Website
 
 ## Features
-- Tribute introduction section.
-- Informational content presentation.
-- Image and text layout.
-- Organized webpage sections.
-- Simple and readable design.
+- Tribute introduction section highlighting A.P.J. Abdul Kalam.
+- Informational content presentation about his life and achievements.
+- Image and text layout for a visually engaging experience.
+- Organized webpage sections for structured content navigation.
+- Simple and readable design with improved typography.
+- Dedicated About section.
+- Achievements section highlighting major milestones.
+- Chronological timeline showcasing important life events.
+- Inspirational quotes section featuring memorable quotations.
+- Legacy section highlighting his contributions and impact.
+- Responsive layout for desktop, tablet, and mobile devices.
+- Improved navigation with section links.
+- Accessibility enhancements, including semantic HTML, descriptive alt text, keyboard focus states, and skip navigation link.
+- Reduced-motion support for better accessibility.
 
 ## Technologies Used
 - HTML5

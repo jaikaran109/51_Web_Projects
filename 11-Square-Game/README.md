@@ -17,6 +17,7 @@ https://github.com/jaikaran109/51_Web_Projects/tree/main/11-Square-Game
 - User interaction.
 - Dynamic game behaviour.
 - JavaScript-based functionality.
+- About game-play functionality.
 
 ## Technologies Used
 - HTML5
