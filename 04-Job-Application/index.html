@@ -23,9 +23,6 @@
                 <ul id="error-summary-list"></ul>
             </div>
 
-            <!-- Filled in by script.js after a successful submit -->
-            <p id="form-status" class="form-status" role="status"></p>
-
             <form id="application-form" action="" novalidate>
                 <div class="form-container">
                     <div class="form-control">
@@ -190,6 +187,22 @@
                 </div>
             </form>
         </div>
+
+<div id="form-status" class="toast-notification" role="status" aria-live="polite">
+    <div class="toast-icon">✓</div>
+
+    <div class="toast-content">
+        <h3>Application Submitted!</h3>
+        <p>Your application has been received successfully.</p>
+    </div>
+
+    <button type="button" class="toast-close" aria-label="Close notification">
+        &times;
+    </button>
+
+    <div class="toast-progress"></div>
+</div>
+
     </main>
     <script src="script.js"></script>
 </body>
