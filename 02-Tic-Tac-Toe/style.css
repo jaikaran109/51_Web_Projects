@@ -26,6 +26,88 @@ body{
     background-color: #b0413b;
     color: #ffffc7;
 }
+
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 1.5rem auto 0;
+}
+
+.score-card {
+    width: 140px;
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255, 255, 199, 0.15);
+    border: 1px solid rgba(255, 255, 199, 0.3);
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.score-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 199, 0.23);
+}
+
+.player-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffc7;
+}
+
+.player-symbol {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffc7;
+}
+
+.score {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffc7;
+    line-height: 1.2;
+}
+
+.score-caption {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: rgba(255, 255, 199, 0.7);
+}
+
+.score-divider {
+    color: #ffffc7;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .scoreboard {
+        gap: 1rem;
+    }
+
+    .score-card {
+        width: 110px;
+        padding: 1rem 0.7rem;
+    }
+
+    .score {
+        font-size: 2rem;
+    }
+}
+
+
+
 .game{
     height: 60vmin;
     width: 60vmin;

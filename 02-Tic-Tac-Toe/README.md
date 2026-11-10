@@ -10,14 +10,16 @@ A simple and responsive Tic Tac Toe game built using **HTML, CSS, and JavaScript
 
 ## 🚀 Features
 
-* ✅ 2 Player Game (X vs O)
-* ✅ Turn-based logic
-* ✅ Winner detection
-* ✅ Draw detection
-* ✅ Reset Game button
-* ✅ New Game option
-* ✅ Prevents multiple clicks on same box
-* ✅ Responsive UI using `vh` and `vmin`
+- ✅ 2 Player Game (X vs O)
+- ✅ Turn-based logic
+- ✅ Winner detection
+- ✅ Draw detection
+- ✅ Reset Game button
+- ✅ New Game option
+- ✅ Prevents multiple clicks on the same box
+- ✅ Responsive UI using `vh` and `vmin`
+- ✅ Player X and Player O score tracking
+- ✅ Persistent scoreboard using `localStorage` (scores remain saved even after page refresh and reset only when the Reset Game button is pressed)
 
 ---
 

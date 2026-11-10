@@ -3,10 +3,13 @@ let resetBtn = document.querySelector("#reset-btn");
 let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let scoreO = document.querySelector("#score-o");
+let scoreX = document.querySelector("#score-x");
 
 let turnO = true; // playerx , playerO
 let count = 0;
-
+let scoreCountPlayerO=0;
+let scoreCountPlayerX=0;
 const winPatterns = [
     [0, 1, 2],
     [0, 3, 6],  // winnig patterns
@@ -18,11 +21,22 @@ const winPatterns = [
     [6, 7, 8]
 ];
 
+scoreCountPlayerO=Number(localStorage.getItem("PlayerO")) || 0;
+scoreCountPlayerX=Number(localStorage.getItem("PlayerX")) || 0;
+scoreO.textContent=localStorage.getItem("PlayerO") || "0";
+scoreX.textContent=localStorage.getItem("PlayerX") || "0";
+
 
 const resetGame = () => {
     turnO = true;
     count = 0;
     enableBoxes();
+    scoreCountPlayerO=0;
+    scoreCountPlayerX=0;
+    localStorage.setItem("PlayerO",String(scoreCountPlayerO));
+    localStorage.setItem("PlayerX",String(scoreCountPlayerX));
+    scoreO.textContent=localStorage.getItem("PlayerO");
+    scoreX.textContent=localStorage.getItem("PlayerX");
     msgContainer.classList.add("hide");
 };
 
@@ -70,6 +84,19 @@ const enableBoxes = () => {
 
 const showWinner = (winner) => {
     msg.innerText = `Congratulations, Winner is ${winner}`;
+    if(winner==="O"){
+        scoreCountPlayerO++;
+        scoreO.textContent=scoreCountPlayerO;
+        localStorage.setItem("PlayerO",String(scoreCountPlayerO));
+        scoreO.textContent=localStorage.getItem("PlayerO");
+   
+    }
+    if(winner==="X"){
+        scoreCountPlayerX++;
+        scoreX.textContent=scoreCountPlayerX;
+        localStorage.setItem("PlayerX",String(scoreCountPlayerX));
+        scoreX.textContent=localStorage.getItem("PlayerX");
+    }
     msgContainer.classList.remove("hide");
     disableBoxes();
 };
@@ -94,5 +121,10 @@ const checkWinner = () => {
 };
 
 
-newGameBtn.addEventListener("click", resetGame);
+newGameBtn.addEventListener("click", (e)=>{
+    turnO = true;
+    count = 0;
+    enableBoxes();
+    msgContainer.classList.add("hide");
+});
 resetBtn.addEventListener("click", resetGame);
