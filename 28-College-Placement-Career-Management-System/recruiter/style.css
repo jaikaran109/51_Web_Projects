@@ -1,0 +1,56 @@
+/* ============================================================
+   RECRUITER DASHBOARD STYLES
+   ============================================================ */
+.job-list {
+    display: grid;
+    gap: 12px;
+}
+
+.job-card {
+    border: 1px solid var(--border-light);
+    background-color: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.job-card h3 {
+    margin: 0 0 4px 0;
+    font-size: 15.5px;
+    color: var(--text-main);
+}
+
+.job-card p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.status-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+}
+
+.status-card {
+    background-color: var(--primary-subtle);
+    padding: 18px;
+    text-align: center;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-light);
+}
+
+.status-card h3 {
+    color: var(--primary);
+    font-size: 24px;
+    margin: 0 0 4px 0;
+}
+
+.status-card p {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: 0;
+}

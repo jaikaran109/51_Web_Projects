@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard - GLA Campus Portal</title>
+
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="dashboard-header">
+
+        <a href="../index.html" class="home-logo">
+            🎓 GLA Campus Portal
+        </a>
+
+        <nav>
+            <a href="index.html" class="nav-active">Overview</a>
+            <a href="drives/index.html">Placement Drives</a>
+            <a href="resources/index.html">Career Resources</a>
+            <a href="profile/index.html">My Profile</a>
+            <a href="../index.html">Portal Home</a>
+        </nav>
+
+        <a href="../auth/login/index.html" class="logout-button">
+            Logout
+        </a>
+
+    </header>
+
+
+    <!-- Main Content Area -->
+    <main class="dashboard">
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <p>Student Career Panel</p>
+            <h1>Welcome back, Student!</h1>
+            <span>
+                B.Tech Computer Science & Engineering &bull;
+                Roll No: 2415000751 &bull;
+                Verified CGPA: 9.40
+            </span>
+
+            <div class="quick-actions-bar">
+                <a href="drives/index.html" class="btn-primary-action">
+                    <span>💼</span> View Active Drives
+                </a>
+
+                <a href="resources/index.html" class="btn-secondary-action">
+                    <span>📚</span> Preparation Resources
+                </a>
+            </div>
+        </section>
+
+
+        <!-- Statistics Cards -->
+        <section class="dashboard-cards">
+
+            <div class="dashboard-card">
+                <h2>🔎</h2>
+                <h3>12</h3>
+                <p>Eligible Drives</p>
+                <a href="drives/index.html">Browse All &rarr;</a>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>📄</h2>
+                <h3>3</h3>
+                <p>Applications Submitted</p>
+                <a href="#pipeline-section">Track Status &rarr;</a>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>⚡</h2>
+                <h3>2</h3>
+                <p>Shortlisted Interviews</p>
+                <a href="#pipeline-section">View Rounds &rarr;</a>
+            </div>
+
+            <div class="dashboard-card card-success">
+                <h2>🏆</h2>
+                <h3>1</h3>
+                <p>Offer Extended</p>
+                <a href="#pipeline-section">View Details &rarr;</a>
+            </div>
+
+        </section>
+
+
+        <!-- Featured Drives -->
+        <section class="dashboard-section">
+
+            <div class="section-header-flex">
+                <h2>Featured Placement Drives</h2>
+
+                <a href="drives/index.html" class="btn-secondary-action btn-sm">
+                    View All &rarr;
+                </a>
+            </div>
+
+            <div class="job-list">
+
+                <div class="job-card">
+                    <div>
+                        <h3>
+                            Oracle Financial Services — Software Engineer (SDE-1)
+                        </h3>
+
+                        <p>
+                            Package: ₹14.0 LPA &bull;
+                            Cutoff: 7.5 CGPA &bull;
+                            Location: Bangalore
+                        </p>
+
+                        <div class="skill-tags-group">
+                            <span class="skill-mini-tag">Java</span>
+                            <span class="skill-mini-tag">Spring Boot</span>
+                            <span class="skill-mini-tag">React</span>
+                        </div>
+                    </div>
+
+                    <span class="status-badge badge-selected">
+                        🎉 Offer Released
+                    </span>
+                </div>
+
+
+                <div class="job-card">
+                    <div>
+                        <h3>
+                            TCS Digital — Full Stack Developer
+                        </h3>
+
+                        <p>
+                            Package: ₹9.0 LPA &bull;
+                            Cutoff: 7.0 CGPA &bull;
+                            Location: Pune / Noida
+                        </p>
+
+                        <div class="skill-tags-group">
+                            <span class="skill-mini-tag">React</span>
+                            <span class="skill-mini-tag">Node.js</span>
+                            <span class="skill-mini-tag">SQL</span>
+                        </div>
+                    </div>
+
+                    <span class="status-badge badge-shortlisted">
+                        ⚡ Technical Round 2
+                    </span>
+                </div>
+
+
+                <div class="job-card">
+                    <div>
+                        <h3>
+                            Accenture Innovation Labs — App Engineering Analyst
+                        </h3>
+
+                        <p>
+                            Package: ₹11.5 LPA &bull;
+                            Cutoff: 7.2 CGPA &bull;
+                            Location: Hyderabad
+                        </p>
+
+                        <div class="skill-tags-group">
+                            <span class="skill-mini-tag">Java</span>
+                            <span class="skill-mini-tag">Cloud</span>
+                            <span class="skill-mini-tag">DSA</span>
+                        </div>
+                    </div>
+
+                    <a href="drives/index.html" class="btn-apply">
+                        Apply Now
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Application Status Pipeline -->
+        <section class="dashboard-section" id="pipeline-section">
+
+            <h2>My Application Pipeline Status</h2>
+
+            <p class="section-subtitle">
+                Real-time status updates from the placement cell.
+            </p>
+
+            <div class="status-cards">
+
+                <div class="status-card">
+                    <h3>3</h3>
+                    <p>Total Applied</p>
+                </div>
+
+                <div class="status-card">
+                    <h3>1</h3>
+                    <p>Online Test Cleared</p>
+                </div>
+
+                <div class="status-card">
+                    <h3>1</h3>
+                    <p>Interview Round</p>
+                </div>
+
+                <div class="status-card card-success">
+                    <h3>1</h3>
+                    <p>Offer Confirmed</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Upcoming Interviews -->
+        <section class="dashboard-section">
+
+            <div class="section-header-flex">
+
+                <div>
+                    <h2>Upcoming Interviews</h2>
+
+                    <p class="section-subtitle">
+                        Your scheduled placement rounds.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="job-list">
+
+                <div class="job-card">
+
+                    <div>
+
+                        <h3>
+                            TCS Digital — Technical Interview
+                        </h3>
+
+                        <p>
+                            📅 24 September 2026 &bull;
+                            ⏰ 10:00 AM &bull;
+                            Online
+                        </p>
+
+                        <div class="skill-tags-group">
+                            <span class="skill-mini-tag">
+                                Technical Round
+                            </span>
+
+                            <span class="skill-mini-tag">
+                                DSA
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <span class="status-badge badge-shortlisted">
+                        Upcoming
+                    </span>
+
+                </div>
+
+
+                <div class="job-card">
+
+                    <div>
+
+                        <h3>
+                            Accenture Innovation Labs — HR Interview
+                        </h3>
+
+                        <p>
+                            📅 27 September 2026 &bull;
+                            ⏰ 2:00 PM &bull;
+                            Campus
+                        </p>
+
+                        <div class="skill-tags-group">
+                            <span class="skill-mini-tag">
+                                HR Round
+                            </span>
+
+                            <span class="skill-mini-tag">
+                                Final Round
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <span class="status-badge badge-selected">
+                        Scheduled
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div>
+            🎓 <strong>GLA Campus Portal</strong> — Student Career Panel
+        </div>
+
+        <div>
+            <a href="index.html">Overview</a>
+            <a href="drives/index.html">Drives</a>
+            <a href="resources/index.html">Resources</a>
+            <a href="../index.html">Main Portal</a>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

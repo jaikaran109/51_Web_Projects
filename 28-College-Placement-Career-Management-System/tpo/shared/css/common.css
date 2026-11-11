@@ -1,0 +1,397 @@
+/* ============================================================
+   GLA CAMPUS PORTAL - COMMON DESIGN SYSTEM
+   CSS Variables & Universal Base Layouts
+   Theme: Kanak Blue Palette (#0866ff)
+   ============================================================ */
+
+/* CSS Variables for Colors & Typography */
+:root {
+    --primary: #0866ff;
+    --primary-hover: #0052cc;
+    --primary-light: #eaf4ff;
+    --primary-subtle: #f0f7ff;
+    --text-main: #172b4d;
+    --text-muted: #64748b;
+    --text-body: #53657d;
+    --bg-page: #eef6ff;
+    --bg-card: #ffffff;
+    --border-color: #cbdcf0;
+    --border-light: #dbe7f3;
+    --success: #10b981;
+    --success-bg: #ecfdf5;
+    --success-border: #a7f3d0;
+    --warning: #f59e0b;
+    --warning-bg: #fffbeb;
+    --warning-border: #fde68a;
+    --font-family: Arial, sans-serif;
+    --radius: 8px;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* Global Reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+/* ============================================================
+   HEADER & NAVIGATION
+   ============================================================ */
+.dashboard-header,
+.home-header {
+    background-color: var(--bg-card);
+    padding: 15px 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.home-logo {
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 500;
+    margin: 0 10px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--primary);
+    background-color: var(--primary-subtle);
+}
+
+nav a.nav-active {
+    color: var(--primary);
+    font-weight: bold;
+    border-bottom: 2px solid var(--primary);
+    border-radius: 0;
+}
+
+.logout-button {
+    justify-self: end;
+    color: var(--primary);
+    text-decoration: none;
+    border: 1px solid var(--primary);
+    padding: 7px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+/* ============================================================
+   MAIN DASHBOARD LAYOUT & WELCOME BANNER
+   ============================================================ */
+.dashboard {
+    background-color: var(--bg-page);
+    min-height: calc(100vh - 140px);
+    padding: 30px 45px;
+}
+
+.welcome-section {
+    background-color: var(--bg-card);
+    padding: 25px 30px;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow);
+}
+
+.welcome-section p {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 6px 0;
+}
+
+.welcome-section h1 {
+    text-align: left;
+    color: var(--text-main);
+    font-size: 26px;
+    margin: 0 0 6px 0;
+}
+
+.welcome-section span {
+    color: var(--text-muted);
+    font-size: 13.5px;
+}
+
+.quick-actions-bar {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+/* ============================================================
+   DASHBOARD CARDS
+   ============================================================ */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.dashboard-card {
+    background-color: var(--bg-card);
+    padding: 20px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow);
+}
+
+.dashboard-card h2 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+}
+
+.dashboard-card h3 {
+    color: var(--text-main);
+    margin: 0 0 5px 0;
+    font-size: 22px;
+}
+
+.dashboard-card p {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+.dashboard-card a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.dashboard-card a:hover {
+    text-decoration: underline;
+}
+
+.dashboard-section {
+    background-color: var(--bg-card);
+    padding: 22px 25px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-light);
+    margin-bottom: 22px;
+    box-shadow: var(--shadow);
+}
+
+.dashboard-section h2 {
+    color: var(--text-main);
+    font-size: 19px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: -8px 0 16px 0;
+}
+
+/* Universal Helper Layouts */
+.section-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-header-flex h2 {
+    margin: 0;
+}
+
+.skill-tags-group {
+    margin-top: 6px;
+}
+
+.form-actions-bar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.card-success {
+    background-color: var(--success-bg);
+    border-color: var(--success-border);
+}
+
+.card-success h2,
+.card-success h3,
+.card-success p,
+.card-success a {
+    color: #059669;
+}
+
+.card-success p {
+    font-weight: bold;
+}
+
+/* ============================================================
+   BUTTONS & BADGES
+   ============================================================ */
+.btn-primary-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--primary);
+    color: #ffffff;
+    border: 1px solid var(--primary);
+    padding: 9px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-primary-action:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 12.5px;
+}
+
+.btn-lg {
+    padding: 12px 24px;
+    font-size: 14px;
+}
+
+.header-auth-buttons {
+    display: flex;
+    gap: 8px;
+    justify-self: end;
+}
+
+.btn-secondary-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #ffffff;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 9px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-secondary-action:hover {
+    background-color: var(--primary-light);
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.badge-in-review {
+    background-color: var(--warning-bg);
+    color: #b45309;
+    border: 1px solid var(--warning-border);
+}
+
+.badge-shortlisted {
+    background-color: var(--primary-subtle);
+    color: var(--primary);
+    border: 1px solid #bfdbfe;
+}
+
+.badge-selected {
+    background-color: var(--success-bg);
+    color: #059669;
+    border: 1px solid var(--success-border);
+}
+
+.skill-mini-tag {
+    display: inline-block;
+    padding: 2px 7px;
+    background-color: var(--primary-light);
+    color: var(--primary);
+    border-radius: 4px;
+    font-size: 11.5px;
+    margin: 2px 4px 2px 0;
+    font-weight: 600;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+    background-color: #102a43;
+    color: #ffffff;
+    padding: 22px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    margin-left: 15px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .dashboard { padding: 20px 15px; }
+    .dashboard-cards { grid-template-columns: 1fr 1fr; }
+    .dashboard-header, .home-header { grid-template-columns: 1fr; gap: 12px; text-align: center; }
+    .logout-button { justify-self: center; }
+    footer { grid-template-columns: 1fr; gap: 12px; text-align: center; }
+}
+
+@media (max-width: 600px) {
+    .dashboard-cards { grid-template-columns: 1fr; }
+}

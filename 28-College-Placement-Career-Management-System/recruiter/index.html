@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recruiter Dashboard - GLA Campus Portal</title>
+
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="dashboard-header">
+
+        <a href="../index.html" class="home-logo">
+            🎓 GLA Campus Portal
+        </a>
+
+        <nav>
+            <a href="index.html" class="nav-active">Overview</a>
+            <a href="post-job/index.html">Post Job</a>
+            <a href="applicants/index.html">Applicant Funnel</a>
+            <a href="../index.html">Portal Home</a>
+        </nav>
+
+        <a href="../auth/login/index.html" class="logout-button">
+            Logout
+        </a>
+
+    </header>
+
+
+    <!-- Main Content Area -->
+    <main class="dashboard">
+
+        <!-- Welcome Banner -->
+        <section class="welcome-section">
+            <p>Recruiter Business Panel</p>
+            <h1>Recruiter Overview</h1>
+            <span>Manage campus openings, configure job specifications, and review applicant pipelines.</span>
+
+            <div class="quick-actions-bar">
+                <a href="post-job/index.html" class="btn-primary-action"><span>➕</span> Post Job Opening</a>
+                <a href="applicants/index.html" class="btn-secondary-action"><span>👥</span> Applicant Funnel Matrix</a>
+            </div>
+        </section>
+
+
+        <!-- Summary Board Statistics -->
+        <section class="dashboard-cards">
+
+            <div class="dashboard-card">
+                <h2>💼</h2>
+                <h3>4</h3>
+                <p>Active Openings</p>
+                <a href="post-job/index.html">Manage Openings &rarr;</a>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>📄</h2>
+                <h3>156</h3>
+                <p>Total Applicants</p>
+                <a href="applicants/index.html">View Applications &rarr;</a>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>⏳</h2>
+                <h3>32</h3>
+                <p>Pending Evaluations</p>
+                <a href="applicants/index.html">Review Queue &rarr;</a>
+            </div>
+
+            <div class="dashboard-card card-success">
+                <h2>🏆</h2>
+                <h3>18</h3>
+                <p>Offers Released</p>
+                <a href="applicants/index.html#offers-section">View Offers &rarr;</a>
+            </div>
+
+        </section>
+
+
+        <!-- Active Campus Openings -->
+        <section class="dashboard-section">
+
+            <div class="section-header-flex">
+                <h2>Active Campus Openings</h2>
+                <a href="post-job/index.html" class="btn-primary-action btn-sm">+ Add Opening</a>
+            </div>
+
+            <div class="job-list">
+
+                <div class="job-card">
+                    <div>
+                        <h3>Software Development Engineer (SDE-1)</h3>
+                        <p>Bangalore | Package: ₹14.0 LPA | <strong>120 Applicants</strong> &bull; 18 Shortlisted</p>
+                        <div class="skill-tags-group">
+                            <span class="skill-mini-tag">Java</span>
+                            <span class="skill-mini-tag">Spring Boot</span>
+                            <span class="skill-mini-tag">React</span>
+                        </div>
+                    </div>
+                    <a href="applicants/index.html" class="btn-primary-action btn-sm">Manage Funnel</a>
+                </div>
+
+                <div class="job-card">
+                    <div>
+                        <h3>Full Stack Web Developer</h3>
+                        <p>Pune / Hybrid | Package: ₹11.5 LPA | <strong>98 Applicants</strong> &bull; 12 Shortlisted</p>
+                        <div class="skill-tags-group">
+                            <span class="skill-mini-tag">React</span>
+                            <span class="skill-mini-tag">Node.js</span>
+                            <span class="skill-mini-tag">MongoDB</span>
+                        </div>
+                    </div>
+                    <a href="applicants/index.html" class="btn-primary-action btn-sm">Manage Funnel</a>
+                </div>
+
+                <div class="job-card">
+                    <div>
+                        <h3>Data & AI Analyst</h3>
+                        <p>Hyderabad | Package: ₹10.0 LPA | <strong>76 Applicants</strong> &bull; 8 Shortlisted</p>
+                        <div class="skill-tags-group">
+                            <span class="skill-mini-tag">Python</span>
+                            <span class="skill-mini-tag">SQL</span>
+                            <span class="skill-mini-tag">PowerBI</span>
+                        </div>
+                    </div>
+                    <a href="applicants/index.html" class="btn-primary-action btn-sm">Manage Funnel</a>
+                </div>
+
+                <div class="job-card">
+                    <div>
+                        <h3>Cloud & DevOps Associate</h3>
+                        <p>Noida | Package: ₹9.0 LPA | <strong>64 Applicants</strong> &bull; 6 Shortlisted</p>
+                        <div class="skill-tags-group">
+                            <span class="skill-mini-tag">Linux</span>
+                            <span class="skill-mini-tag">Docker</span>
+                            <span class="skill-mini-tag">AWS</span>
+                        </div>
+                    </div>
+                    <a href="applicants/index.html" class="btn-primary-action btn-sm">Manage Funnel</a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Funnel Summary -->
+        <section class="dashboard-section">
+
+            <h2>Campus Recruitment Summary</h2>
+
+            <div class="status-cards">
+                <div class="status-card">
+                    <h3>156</h3>
+                    <p>Total Registered</p>
+                </div>
+                <div class="status-card">
+                    <h3>94</h3>
+                    <p>Passed Online Test</p>
+                </div>
+                <div class="status-card">
+                    <h3>48</h3>
+                    <p>Interviewed</p>
+                </div>
+                <div class="status-card card-success">
+                    <h3>18</h3>
+                    <p>Offers Extended</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            🎓 <strong>GLA Campus Portal</strong> — Recruiter Business Panel
+        </div>
+        <div>
+            <a href="index.html">Overview</a>
+            <a href="post-job/index.html">Post Job</a>
+            <a href="applicants/index.html">Applicants</a>
+            <a href="../index.html">Main Portal</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

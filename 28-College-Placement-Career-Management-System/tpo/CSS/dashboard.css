@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ==========================================================
+   RESET & BASE STYLES
+   ========================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+  background-color: #eef6ff;
+  color: #172b4d;
+  line-height: 1.5;
+}
+
+/* ==========================================================
+   HEADER & NAVIGATION
+   ========================================================== */
+.dashboard-header {
+  background-color: #ffffff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dbe7f3;
+}
+
+.home-logo {
+  color: #0866ff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 6px;
+}
+
+nav a {
+  color: #172b4d;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  color: #0866ff;
+  background-color: #f0f7ff;
+}
+
+nav a.nav-active {
+  background-color: #0866ff;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.logout-button {
+  color: #0866ff;
+  text-decoration: none;
+  border: 1px solid #0866ff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.logout-button:hover {
+  background-color: #0866ff;
+  color: #ffffff;
+}
+
+/* ==========================================================
+   PAGE CONTAINER
+   ========================================================== */
+.dashboard {
+  padding: 30px 45px;
+}
+
+/* ==========================================================
+   WELCOME BANNER
+   ========================================================== */
+.welcome-section {
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  margin-bottom: 22px;
+  border: 1px solid #dbe7f3;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.welcome-section p {
+  color: #0866ff;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.welcome-section h1 {
+  color: #172b4d;
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.welcome-section span {
+  color: #64748b;
+  font-size: 13.5px;
+}
+
+/* ==========================================================
+   STAT CARDS (CSS GRID)
+   ========================================================== */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.dashboard-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #dbe7f3;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.stat-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #f0f7ff;
+  color: #0866ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin: 0 auto 10px auto;
+}
+
+.dashboard-card h2 {
+  color: #172b4d;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.dashboard-card h3 {
+  color: #64748b;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================
+   CHART SECTIONS
+   ========================================================== */
+.dashboard-section {
+  background-color: #ffffff;
+  padding: 22px 25px;
+  border-radius: 8px;
+  border: 1px solid #dbe7f3;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-section h2 {
+  color: #172b4d;
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.section-subtitle {
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.chart-placeholder {
+  height: 240px;
+  background-color: #f0f7ff;
+  border: 1px dashed #0866ff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0866ff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width: 900px) {
+  .dashboard {
+    padding: 20px 15px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

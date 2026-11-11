@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Applicant Funnel - Recruiter Panel</title>
+
+    <link rel="stylesheet" href="../../CSS/common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="dashboard-header">
+
+        <a href="../../index.html" class="home-logo">
+            🎓 GLA Campus Portal
+        </a>
+
+        <nav>
+            <a href="../index.html">Overview</a>
+            <a href="../post-job/index.html">Post Job</a>
+            <a href="index.html" class="nav-active">Applicant Funnel</a>
+            <a href="../../index.html">Portal Home</a>
+        </nav>
+
+        <a href="../../auth/login/index.html" class="logout-button">
+            Logout
+        </a>
+
+    </header>
+
+
+    <!-- Main Content Area -->
+    <main class="dashboard">
+
+        <!-- Welcome Banner -->
+        <section class="welcome-section">
+            <p>Recruiter Business Panel</p>
+            <h1>Applicant Funnel Matrix</h1>
+            <span>Review registered applicants, preview student profiles, and mark selected candidates for offers.</span>
+        </section>
+
+
+        <!-- Statistics Cards -->
+        <section class="dashboard-cards">
+
+            <div class="dashboard-card">
+                <h3>156</h3>
+                <p>Total Applicants</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>32</h3>
+                <p>Pending Review</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>48</h3>
+                <p>Shortlisted</p>
+            </div>
+
+            <div class="dashboard-card card-success">
+                <h3 id="offersCountText">3</h3>
+                <p>Offers Released</p>
+            </div>
+
+        </section>
+
+
+        <!-- Filter & Search Toolbar -->
+        <section class="matrix-filter-bar">
+
+            <div>
+                <input type="text" id="searchInput" class="search-input" placeholder="Search applicant by name...">
+            </div>
+
+            <div>
+                <select id="roleFilter">
+                    <option value="ALL">All Job Roles</option>
+                    <option value="Software Development Engineer (SDE-1)">SDE-1</option>
+                    <option value="Full Stack Web Developer">Full Stack Developer</option>
+                    <option value="Data & AI Analyst">Data & AI Analyst</option>
+                    <option value="Cloud & DevOps Associate">Cloud & DevOps</option>
+                </select>
+            </div>
+
+        </section>
+
+
+        <!-- Applicants Data Table -->
+        <section class="dashboard-section">
+
+            <div class="table-wrapper">
+
+                <table class="applicant-table" id="applicantsTable">
+
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Roll Number</th>
+                            <th>Branch & CGPA</th>
+                            <th>Target Role</th>
+                            <th>Status</th>
+                            <th class="text-right">Evaluation Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="applicantList">
+
+                        <!-- Student 1 -->
+                        <tr id="row-1">
+                            <td><strong>Kanak Gangwar</strong></td>
+                            <td>2415000751</td>
+                            <td>B.Tech CSE (CGPA: 9.40)</td>
+                            <td>Software Development Engineer (SDE-1)</td>
+                            <td><span class="status-badge badge-selected">Selected ✓</span></td>
+                            <td class="text-right">
+                                <span class="skill-mini-tag">Java</span>
+                                <span class="skill-mini-tag">Spring</span>
+                                <span class="skill-mini-tag">React</span>
+                            </td>
+                        </tr>
+
+                        <!-- Student 2 -->
+                        <tr id="row-2">
+                            <td><strong>Ishita Rastogi</strong></td>
+                            <td>2415000708</td>
+                            <td>B.Tech CSE (CGPA: 9.10)</td>
+                            <td>Full Stack Web Developer</td>
+                            <td><span class="status-badge badge-in-review">In Review</span></td>
+                            <td class="text-right">
+                                <span class="skill-mini-tag">Node.js</span>
+                                <span class="skill-mini-tag">React</span>
+                                <span class="skill-mini-tag">MongoDB</span>
+                            </td>
+                        </tr>
+
+                        <!-- Student 3 -->
+                        <tr id="row-3">
+                            <td><strong>Jai Karan Gupta</strong></td>
+                            <td>2415000711</td>
+                            <td>B.Tech CSE (CGPA: 8.90)</td>
+                            <td>Data & AI Analyst</td>
+                            <td><span class="status-badge badge-shortlisted">Shortlisted (R2)</span></td>
+                            <td class="text-right">
+                                <span class="skill-mini-tag">Python</span>
+                                <span class="skill-mini-tag">SQL</span>
+                                <span class="skill-mini-tag">PowerBI</span>
+                            </td>
+                        </tr>
+
+                        <!-- Student 4 -->
+                        <tr id="row-4">
+                            <td><strong>Kakul Mittal</strong></td>
+                            <td>2415000747</td>
+                            <td>B.Tech CSE (CGPA: 9.20)</td>
+                            <td>Cloud & DevOps Associate</td>
+                            <td><span class="status-badge badge-in-review">In Review</span></td>
+                            <td class="text-right">
+                                <span class="skill-mini-tag">Linux</span>
+                                <span class="skill-mini-tag">Docker</span>
+                                <span class="skill-mini-tag">AWS</span>
+                            </td>
+                        </tr>
+
+                        <!-- Student 5 -->
+                        <tr id="row-5">
+                            <td><strong>Aman Sharma</strong></td>
+                            <td>2415000620</td>
+                            <td>B.Tech IT (CGPA: 8.70)</td>
+                            <td>Software Development Engineer (SDE-1)</td>
+                            <td><span class="status-badge badge-shortlisted">Tech Round 1</span></td>
+                            <td class="text-right">
+                                <span class="skill-mini-tag">Java</span>
+                                <span class="skill-mini-tag">C++</span>
+                                <span class="skill-mini-tag">DSA</span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Offers Handed Out Grid -->
+        <section class="dashboard-section" id="offers-section">
+
+            <div class="section-header-flex">
+                <h2>🎉 Offers Handed Out</h2>
+                <span class="offers-registry-tag">Official Selection Registry</span>
+            </div>
+            <p class="section-subtitle">Candidates selected by hiring partners appear in this registry.</p>
+
+            <div class="offers-grid" id="offersContainer">
+
+                <div class="offer-card">
+                    <h3 class="offer-student-name">Kanak Gangwar</h3>
+                    <span class="offer-meta">Roll: 2415000751 &bull; B.Tech CSE</span>
+                    <p class="offer-role-title">Software Development Engineer (SDE-1)</p>
+                    <p class="offer-pkg">💰 Package: ₹14.0 LPA</p>
+                    <div class="offer-footer">
+                        <span>Letter: OFS-2026-01</span>
+                        <span>Date: Sep 18, 2026</span>
+                    </div>
+                </div>
+
+                <div class="offer-card">
+                    <h3 class="offer-student-name">Pooja Choudhary</h3>
+                    <span class="offer-meta">Roll: 2415000632 &bull; B.Tech CSE</span>
+                    <p class="offer-role-title">Software Development Engineer (SDE-1)</p>
+                    <p class="offer-pkg">💰 Package: ₹14.0 LPA</p>
+                    <div class="offer-footer">
+                        <span>Letter: OFS-2026-02</span>
+                        <span>Date: Sep 16, 2026</span>
+                    </div>
+                </div>
+
+                <div class="offer-card">
+                    <h3 class="offer-student-name">Vikram Malhotra</h3>
+                    <span class="offer-meta">Roll: 2415000654 &bull; B.Tech IT</span>
+                    <p class="offer-role-title">Full Stack Web Developer</p>
+                    <p class="offer-pkg">💰 Package: ₹11.5 LPA</p>
+                    <div class="offer-footer">
+                        <span>Letter: OFS-2026-03</span>
+                        <span>Date: Sep 17, 2026</span>
+                    </div>
+                </div>
+
+                <div class="offer-card">
+                    <h3 class="offer-student-name">Simran Gill</h3>
+                    <span class="offer-meta">Roll: 2415000690 &bull; B.Tech CSE</span>
+                    <p class="offer-role-title">Data & AI Analyst</p>
+                    <p class="offer-pkg">💰 Package: ₹10.0 LPA</p>
+                    <div class="offer-footer">
+                        <span>Letter: OFS-2026-04</span>
+                        <span>Date: Sep 17, 2026</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            🎓 <strong>GLA Campus Portal</strong> — Recruiter Business Panel
+        </div>
+        <div>
+            <a href="../index.html">Overview</a>
+            <a href="../post-job/index.html">Post Job</a>
+            <a href="index.html">Applicants</a>
+            <a href="../../index.html">Main Portal</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

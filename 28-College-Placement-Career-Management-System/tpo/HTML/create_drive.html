@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drive Creation Wizard</title>
+  <link rel="stylesheet" href="../CSS/create_drive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <header class="dashboard-header">
+    <a href="../../auth/index.html" class="home-logo">🎓 GLA Campus Portal</a>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="create_drive.html" class="nav-active">Create Drive</a>
+      <a href="students.html">Students</a>
+    </nav>
+    <a href="../../auth/login.html" class="logout-button">Logout</a>
+  </header>
+
+  <main class="dashboard">
+
+    <!-- Step indicator -->
+    <div class="stepper">
+      <div class="step active">
+        <div class="step-circle">1</div>
+        <span>Company Details</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step">
+        <div class="step-circle">2</div>
+        <span>CTC & Deadlines</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step">
+        <div class="step-circle">3</div>
+        <span>Eligibility</span>
+      </div>
+    </div>
+
+    <form class="dashboard-section drive-form">
+
+      <div class="section-header-flex">
+        <h2>Company Branding</h2>
+      </div>
+
+      <div class="form-group">
+        <label for="companyName">Company Name</label>
+        <input type="text" id="companyName" name="companyName" placeholder="e.g., Google" />
+      </div>
+
+      <div class="form-group">
+        <label for="companyLogo">Company Logo</label>
+        <div class="logo-upload-row">
+          <img src="https://placehold.co/60x60?text=Logo" alt="Company logo preview" class="logo-preview" />
+          <label for="companyLogo" class="btn-secondary-action">
+            <i class="fa-solid fa-upload"></i> Choose File
+          </label>
+          <input type="file" id="companyLogo" name="companyLogo" hidden />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="jobRole">Job Role</label>
+        <input type="text" id="jobRole" name="jobRole" placeholder="e.g., Software Engineer" />
+      </div>
+
+      <hr class="section-divider" />
+
+      <div class="section-header-flex">
+        <h2>CTC &amp; Deadlines</h2>
+      </div>
+
+      <div class="form-group">
+        <label for="ctc">CTC (in LPA)</label>
+        <input type="number" id="ctc" name="ctc" placeholder="e.g., 12" />
+      </div>
+
+      <div class="form-group">
+        <label for="deadline">Registration Deadline</label>
+        <input type="date" id="deadline" name="deadline" />
+      </div>
+
+      <hr class="section-divider" />
+
+      <div class="section-header-flex">
+        <h2>Selection Cutoffs</h2>
+      </div>
+
+      <div class="form-group">
+        <label for="minCgpa">Minimum CGPA</label>
+        <input type="number" step="0.1" id="minCgpa" name="minCgpa" placeholder="e.g., 7.5" />
+      </div>
+
+      <div class="form-group">
+        <label for="branches">Eligible Branches</label>
+        <select id="branches" name="branches" multiple>
+          <option value="CSE">CSE</option>
+          <option value="ECE">ECE</option>
+          <option value="ME">ME</option>
+          <option value="Civil">Civil</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="backlogs">Max Active Backlogs Allowed</label>
+        <input type="number" id="backlogs" name="backlogs" placeholder="e.g., 0" />
+      </div>
+
+      <div class="form-actions-bar">
+        <button type="button" class="btn-secondary-action">Back</button>
+        <button type="submit" class="btn-primary-action">Create Drive</button>
+      </div>
+
+    </form>
+
+  </main>
+
+</body>
+</html>

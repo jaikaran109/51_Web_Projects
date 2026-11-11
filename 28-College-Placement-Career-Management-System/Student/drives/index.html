@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Placement Drives - GLA Campus Portal</title>
+
+    <link rel="stylesheet" href="../../CSS/common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="dashboard-header">
+
+        <a href="../../index.html" class="home-logo">
+            🎓 GLA Campus Portal
+        </a>
+
+        <nav>
+            <a href="../index.html">Overview</a>
+            <a href="index.html" class="nav-active">Placement Drives</a>
+            <a href="../resources/index.html">Career Resources</a>
+            <a href="../profile/index.html">My Profile</a>
+            <a href="../../index.html">Portal Home</a>
+        </nav>
+
+        <a href="../../auth/login/index.html" class="logout-button">
+            Logout
+        </a>
+
+    </header>
+
+
+    <!-- Main Content Area -->
+    <main class="dashboard">
+
+        <!-- Welcome Banner -->
+        <section class="welcome-section">
+            <p>Student Career Panel</p>
+            <h1>Active Campus Placement Drives</h1>
+            <span>Explore upcoming on-campus recruitment drives and submit applications.</span>
+        </section>
+
+
+        <!-- Filter Toolbar -->
+        <section class="dashboard-section toolbar-section">
+            <div class="drives-toolbar">
+                <div>
+                    <input type="text" id="driveSearch" class="search-input" placeholder="Search company or role...">
+                </div>
+                <div>
+                    <select id="roleCategory">
+                        <option value="ALL">All Profiles</option>
+                        <option value="Software">Software Engineering</option>
+                        <option value="Data">Data & AI</option>
+                        <option value="Cloud">Cloud & DevOps</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Drives List -->
+        <section class="dashboard-section">
+
+            <h2>Available Placement Drives (6)</h2>
+
+            <div class="job-list" id="drivesList">
+
+                <!-- Drive 1 -->
+                <div class="job-card" data-cat="Software">
+                    <div>
+                        <h3>Oracle — Associate SDE-1</h3>
+                        <p>CTC: <strong>₹14.00 LPA</strong> &bull; Location: Bangalore &bull; Cutoff: 7.5 CGPA</p>
+                        <div class="skill-tags-group">
+                            <span class="skill-mini-tag">Java</span>
+                            <span class="skill-mini-tag">Spring Boot</span>
+                            <span class="skill-mini-tag">React</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-apply btn-applied" disabled>Applied ✓</button>
+                </div>
+
+                <!-- Drive 2 -->
+                <div class="job-card" data-cat="Software">
+                    <div>
+                        <h3>Accenture — Full Stack Software Engineer</h3>
+                        <p>CTC: <strong>₹11.50 LPA</strong> &bull; Location: Hyderabad &bull; Cutoff: 7.2 CGPA</p>
+                        <div class="skill-tags-group">
+                            <span class="skill-mini-tag">React</span>
+                            <span class="skill-mini-tag">Node.js</span>
+                            <span class="skill-mini-tag">MongoDB</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-apply">Apply Now</a>
+                </div>
+
+                <!-- Drive 3 -->
+                <div class="job-card" data-cat="Data">
+                    <div>
+                        <h3>Deloitte USI — Business & AI Analyst</h3>
+                        <p>CTC: <strong>₹10.00 LPA</strong> &bull; Location: Pune / Gurgaon &bull; Cutoff: 7.0 CGPA</p>
+                        <div class="skill-tags-group">
+                            <span class="skill-mini-tag">Python</span>
+                            <span class="skill-mini-tag">SQL</span>
+                            <span class="skill-mini-tag">PowerBI</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-apply">Apply Now</a>
+                </div>
+
+                <!-- Drive 4 -->
+                <div class="job-card" data-cat="Cloud">
+                    <div>
+                        <h3>Wipro Turbo — Cloud & DevOps Associate</h3>
+                        <p>CTC: <strong>₹9.00 LPA</strong> &bull; Location: Noida &bull; Cutoff: 6.8 CGPA</p>
+                        <div class="skill-tags-group">
+                            <span class="skill-mini-tag">Linux</span>
+                            <span class="skill-mini-tag">Docker</span>
+                            <span class="skill-mini-tag">AWS</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-apply">Apply Now</a>
+                </div>
+
+                <!-- Drive 5 -->
+                <div class="job-card" data-cat="Software">
+                    <div>
+                        <h3>TCS Digital — Systems Engineer</h3>
+                        <p>CTC: <strong>₹9.00 LPA</strong> &bull; Location: Pan-India &bull; Cutoff: 7.0 CGPA</p>
+                        <div class="skill-tags-group">
+                            <span class="skill-mini-tag">Java</span>
+                            <span class="skill-mini-tag">DSA</span>
+                            <span class="skill-mini-tag">SQL</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-apply">Apply Now</a>
+                </div>
+
+                <!-- Drive 6 -->
+                <div class="job-card" data-cat="Software">
+                    <div>
+                        <h3>Infosys — Specialist Programmer</h3>
+                        <p>CTC: <strong>₹12.00 LPA</strong> &bull; Location: Bangalore &bull; Cutoff: 7.5 CGPA</p>
+                        <div class="skill-tags-group">
+                            <span class="skill-mini-tag">C++</span>
+                            <span class="skill-mini-tag">Java</span>
+                            <span class="skill-mini-tag">Algorithms</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-apply">Apply Now</a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            🎓 <strong>GLA Campus Portal</strong> — Student Career Panel
+        </div>
+        <div>
+            <a href="../index.html">Overview</a>
+            <a href="index.html">Drives</a>
+            <a href="../resources/index.html">Resources</a>
+            <a href="../../index.html">Main Portal</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+/* ============================================================
+   STUDENT PLACEMENT DRIVES STYLES
+   ============================================================ */
+.toolbar-section {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.drives-toolbar {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.drives-toolbar input,
+.drives-toolbar select {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 13.5px;
+    outline: none;
+}
+
+.search-input {
+    width: 260px;
+}
+
+.job-list {
+    display: grid;
+    gap: 12px;
+}
+
+.job-card {
+    border: 1px solid var(--border-light);
+    background-color: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.job-card h3 {
+    margin: 0 0 4px 0;
+    font-size: 15.5px;
+    color: var(--text-main);
+}
+
+.job-card p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.btn-apply {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-apply:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-applied {
+    background-color: var(--success-bg);
+    color: var(--success);
+    border: 1px solid var(--success-border);
+    cursor: default;
+}

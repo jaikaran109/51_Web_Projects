@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TPO Analytics Hub</title>
+  <!-- Shared design system (colors, header, cards, buttons, badges) -->
+  <link rel="stylesheet" href="../CSS/dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <header class="dashboard-header">
+    <a href="../../auth/index.html" class="home-logo">🎓 GLA Campus Portal</a>
+    <nav>
+      <a href="dashboard.html" class="nav-active">Dashboard</a>
+      <a href="create_drive.html">Create Drive</a>
+      <a href="students.html">Students</a>
+    </nav>
+    <a href="../../auth/login.html" class="logout-button">Logout</a>
+  </header>
+
+  <main class="dashboard">
+
+    <!-- Welcome banner (shared .welcome-section) -->
+    <section class="welcome-section">
+      <p>TPO Admin Panel</p>
+      <h1>Welcome back, TPO Admin 👋</h1>
+      <span>Here's how placements are shaping up this season.</span>
+    </section>
+
+    <!-- Stat cards (shared .dashboard-cards / .dashboard-card) -->
+    <section class="dashboard-cards">
+      <div class="dashboard-card">
+        <div class="stat-icon-circle"><i class="fa-solid fa-chart-pie"></i></div>
+        <h2>82%</h2>
+        <h3>Placement %</h3>
+      </div>
+      <div class="dashboard-card">
+        <div class="stat-icon-circle"><i class="fa-solid fa-sack-dollar"></i></div>
+        <h2>₹42 LPA</h2>
+        <h3>Highest Package</h3>
+      </div>
+      <div class="dashboard-card">
+        <div class="stat-icon-circle"><i class="fa-solid fa-coins"></i></div>
+        <h2>₹8.5 LPA</h2>
+        <h3>Average Package</h3>
+      </div>
+    </section>
+
+    <!-- Charts (shared .dashboard-section) -->
+    <section class="dashboard-section">
+      <h2>Department-wise Placement</h2>
+      <p class="section-subtitle">CSE vs ECE vs ME</p>
+      <div class="chart-placeholder">
+        <p>[ Bar Chart: CSE vs ECE vs ME ]</p>
+      </div>
+    </section>
+
+    <section class="dashboard-section">
+      <h2>Year-on-Year Hiring Trend</h2>
+      <p class="section-subtitle">2022 – 2026</p>
+      <div class="chart-placeholder">
+        <p>[ Line Chart: 2022 – 2026 Hiring Trend ]</p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

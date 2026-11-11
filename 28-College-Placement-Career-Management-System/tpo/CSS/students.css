@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ==========================================================
+   RESET & BASE STYLES
+   ========================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+  background-color: #eef6ff;
+  color: #172b4d;
+  line-height: 1.5;
+}
+
+/* ==========================================================
+   HEADER & NAVIGATION
+   ========================================================== */
+.dashboard-header {
+  background-color: #ffffff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dbe7f3;
+}
+
+.home-logo {
+  color: #0866ff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 6px;
+}
+
+nav a {
+  color: #172b4d;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  color: #0866ff;
+  background-color: #f0f7ff;
+}
+
+nav a.nav-active {
+  background-color: #0866ff;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.logout-button {
+  color: #0866ff;
+  text-decoration: none;
+  border: 1px solid #0866ff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.logout-button:hover {
+  background-color: #0866ff;
+  color: #ffffff;
+}
+
+/* ==========================================================
+   PAGE CONTAINER
+   ========================================================== */
+.dashboard {
+  padding: 30px 45px;
+}
+
+/* ==========================================================
+   SECTION WRAPPER
+   ========================================================== */
+.dashboard-section {
+  background-color: #ffffff;
+  padding: 22px 25px;
+  border-radius: 8px;
+  border: 1px solid #dbe7f3;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-section h2 {
+  color: #172b4d;
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.section-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+/* ==========================================================
+   FILTER BAR & SEARCH BOX
+   ========================================================== */
+.filter-bar {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  border: 1px solid #cbdcf0;
+  border-radius: 6px;
+  padding: 9px 14px;
+  flex: 1;
+  min-width: 220px;
+  color: #64748b;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 13.5px;
+  width: 100%;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.filter-select {
+  padding: 9px 14px;
+  border: 1px solid #cbdcf0;
+  border-radius: 6px;
+  font-size: 13.5px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+/* ==========================================================
+   STUDENT TABLE
+   ========================================================== */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table th {
+  text-align: left;
+  font-size: 12.5px;
+  color: #64748b;
+  text-transform: uppercase;
+  padding: 12px 14px;
+  border-bottom: 2px solid #dbe7f3;
+}
+
+.student-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #dbe7f3;
+  font-size: 13.5px;
+}
+
+.student-table tr:hover {
+  background-color: #f7fafc;
+}
+
+.student-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+/* ==========================================================
+   STATUS BADGES
+   ========================================================== */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge-in-review {
+  background-color: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.badge-selected {
+  background-color: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+}
+
+.badge-flagged {
+  background-color: #fdecea;
+  color: #c0392b;
+  border: 1px solid #f5c6cb;
+}
+
+/* ==========================================================
+   ACTION ICON BUTTONS
+   ========================================================== */
+.action-cell {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verify-btn {
+  background-color: #ecfdf5;
+  color: #059669;
+}
+
+.flag-btn {
+  background-color: #fdecea;
+  color: #c0392b;
+}
+
+/* ==========================================================
+   PAGINATION
+   ========================================================== */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pagination-info {
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+.pagination-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.page-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid #cbdcf0;
+  background-color: #ffffff;
+  color: #64748b;
+  font-size: 12.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-btn.active {
+  background-color: #0866ff;
+  border-color: #0866ff;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width: 900px) {
+  .dashboard {
+    padding: 20px 15px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

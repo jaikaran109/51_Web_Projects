@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jai Karan Gupta | Developer Portfolio</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="site-wrapper">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <a href="#home" class="logo">
+        <span class="logo-icon"><i class="ri-code-s-slash-line"></i></span>
+        <span>JAI KARAN</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#coding">Coding</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open Menu">
+        <i class="ri-menu-3-line"></i>
+      </button>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="hero-kicker">Building Projects • Solving Problems • Learning Daily</p>
+
+        <h1>JAI KARAN <span>GUPTA</span></h1>
+
+        <h2>Frontend Developer | Java DSA Learner | ML Enthusiast</h2>
+
+        <p class="hero-desc">
+          I build responsive web projects, solve coding problems in Java, and explore
+          Machine Learning by creating practical real-life projects.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i class="ri-rocket-2-fill"></i>
+            View Projects
+          </a>
+
+          <a href="#contact" class="btn btn-outline">
+            <i class="ri-mail-fill"></i>
+            Contact Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Clean right side UI instead of ugly character -->
+      <div class="hero-card">
+        <div class="hero-card-top">
+          <div class="avatar-box">
+            JK
+          </div>
+          <div>
+            <h3>Jai Karan Gupta</h3>
+            <p>Developer in Progress</p>
+          </div>
+        </div>
+
+        <div class="terminal-card">
+          <div class="terminal-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <pre><code>const jai = {
+  focus: ["Web Dev", "Java DSA", "ML"],
+  mindset: "Learning by building",
+  status: "Open to opportunities"
+};</code></pre>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <strong>400+</strong>
+            <span>Problems</span>
+          </div>
+          <div>
+            <strong>1500+</strong>
+            <span>Rating</span>
+          </div>
+          <div>
+            <strong>1800+</strong>
+            <span>Contributions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="panel about-panel" id="about">
+      <div class="section-heading">
+        <i class="ri-user-star-line"></i>
+        <h2>About Me</h2>
+        <span></span>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am a Computer Science student focused on Web Development, Data Structures
+            & Algorithms, and Machine Learning. I enjoy building useful projects, learning
+            new technologies, and improving my problem-solving skills through consistent practice.
+          </p>
+        </div>
+
+        <div class="about-tags">
+          <span><i class="ri-layout-4-line"></i> Frontend Development</span>
+          <span><i class="ri-code-box-line"></i> Java DSA</span>
+          <span><i class="ri-brain-line"></i> Machine Learning</span>
+          <span><i class="ri-open-source-line"></i> Open Source Contributor</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="panel stack-panel" id="skills">
+      <div class="section-heading">
+        <i class="ri-code-s-slash-line"></i>
+        <h2>Tech Stack & Platforms</h2>
+        <span></span>
+      </div>
+
+      <p class="section-subtitle">
+        Change percentage only in <b>data-level</b>. Bars will update automatically.
+      </p>
+
+      <div class="stack-layout">
+
+        <div class="stack-card tall">
+          <div class="stack-title">
+            <i class="ri-global-line"></i>
+            <h3>Web Development</h3>
+          </div>
+
+          <div class="skill-row" data-level="95">
+            <i class="devicon-html5-plain colored"></i>
+            <span>HTML</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="82">
+            <i class="devicon-css3-plain colored"></i>
+            <span>CSS</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="40">
+            <i class="devicon-javascript-plain colored"></i>
+            <span>JavaScript</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="40">
+            <i class="devicon-react-original colored"></i>
+            <span>React</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="18">
+            <i class="devicon-tailwindcss-original colored"></i>
+            <span>Tailwind CSS</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="5">
+            <i class="devicon-bootstrap-plain colored"></i>
+            <span>Bootstrap</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="10">
+            <i class="devicon-nodejs-plain colored"></i>
+            <span>Node.js</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="0">
+            <i class="devicon-express-original"></i>
+            <span>Express.js</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="0">
+            <i class="devicon-nextjs-original"></i>
+            <span>Next.js</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+        </div>
+
+        <div class="stack-card">
+          <div class="stack-title">
+            <i class="ri-terminal-box-line"></i>
+            <h3>Programming</h3>
+          </div>
+
+          <div class="skill-row" data-level="50">
+            <i class="devicon-java-plain colored"></i>
+            <span>Java</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="30">
+            <i class="devicon-python-plain colored"></i>
+            <span>Python</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="58">
+            <i class="ri-braces-line"></i>
+            <span>DSA / Problem Solving</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+        </div>
+
+        <div class="stack-card">
+          <div class="stack-title">
+            <i class="ri-database-2-line"></i>
+            <h3>Databases</h3>
+          </div>
+
+          <div class="skill-row" data-level="82">
+            <i class="devicon-mysql-plain colored"></i>
+            <span>SQL</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="88">
+            <i class="devicon-postgresql-plain colored"></i>
+            <span>PostgreSQL</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="82">
+            <i class="devicon-mongodb-plain colored"></i>
+            <span>MongoDB</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="0">
+            <i class="devicon-firebase-plain colored"></i>
+            <span>Firebase</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+        </div>
+
+        <div class="stack-card">
+          <div class="stack-title">
+            <i class="ri-tools-line"></i>
+            <h3>Tools</h3>
+          </div>
+
+          <div class="skill-row" data-level="68">
+            <i class="devicon-git-plain colored"></i>
+            <span>Git</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="90">
+            <i class="devicon-github-original"></i>
+            <span>GitHub</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="82">
+            <i class="devicon-vscode-plain colored"></i>
+            <span>VS Code</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="0">
+            <i class="devicon-postman-plain colored"></i>
+            <span>Postman</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+        </div>
+
+        <div class="stack-card">
+          <div class="stack-title">
+            <i class="ri-gamepad-line"></i>
+            <h3>Coding Platforms</h3>
+          </div>
+
+          <div class="skill-row" data-level="30">
+            <i class="ri-code-box-line leetcode"></i>
+            <span>LeetCode</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="90">
+            <i class="devicon-github-original"></i>
+            <span>GitHub</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="70">
+            <i class="ri-bowl-line"></i>
+            <span>CodeChef</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+        </div>
+
+        <div class="stack-card wide">
+          <div class="stack-title">
+            <i class="ri-brain-line"></i>
+            <h3>Machine Learning</h3>
+          </div>
+
+          <div class="skill-row" data-level="5">
+            <i class="devicon-numpy-plain colored"></i>
+            <span>NumPy</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="8">
+            <i class="devicon-pandas-plain colored"></i>
+            <span>Pandas</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="0">
+            <i class="devicon-matplotlib-plain colored"></i>
+            <span>Matplotlib</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="2">
+            <i class="devicon-scikitlearn-plain colored"></i>
+            <span>Scikit-learn</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+
+          <div class="skill-row" data-level="8">
+            <i class="devicon-tensorflow-original colored"></i>
+            <span>TensorFlow</span>
+            <div class="meter"><span></span></div>
+            <strong></strong>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="panel projects-panel" id="projects">
+      <div class="section-heading">
+        <i class="ri-crosshair-2-line"></i>
+        <h2>Projects & Repositories</h2>
+        <span></span>
+      </div>
+
+      <div class="project-grid">
+
+        <a href="https://github.com/jaikaran109/DrishtiAI" target="_blank" class="project-card featured">
+          <div class="project-icon"><i class="ri-eye-line"></i></div>
+          <h3>DrishtiAI</h3>
+          <p>Real-life AI project focused on visual understanding and assistance.</p>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>AI</span>
+            <span>Real Project</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/jaikaran109/51_Web_Projects" target="_blank" class="project-card featured">
+          <div class="project-icon"><i class="ri-folder-line"></i></div>
+          <h3>51 Web Projects</h3>
+          <p>A collection of beginner-friendly web development projects.</p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/jaikaran109/DSA" target="_blank" class="project-card featured">
+          <div class="project-icon"><i class="ri-braces-line"></i></div>
+          <h3>DSA in Java</h3>
+          <p>Java-based data structures and algorithms solutions.</p>
+          <div class="project-tags">
+            <span>Java</span>
+            <span>DSA</span>
+            <span>Problem Solving</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/jaikaran109/2048-Game" target="_blank" class="project-card featured">
+          <div class="project-icon"><i class="ri-number-2"></i></div>
+          <h3>2048 Game</h3>
+          <p>Interactive 2048 puzzle game with clean UI and JavaScript logic.</p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/jaikaran109/Web-Development" target="_blank" class="project-card">
+          <div class="project-icon"><i class="ri-javascript-line"></i></div>
+          <h3>Web Development</h3>
+          <p>Frontend practice repository with multiple web development concepts.</p>
+          <div class="project-tags">
+            <span>Frontend</span>
+            <span>Practice</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/jaikaran109/Machine-Learning" target="_blank" class="project-card">
+          <div class="project-icon"><i class="ri-brain-line"></i></div>
+          <h3>Machine Learning</h3>
+          <p>Machine Learning learning repository with basic ML experiments.</p>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>ML</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/jaikaran109/Currency-Converter" target="_blank" class="project-card">
+          <div class="project-icon"><i class="ri-exchange-dollar-line"></i></div>
+          <h3>Currency Converter</h3>
+          <p>Real-time currency converter using JavaScript and API integration.</p>
+          <div class="project-tags">
+            <span>API</span>
+            <span>JavaScript</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/jaikaran109/PostGreSQL" target="_blank" class="project-card">
+          <div class="project-icon"><i class="ri-database-2-line"></i></div>
+          <h3>PostgreSQL</h3>
+          <p>Database practice repository focused on PostgreSQL for Data Science.</p>
+          <div class="project-tags">
+            <span>SQL</span>
+            <span>Database</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/jaikaran109/MongoDB" target="_blank" class="project-card">
+          <div class="project-icon"><i class="ri-leaf-line"></i></div>
+          <h3>MongoDB</h3>
+          <p>MongoDB learning repository covering database basics and commands.</p>
+          <div class="project-tags">
+            <span>MongoDB</span>
+            <span>Database</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- CODING -->
+    <section class="panel coding-panel" id="coding">
+      <div class="section-heading">
+        <i class="ri-trophy-line"></i>
+        <h2>Coding Records</h2>
+        <span></span>
+      </div>
+
+      <div class="records-grid">
+        <div class="record-card">
+          <i class="ri-code-box-line"></i>
+          <h3>400+</h3>
+          <p>LeetCode Problems</p>
+        </div>
+
+        <div class="record-card">
+          <i class="ri-line-chart-line"></i>
+          <h3>1500+</h3>
+          <p>LeetCode Rating</p>
+        </div>
+
+        <div class="record-card">
+          <i class="ri-github-fill"></i>
+          <h3>1800+</h3>
+          <p>GitHub Contributions</p>
+        </div>
+
+        <div class="record-card">
+          <i class="ri-open-source-line"></i>
+          <h3>GSSoC</h3>
+          <p>Open Source Contributor</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="panel contact-panel" id="contact">
+      <div class="section-heading">
+        <i class="ri-send-plane-fill"></i>
+        <h2>Let's Connect</h2>
+        <span></span>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-text">
+          <p>
+            I'm open to internships, collaborations, project discussions, and learning opportunities.
+            Feel free to connect with me.
+          </p>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:jaik05581@gmail.com"><i class="ri-mail-fill"></i> jaik05581@gmail.com</a>
+          <a href="https://github.com/jaikaran109" target="_blank"><i class="ri-github-fill"></i> github.com/jaikaran109</a>
+          <a href="https://www.linkedin.com/in/jaikaran109/" target="_blank"><i class="ri-linkedin-box-fill"></i> LinkedIn</a>
+          <a href="#"><i class="ri-download-2-line"></i> Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Jai Karan Gupta. All rights reserved.</p>
+      <p>Built with <span>❤</span> and lots of ☕</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
