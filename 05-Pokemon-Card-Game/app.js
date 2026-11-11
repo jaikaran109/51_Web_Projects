@@ -19,6 +19,9 @@ const movesEl = document.getElementById('moves');
 const timerEl = document.getElementById('timer');
 const playAgainBtn = document.getElementById('play-again');
 const winMessage = document.getElementById('win-message');
+const bestMoves = document.getElementById('best-moves');
+const bestTime = document.getElementById('best-time');
+const bestScore = document.getElementById('best-score');
 
 function initGame() {
     cards = [...POKEMON, ...POKEMON];
@@ -185,11 +188,64 @@ function startTimer() {
     }, 1000);
 }
 
+function initRecords(){
+    bestMoves.textContent=localStorage.getItem("best-moves")|| "0";
+bestTime.textContent = localStorage.getItem("best-time") || "0:00";
+bestScore.textContent=localStorage.getItem("best-score")|| "0";
+if(bestMoves.textContent==="0")
+    localStorage.setItem("best-moves","0");
+if(bestTime.textContent==="0")
+    localStorage.setItem("best-time","0");
+if(bestScore.textContent==="0")
+    localStorage.setItem("best-score","0");
+}
+
+initRecords();
+
 function endGame() {
     clearInterval(timerInterval);
     playAgainBtn.hidden = false;
     winMessage.hidden = false;
     winMessage.textContent = `You won in ${moves} moves and ${timerEl.textContent}!`;
+    if(Number(`${moves}`)>=Number(localStorage.getItem("best-moves"))){
+bestMoves.textContent=`${moves}`;
+localStorage.setItem("best-moves",bestMoves.textContent);
+    }
+    
+    
+   let elapsedSeconds = Math.max(
+    1,
+    Math.floor((Date.now() - startTime) / 1000)
+);
+
+const previousBestTime = Number(
+    localStorage.getItem("best-time-seconds")
+) || Infinity;
+
+if (elapsedSeconds < previousBestTime) {
+    localStorage.setItem("best-time-seconds", elapsedSeconds);
+
+    const minutes = Math.floor(elapsedSeconds / 60);
+    const seconds = elapsedSeconds % 60;
+
+    bestTime.textContent =
+        `${minutes}:${seconds.toString().padStart(2, "0")}`;
+
+    localStorage.setItem("best-time", bestTime.textContent);
+}
+    elapsedSeconds = Math.floor((Date.now() - startTime) / 1000);
+if(elapsedSeconds===0){
+ elapsedSeconds = Math.max(
+    1,
+    Math.floor((Date.now() - startTime) / 1000)
+);
+}
+let score = Math.round(10000 / (moves * elapsedSeconds));
+if(score>=Number(localStorage.getItem("best-score"))){
+bestScore.textContent = score;
+localStorage.setItem("best-score",bestScore.textContent);
+}
+
     winMessage.setAttribute('role', 'status');
     winMessage.setAttribute('aria-live', 'polite');
 }

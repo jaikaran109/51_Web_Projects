@@ -1,29 +1,184 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon Card Game</title>
+    <meta name="theme-color" content="#0b1020">
+
+    <title>Pokémon Arena | Memory Challenge</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Pokemon Card Game</h1>
-    </header>
 
-    <main>
-        <div class="game-stats">
-            <div class="stat">Moves: <span id="moves">0</span></div>
-            <div class="stat">Time: <span id="timer">0:00</span></div>
-        </div>
+    <div class="app-container">
 
-        <div class="game-board" id="game-board"></div>
+        <!-- Header -->
+        <header class="header">
+            <a href="#" class="brand">
+                <span class="brand-ball">◉</span>
+                <span>POKÉMON <span class="brand-accent">ARENA</span></span>
+            </a>
 
-        <button class="play-again" id="play-again" hidden>Play Again</button>
+            <div class="header-status">
+                <span class="status-dot"></span>
+                MEMORY CHALLENGE
+            </div>
+        </header>
 
-        <div class="win-message" id="win-message" hidden aria-live="polite"></div>
-    </main>
+        <main>
+
+            <!-- Hero -->
+            <section class="hero">
+                <div class="hero-label">
+                    <span>✦</span> TRAIN YOUR MEMORY
+                </div>
+
+                <h1>Gotta Match <span>'Em All!</span></h1>
+
+                <p>
+                    Test your memory, discover Pokémon pairs
+                    and beat your personal records.
+                </p>
+            </section>
+
+            <!-- Game Statistics -->
+            <section class="game-stats" aria-label="Game statistics">
+
+                <div class="stat-card">
+                    <div class="stat-icon moves-icon">⚡</div>
+
+                    <div>
+                        <span class="stat-label">TOTAL MOVES</span>
+                        <strong id="moves">0</strong>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon timer-icon">◷</div>
+
+                    <div>
+                        <span class="stat-label">TIME ELAPSED</span>
+                        <strong id="timer">0:00</strong>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Main Game Layout -->
+            <section class="game-layout">
+
+                <!-- Game Board -->
+                <div class="game-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <span class="section-label">THE BATTLEFIELD</span>
+                            <h2>Find the Pairs</h2>
+                        </div>
+
+                        <span class="pairs-count">4 PAIRS</span>
+                    </div>
+
+                    <div class="game-board" id="game-board"></div>
+
+                    <button
+                        class="play-again"
+                        id="play-again"
+                        type="button"
+                        hidden
+                    >
+                        <span>↻</span> Play Again
+                    </button>
+
+                    <div
+                        class="win-message"
+                        id="win-message"
+                        hidden
+                        aria-live="polite"
+                    ></div>
+
+                </div>
+
+                <!-- Personal Records -->
+                <aside class="records-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <span class="section-label">YOUR ACHIEVEMENTS</span>
+                            <h2>Personal Records</h2>
+                        </div>
+
+                        <span class="trophy-icon">🏆</span>
+                    </div>
+
+                    <div class="records-list">
+
+                        <div class="record-item">
+                            <div class="record-icon moves-record">⚡</div>
+
+                            <div class="record-info">
+                                <span>BEST MOVES</span>
+                                <strong id="best-moves"></strong>
+                                <small>Lowest moves</small>
+                            </div>
+                        </div>
+
+                        <div class="record-item">
+                            <div class="record-icon time-record">◷</div>
+
+                            <div class="record-info">
+                                <span>BEST TIME</span>
+                                <strong id="best-time"></strong>
+                                <small>Fastest completion</small>
+                            </div>
+                        </div>
+
+                        <div class="record-item overall-item">
+                            <div class="record-icon score-record">🏅</div>
+
+                            <div class="record-info">
+                                <span>OVERALL BEST</span>
+                                <strong id="best-score">--</strong>
+                                <small>Combined performance</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="record-tip">
+                        <span>💡</span>
+                        <p>Complete the game with fewer moves and less time to achieve a higher score!</p>
+                    </div>
+
+                    <div class="arena-decoration">
+                        <span class="decoration-ball">◉</span>
+                        <div>
+                            <strong>Become a Master</strong>
+                            <small>Every move counts.</small>
+                        </div>
+                    </div>
+
+                </aside>
+
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <p>Made with <span>♥</span> for Pokémon fans</p>
+            <p>Gotta Match 'Em All!</p>
+        </footer>
+
+    </div>
 
     <script src="app.js"></script>
+
 </body>
 </html>
