@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Verification Grid</title>
+  <link rel="stylesheet" href="../CSS/students.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <header class="dashboard-header">
+    <a href="../../auth/index.html" class="home-logo">🎓 GLA Campus Portal</a>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="create_drive.html">Create Drive</a>
+      <a href="students.html" class="nav-active">Students</a>
+    </nav>
+    <a href="../../auth/login.html" class="logout-button">Logout</a>
+  </header>
+
+  <main class="dashboard">
+
+    <section class="dashboard-section">
+
+      <div class="section-header-flex">
+        <h2>Student Verification Grid</h2>
+      </div>
+      <p class="section-subtitle">Verify student records or flag discrepancies before drives open</p>
+
+      <div class="filter-bar">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search by student name..." />
+        </div>
+        <select class="filter-select">
+          <option value="">Filter by Branch</option>
+          <option value="CSE">CSE</option>
+          <option value="ECE">ECE</option>
+          <option value="ME">ME</option>
+        </select>
+        <select class="filter-select">
+          <option value="">Sort by Rank</option>
+          <option value="asc">CGPA: High to Low</option>
+          <option value="desc">CGPA: Low to High</option>
+        </select>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="student-table">
+          <thead>
+            <tr>
+              <th>Student</th>
+              <th>Branch</th>
+              <th>CGPA</th>
+              <th>Backlogs</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td class="student-cell">
+                <img src="https://ui-avatars.com/api/?name=Kanak+Gangwar&background=0866ff&color=fff" alt="Kanak Gangwar" class="avatar" />
+                <span>Kanak Gangwar</span>
+              </td>
+              <td>CSE</td>
+              <td>9.40</td>
+              <td>0</td>
+              <td><span class="status-badge badge-selected">Verified</span></td>
+              <td class="action-cell">
+                <button class="icon-btn verify-btn" title="Verify Details">
+                  <i class="fa-solid fa-circle-check"></i>
+                </button>
+                <button class="icon-btn flag-btn" title="Flag Discrepancy">
+                  <i class="fa-solid fa-flag"></i>
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="student-cell">
+                <img src="https://ui-avatars.com/api/?name=Ishita+Rastogi&background=0052cc&color=fff" alt="Ishita Rastogi" class="avatar" />
+                <span>Ishita Rastogi</span>
+              </td>
+              <td>CSE</td>
+              <td>9.10</td>
+              <td>0</td>
+              <td><span class="status-badge badge-selected">Verified</span></td>
+              <td class="action-cell">
+                <button class="icon-btn verify-btn" title="Verify Details">
+                  <i class="fa-solid fa-circle-check"></i>
+                </button>
+                <button class="icon-btn flag-btn" title="Flag Discrepancy">
+                  <i class="fa-solid fa-flag"></i>
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="student-cell">
+                <img src="https://ui-avatars.com/api/?name=Jai+Karan+Gupta&background=64748b&color=fff" alt="Jai Karan Gupta" class="avatar" />
+                <span>Jai Karan Gupta</span>
+              </td>
+              <td>CSE</td>
+              <td>8.90</td>
+              <td>0</td>
+              <td><span class="status-badge badge-in-review">Pending</span></td>
+              <td class="action-cell">
+                <button class="icon-btn verify-btn" title="Verify Details">
+                  <i class="fa-solid fa-circle-check"></i>
+                </button>
+                <button class="icon-btn flag-btn" title="Flag Discrepancy">
+                  <i class="fa-solid fa-flag"></i>
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="student-cell">
+                <img src="https://ui-avatars.com/api/?name=Kakul+Mittal&background=0866ff&color=fff" alt="Kakul Mittal" class="avatar" />
+                <span>Kakul Mittal</span>
+              </td>
+              <td>CSE</td>
+              <td>9.20</td>
+              <td>0</td>
+              <td><span class="status-badge badge-selected">Verified</span></td>
+              <td class="action-cell">
+                <button class="icon-btn verify-btn" title="Verify Details">
+                  <i class="fa-solid fa-circle-check"></i>
+                </button>
+                <button class="icon-btn flag-btn" title="Flag Discrepancy">
+                  <i class="fa-solid fa-flag"></i>
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="student-cell">
+                <img src="https://ui-avatars.com/api/?name=Vikram+Malhotra&background=c0392b&color=fff" alt="Vikram Malhotra" class="avatar" />
+                <span>Vikram Malhotra</span>
+              </td>
+              <td>IT</td>
+              <td>8.70</td>
+              <td>1</td>
+              <td><span class="status-badge badge-flagged">Flagged</span></td>
+              <td class="action-cell">
+                <button class="icon-btn verify-btn" title="Verify Details">
+                  <i class="fa-solid fa-circle-check"></i>
+                </button>
+                <button class="icon-btn flag-btn" title="Flag Discrepancy">
+                  <i class="fa-solid fa-flag"></i>
+                </button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <div class="pagination">
+          <span class="pagination-info">Showing 1–5 of 5 students</span>
+          <div class="pagination-buttons">
+            <button class="page-btn" disabled><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn" disabled><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Profile - GLA Campus Portal</title>
+
+    <link rel="stylesheet" href="../../CSS/common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="dashboard-header">
+
+        <a href="../../index.html" class="home-logo">
+            🎓 GLA Campus Portal
+        </a>
+
+        <nav>
+            <a href="../index.html">Overview</a>
+            <a href="../drives/index.html">Placement Drives</a>
+            <a href="../resources/index.html">Career Resources</a>
+            <a href="index.html" class="nav-active">My Profile</a>
+            <a href="../../index.html">Portal Home</a>
+        </nav>
+
+        <a href="../../auth/login/index.html" class="logout-button">
+            Logout
+        </a>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="dashboard">
+
+        <!-- Profile Header -->
+        <section class="welcome-section">
+            <p>Student Career Panel</p>
+            <h1>My Profile</h1>
+            <span>Maintain your personal, academic and career information for placement applications.</span>
+        </section>
+
+
+        <!-- Personal Information -->
+        <section class="dashboard-section">
+
+            <div class="section-header-flex">
+                <h2>Personal Information</h2>
+                <span class="profile-status">Profile 80% Complete</span>
+            </div>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" value="Student Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="rollNumber">Roll Number</label>
+                    <input type="text" id="rollNumber" value="2415000751" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" value="student@gla.ac.in">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" value="+91 9876543210">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob">
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" value="Mathura">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Academic Information -->
+        <section class="dashboard-section">
+
+            <h2>Academic Information</h2>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="branch">B.Tech Branch</label>
+                    <input type="text" id="branch"
+                        value="Computer Science & Engineering" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="cgpa">Current B.Tech CGPA</label>
+                    <input type="number" id="cgpa" value="9.40" step="0.01">
+                </div>
+
+                <div class="form-group">
+                    <label for="tenth">10th Percentage</label>
+                    <input type="number" id="tenth" value="96" step="0.01">
+                </div>
+
+                <div class="form-group">
+                    <label for="twelfth">12th Percentage</label>
+                    <input type="number" id="twelfth" value="93" step="0.01">
+                </div>
+
+                <div class="form-group">
+                    <label for="backlogs">Active Backlogs</label>
+                    <input type="number" id="backlogs" value="0" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="graduation">Expected Graduation</label>
+                    <input type="text" id="graduation" value="2028" readonly>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Skills -->
+        <section class="dashboard-section">
+
+            <h2>Technical Skills</h2>
+
+            <p class="section-subtitle">
+                Skills that can be considered for placement eligibility.
+            </p>
+
+            <div class="skills-box">
+
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">DSA</span>
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Data Science</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Resume Section -->
+        <section class="dashboard-section">
+
+            <div class="section-header-flex">
+                <div>
+                    <h2>Resume</h2>
+                    <p class="section-subtitle">
+                        Keep your latest resume ready for placement applications.
+                    </p>
+                </div>
+
+                <a href="#" class="btn-secondary-action">
+                    Upload Resume
+                </a>
+            </div>
+
+            <div class="resume-preview">
+
+                <div class="resume-icon">
+                    📄
+                </div>
+
+                <div>
+                    <h3>Ishita_Rastogi_Resume.pdf</h3>
+                    <p>Updated recently • PDF • 1.2 MB</p>
+                </div>
+
+                <a href="#" class="btn-apply">
+                    Preview
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Profile Actions -->
+        <section class="dashboard-section profile-actions">
+
+            <a href="../index.html" class="btn-secondary-action">
+                Cancel
+            </a>
+
+            <a href="#" class="btn-primary-action">
+                Save Profile
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div>
+            🎓 <strong>GLA Campus Portal</strong> — Student Career Panel
+        </div>
+
+        <div>
+            <a href="../index.html">Overview</a>
+            <a href="../drives/index.html">Drives</a>
+            <a href="../resources/index.html">Resources</a>
+            <a href="index.html">Profile</a>
+            <a href="../../index.html">Main Portal</a>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

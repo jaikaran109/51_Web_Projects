@@ -1,0 +1,140 @@
+/* ============================================================
+   STUDENT PROFILE STYLES
+   ============================================================ */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 24px;
+    margin-top: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.form-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    font-size: 13.5px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+}
+
+.form-group input[readonly] {
+    background-color: var(--bg-subtle);
+    cursor: not-allowed;
+}
+
+.profile-status {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: var(--success-bg);
+    color: var(--success);
+    border: 1px solid var(--success-border);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.skills-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background-color: var(--primary-subtle);
+    color: var(--primary);
+    border: 1px solid var(--border-light);
+    font-size: 12.5px;
+    font-weight: 600;
+}
+
+.resume-preview {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 15px;
+    margin-top: 18px;
+    padding: 18px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    background-color: var(--bg-card);
+}
+
+.resume-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: var(--primary-subtle);
+    font-size: 22px;
+}
+
+.resume-preview h3 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: var(--text-main);
+}
+
+.resume-preview p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 12.5px;
+}
+
+.profile-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+@media (max-width: 700px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-preview {
+        grid-template-columns: auto 1fr;
+    }
+
+    .resume-preview .btn-apply {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+    }
+
+}

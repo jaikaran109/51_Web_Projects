@@ -1,0 +1,121 @@
+/* ============================================================
+   RECRUITER POST-JOB STYLES
+   ============================================================ */
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 15px;
+}
+
+.form-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    font-size: 13.5px;
+    font-weight: bold;
+    color: var(--text-main);
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 9px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 13.5px;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 8px;
+    background-color: var(--primary-subtle);
+    border: 1px solid var(--border-light);
+    padding: 15px;
+    border-radius: var(--radius);
+    margin-bottom: 15px;
+}
+
+.skill-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 7px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.skill-checkbox-label:hover {
+    border-color: var(--primary);
+    background-color: var(--primary-light);
+}
+
+.round-card {
+    background-color: var(--primary-subtle);
+    border: 1px solid var(--border-light);
+    border-left: 4px solid var(--primary);
+    border-radius: 6px;
+    padding: 14px;
+    margin-bottom: 10px;
+}
+
+.round-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 13.5px;
+}
+
+.round-number-badge {
+    background-color: var(--primary);
+    color: #ffffff;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11.5px;
+}
+
+.round-inputs {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 8px;
+}
+
+.round-inputs input,
+.round-inputs select {
+    padding: 7px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .form-grid-2, .form-grid-3, .round-inputs {
+        grid-template-columns: 1fr;
+    }
+}

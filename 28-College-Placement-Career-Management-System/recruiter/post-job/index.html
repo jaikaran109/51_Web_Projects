@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post Job - Recruiter Panel</title>
+
+    <link rel="stylesheet" href="../../CSS/common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="dashboard-header">
+
+        <a href="../../index.html" class="home-logo">
+            🎓 GLA Campus Portal
+        </a>
+
+        <nav>
+            <a href="../index.html">Overview</a>
+            <a href="index.html" class="nav-active">Post Job</a>
+            <a href="../applicants/index.html">Applicant Funnel</a>
+            <a href="../../index.html">Portal Home</a>
+        </nav>
+
+        <a href="../../auth/login/index.html" class="logout-button">
+            Logout
+        </a>
+
+    </header>
+
+
+    <!-- Main Page Content -->
+    <main class="dashboard">
+
+        <!-- Welcome Banner -->
+        <section class="welcome-section">
+            <p>Recruiter Business Panel</p>
+            <h1>Job Specification Console</h1>
+            <span>Create new role requirements, select mandatory tech stacks, and configure interview phases.</span>
+        </section>
+
+
+        <!-- Job Specification Form -->
+        <form action="../index.html" method="get">
+
+            <!-- Section 1: Role Overview -->
+            <section class="dashboard-section">
+
+                <h2>1. Role & Compensation Details</h2>
+                <p class="section-subtitle">Basic details about the campus recruitment opening.</p>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="jobTitle">Job Title / Designation *</label>
+                        <input type="text" id="jobTitle" name="jobTitle" value="Associate Software Development Engineer" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="companyName">Company Name *</label>
+                        <input type="text" id="companyName" name="companyName" value="Oracle Financial Services Software" required>
+                    </div>
+                </div>
+
+                <div class="form-grid-3">
+                    <div class="form-group">
+                        <label for="location">Location *</label>
+                        <select id="location" name="location">
+                            <option value="Bangalore" selected>Bangalore</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Noida">Noida</option>
+                            <option value="Remote">Remote</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empType">Employment Type *</label>
+                        <select id="empType" name="empType">
+                            <option value="Full Time" selected>Full Time (FTE)</option>
+                            <option value="Internship + FTE">Internship + FTE</option>
+                            <option value="Summer Internship">Summer Internship</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ctc">Salary Package (CTC in LPA) *</label>
+                        <input type="text" id="ctc" name="ctc" value="₹14.0 LPA" required>
+                    </div>
+                </div>
+
+                <div class="form-grid-3">
+                    <div class="form-group">
+                        <label for="eligibleBranch">Eligible Branch *</label>
+                        <select id="eligibleBranch" name="eligibleBranch">
+                            <option value="CSE, IT, ECE" selected>B.Tech CSE, IT & ECE</option>
+                            <option value="CSE, IT">B.Tech CSE & IT Only</option>
+                            <option value="All Branches">All Engineering Branches</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="minCgpa">Minimum CGPA *</label>
+                        <input type="number" id="minCgpa" name="minCgpa" step="0.1" min="0" max="10" value="7.5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deadline">Application Deadline *</label>
+                        <input type="date" id="deadline" name="deadline" value="2026-10-15" required>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- Section 2: Mandatory Tech Stack (Standard HTML Checkboxes) -->
+            <section class="dashboard-section">
+
+                <h2>2. Mandatory Tech Stack (Multi-Select)</h2>
+                <p class="section-subtitle">Select the key programming languages and technologies required for this role.</p>
+
+                <div class="skills-grid">
+                    <label class="skill-checkbox-label">
+                        <input type="checkbox" name="tech_skills" value="Java" checked> Java
+                    </label>
+                    <label class="skill-checkbox-label">
+                        <input type="checkbox" name="tech_skills" value="Spring Boot" checked> Spring Boot
+                    </label>
+                    <label class="skill-checkbox-label">
+                        <input type="checkbox" name="tech_skills" value="React.js" checked> React.js
+                    </label>
+                    <label class="skill-checkbox-label">
+                        <input type="checkbox" name="tech_skills" value="SQL" checked> SQL
+                    </label>
+                    <label class="skill-checkbox-label">
+                        <input type="checkbox" name="tech_skills" value="Python"> Python
+                    </label>
+                    <label class="skill-checkbox-label">
+                        <input type="checkbox" name="tech_skills" value="C++"> C++
+                    </label>
+                    <label class="skill-checkbox-label">
+                        <input type="checkbox" name="tech_skills" value="Node.js"> Node.js
+                    </label>
+                    <label class="skill-checkbox-label">
+                        <input type="checkbox" name="tech_skills" value="AWS Cloud"> AWS Cloud
+                    </label>
+                    <label class="skill-checkbox-label">
+                        <input type="checkbox" name="tech_skills" value="Docker"> Docker
+                    </label>
+                    <label class="skill-checkbox-label">
+                        <input type="checkbox" name="tech_skills" value="Data Structures"> Data Structures
+                    </label>
+                    <label class="skill-checkbox-label">
+                        <input type="checkbox" name="tech_skills" value="MongoDB"> MongoDB
+                    </label>
+                    <label class="skill-checkbox-label">
+                        <input type="checkbox" name="tech_skills" value="Git & GitHub"> Git & GitHub
+                    </label>
+                </div>
+
+            </section>
+
+
+            <!-- Section 3: Interview Workflow Configurator -->
+            <section class="dashboard-section">
+
+                <h2>3. Interview Workflow Configurator</h2>
+                <p class="section-subtitle">Define the evaluation stages for applicants applying to this drive.</p>
+
+                <!-- Phase 1 -->
+                <div class="round-card">
+                    <div class="round-card-header">
+                        <strong>Round 1</strong>
+                        <span class="round-number-badge">Phase 1</span>
+                    </div>
+                    <div class="round-inputs">
+                        <input type="text" value="Online Aptitude & Coding Assessment" placeholder="Round Name" required>
+                        <select>
+                            <option selected>Automated Online Test</option>
+                            <option>Live Coding Round</option>
+                            <option>1:1 Interview</option>
+                        </select>
+                        <input type="text" value="90 Minutes" placeholder="Duration">
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="round-card">
+                    <div class="round-card-header">
+                        <strong>Round 2</strong>
+                        <span class="round-number-badge">Phase 2</span>
+                    </div>
+                    <div class="round-inputs">
+                        <input type="text" value="Technical Round 1: DSA & Problem Solving" placeholder="Round Name" required>
+                        <select>
+                            <option>Automated Online Test</option>
+                            <option selected>Live Coding Round</option>
+                            <option>1:1 Interview</option>
+                        </select>
+                        <input type="text" value="45 Minutes" placeholder="Duration">
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="round-card">
+                    <div class="round-card-header">
+                        <strong>Round 3</strong>
+                        <span class="round-number-badge">Phase 3</span>
+                    </div>
+                    <div class="round-inputs">
+                        <input type="text" value="Technical Round 2: Core Subjects & Projects" placeholder="Round Name" required>
+                        <select>
+                            <option>Automated Online Test</option>
+                            <option>Live Coding Round</option>
+                            <option selected>1:1 Interview</option>
+                        </select>
+                        <input type="text" value="45 Minutes" placeholder="Duration">
+                    </div>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="round-card">
+                    <div class="round-card-header">
+                        <strong>Round 4</strong>
+                        <span class="round-number-badge">Phase 4</span>
+                    </div>
+                    <div class="round-inputs">
+                        <input type="text" value="HR & Cultural Fit Interview" placeholder="Round Name" required>
+                        <select>
+                            <option>Automated Online Test</option>
+                            <option>Live Coding Round</option>
+                            <option selected>1:1 Interview</option>
+                        </select>
+                        <input type="text" value="30 Minutes" placeholder="Duration">
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- Section 4: Description & Actions -->
+            <section class="dashboard-section">
+
+                <h2>4. Job Description</h2>
+
+                <div class="form-group">
+                    <label for="description">Job Description</label>
+                    <textarea id="description" name="description" rows="4">We are hiring Associate Software Engineers to build scalable web applications and microservices. Candidates should have a good understanding of Object-Oriented Programming, Data Structures, and Database concepts.</textarea>
+                </div>
+
+                <div class="form-actions-bar">
+                    <button type="reset" class="btn-secondary-action">Reset Form</button>
+                    <button type="submit" class="btn-primary-action">Publish Job Specification</button>
+                </div>
+
+            </section>
+
+        </form>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            🎓 <strong>GLA Campus Portal</strong> — Recruiter Business Panel
+        </div>
+        <div>
+            <a href="../index.html">Overview</a>
+            <a href="index.html">Post Job</a>
+            <a href="../applicants/index.html">Applicants</a>
+            <a href="../../index.html">Main Portal</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

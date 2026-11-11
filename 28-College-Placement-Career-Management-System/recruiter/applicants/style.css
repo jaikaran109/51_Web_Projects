@@ -1,0 +1,214 @@
+/* ============================================================
+   RECRUITER APPLICANTS MATRIX STYLES
+   ============================================================ */
+.matrix-filter-bar {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.matrix-filter-bar input,
+.matrix-filter-bar select {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 13.5px;
+    outline: none;
+}
+
+.search-input {
+    width: 260px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    background-color: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+}
+
+.applicant-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-card);
+    font-size: 13.5px;
+}
+
+.applicant-table th {
+    background-color: var(--primary-subtle);
+    color: var(--text-main);
+    padding: 12px 16px;
+    font-weight: bold;
+    border-bottom: 1px solid var(--border-light);
+    text-align: left;
+}
+
+.applicant-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #edf2f7;
+    color: var(--text-main);
+    vertical-align: middle;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.offer-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.offers-registry-tag {
+    color: #059669;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.modal-actions {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.applicant-table tr:hover {
+    background-color: #f9fbfe;
+}
+
+.row-selected {
+    background-color: #f0fdf4 !important;
+}
+
+.btn-action-small {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    background-color: #ffffff;
+    color: var(--text-main);
+    margin-right: 4px;
+}
+
+.btn-action-small:hover {
+    background-color: var(--primary-light);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-select-student {
+    background-color: var(--success);
+    color: #ffffff;
+    border-color: var(--success);
+}
+
+.btn-select-student:hover {
+    background-color: #059669;
+}
+
+.btn-selected-done {
+    background-color: var(--success);
+    color: #ffffff;
+    border-color: var(--success);
+    opacity: 0.85;
+    cursor: default;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.offer-card {
+    background-color: var(--success-bg);
+    border: 1px solid var(--success-border);
+    border-radius: var(--radius);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.offer-student-name {
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+.offer-role-title {
+    margin: 0;
+    font-size: 13px;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.offer-pkg {
+    margin: 0;
+    font-size: 13px;
+    color: var(--success);
+    font-weight: bold;
+}
+
+.offer-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11.5px;
+    color: var(--text-muted);
+    border-top: 1px dashed var(--success-border);
+    padding-top: 5px;
+    margin-top: 4px;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--bg-card);
+    width: 90%;
+    max-width: 500px;
+    border-radius: var(--radius);
+    padding: 22px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: var(--text-main);
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-muted);
+}
