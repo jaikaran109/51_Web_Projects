@@ -149,23 +149,23 @@ Choose any project folder and open the `index.html` file in your browser.
 
 | No. | Project | Language | Tech Stack | Demo | Status |
 |-----|---------|----------|------------|------|--------|
-| 01 | Rock Paper Scissors | HTML, CSS, JS | Vanilla | [Live demo](https://Ritesh007-max.github.io/51_Web_Projects_fork_ritesh/01-Rock-Paper-Scissors/) | ✅ Complete |
-| 02 | Tic Tac Toe | HTML, CSS, JS | Vanilla | [Live demo](https://Ritesh007-max.github.io/51_Web_Projects_fork_ritesh/02-Tic-Tac-Toe/) | ✅ Complete |
-| 03 | CodeForces Clone | HTML, CSS, JS | Vanilla | [Live demo](https://Ritesh007-max.github.io/51_Web_Projects_fork_ritesh/03-CodeForces-Clone/) | ✅ Complete |
-| 04 | Job Application | HTML, CSS | Vanilla | [Live demo](https://Ritesh007-max.github.io/51_Web_Projects_fork_ritesh/04-Job-Application/) | ✅ Complete |
-| 05 | Pokemon Card Game | HTML, CSS, JS | Vanilla | [Live demo](https://Ritesh007-max.github.io/51_Web_Projects_fork_ritesh/05-Pokemon-Card-Game/) | ✅ Complete |
-| 06 | Shapes Game | HTML, CSS, JS | Vanilla | [Live demo](https://Ritesh007-max.github.io/51_Web_Projects_fork_ritesh/06-Shapes-Games/) | ✅ Complete |
-| 07 | Tribute Website | HTML, CSS | Vanilla | [Live demo](https://Ritesh007-max.github.io/51_Web_Projects_fork_ritesh/07-Tribute-Website/) | ✅ Complete |
-| 08 | Amazon Clone | HTML, CSS, JS | Vanilla | [Live demo](https://Ritesh007-max.github.io/51_Web_Projects_fork_ritesh/08-Amazon-Clone/) | ✅ Complete |
-| 09 | Digital Clock | HTML, CSS, JS | Vanilla | [Live demo](https://Ritesh007-max.github.io/51_Web_Projects_fork_ritesh/09-Digital-Clock/) | ✅ Complete |
+| 01 | Rock Paper Scissors | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/Rock-Paper-Scissors/) | ✅ Complete |
+| 02 | Tic Tac Toe | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/Tic-Tac-Toe/) | ✅ Complete |
+| 03 | CodeForces Clone | HTML, CSS, JS | Vanilla | ✅ Complete |
+| 04 | Job Application | HTML, CSS | Vanilla | ✅ Complete |
+| 05 | Pokemon Card Game | HTML, CSS, JS | Vanilla | ✅ Complete |
+| 06 | Shapes Game | HTML, CSS, JS | Vanilla | ✅ Complete |
+| 07 | Tribute Website | HTML, CSS | Vanilla | ✅ Complete |
+| 08 | Amazon Clone | HTML, CSS, JS | Vanilla | ✅ Complete |
+| 09 | Digital Clock | HTML, CSS, JS | Vanilla | ✅ Complete |
 | 10 | E-Commerce Shopping App | HTML, CSS, JS, Node.js, MongoDB | Full Stack | — | ✅ Complete |
-| 11 | Square Game | HTML, CSS, JS | Vanilla | [Live demo](https://Ritesh007-max.github.io/51_Web_Projects_fork_ritesh/11-Square-Game/) | ✅ Complete |
-| 12 | Pokemon Card Collection | HTML, CSS, JS | Vanilla | [Live demo](https://Ritesh007-max.github.io/51_Web_Projects_fork_ritesh/12-Pokemon-Card-Collection/) | ✅ Complete |
-| 13 | Portfolio | HTML, CSS | Vanilla | [Live demo](https://Ritesh007-max.github.io/51_Web_Projects_fork_ritesh/13-Portfolio/) | ✅ Complete |
-| 14 | BMI Calculator | HTML, CSS, JS | Vanilla | [Live demo](https://Ritesh007-max.github.io/51_Web_Projects_fork_ritesh/14-BMI-Calculator/) | ✅ Complete |
-| 15 | Calculator | HTML, CSS, JS | Vanilla | [Live demo](https://Ritesh007-max.github.io/51_Web_Projects_fork_ritesh/15-Calculator/) | ✅ Complete |
-| 16 | Currency Converter | HTML, CSS, JS | Vanilla | [Live demo](https://Ritesh007-max.github.io/51_Web_Projects_fork_ritesh/16-Currency-Converter/) | ✅ Complete |
-| 17 | Portfolio ll | HTML, CSS, JS | Vanilla | [Live demo](https://Ritesh007-max.github.io/51_Web_Projects_fork_ritesh/17-Portfolio-ll/) | ✅ Complete |
+| 11 | Square Game | HTML, CSS, JS | Vanilla | ✅ Complete |
+| 12 | Pokemon Card Collection | HTML, CSS, JS | ✅ Complete |
+| 13 | Portfolio | HTML, CSS | Vanilla | ✅ Complete |
+| 14 | BMI Calculator | HTML, CSS, JS | Vanilla | ✅ Complete |
+| 15 | Calculator | HTML, CSS, JS | Vanilla | ✅ Complete |
+| 16 | Currency Converter | HTML, CSS, JS | ✅ Complete |
+| 17 | Portfolio ll | HTML, CSS, JS | Vanilla | ✅ Complete |
 | 18 | Cards Project | HTML, CSS, JS, React | React + Vite | ✅ Complete |
 | 19 | Gallery Project | HTML, CSS, JS, React | React + Vite | ✅ Complete |
 | 20 | Insta App | HTML, CSS, JS, Node.js | Full Stack | ✅ Complete |
