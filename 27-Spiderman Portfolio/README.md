@@ -35,6 +35,7 @@ Jai Karan
 Jai Karan
 Jai Karan
 Jai Karan
+Jai Karan
 
 A modern red-black developer portfolio built with **HTML, CSS, and JavaScript**.
 
