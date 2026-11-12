@@ -1,20 +1,83 @@
 
-/* ==============================
-   GLOBAL
-============================== */
+/* ========================================
+   GOOGLE FONT
+======================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+
+/* ========================================
+   THEME VARIABLES
+======================================== */
+
 :root {
+    color-scheme: light;
+
     --primary: #3b5998;
+    --primary-hover: #294579;
     --primary-light: #edf3ff;
+
     --text: #252b36;
     --muted: #737d8c;
-    --border: #e5e9f0;
+
     --background: #f5f7fb;
-    --white: #ffffff;
+    --surface: #ffffff;
+    --surface-secondary: #fafbfe;
+
+    --border: #e5e9f0;
+    --table-hover: #f7f9fd;
+    --table-border: #edf0f5;
+
+    --input-background: #f6f7fa;
+
     --shadow: 0 4px 18px rgba(30, 50, 90, 0.055);
+    --button-shadow: 0 4px 12px rgba(59, 89, 152, 0.2);
+
+    --red: #e5484d;
+    --orange: #e58b27;
+    --blue: #3878d8;
+
+    --transition: 0.25s ease;
 }
+
+
+/* ========================================
+   DARK THEME
+   <html data-theme="dark">
+======================================== */
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+
+    --primary: #8baeff;
+    --primary-hover: #a9c2ff;
+    --primary-light: #253653;
+
+    --text: #e6eaf2;
+    --muted: #9aa6b8;
+
+    --background: #111722;
+    --surface: #192230;
+    --surface-secondary: #202c3c;
+
+    --border: #303b4d;
+    --table-hover: #222f40;
+    --table-border: #303b4d;
+
+    --input-background: #141e2b;
+
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+    --button-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+
+    --red: #ff777d;
+    --orange: #ffb454;
+    --blue: #80b4ff;
+}
+
+
+/* ========================================
+   RESET & GLOBAL
+======================================== */
 
 * {
     margin: 0;
@@ -31,22 +94,38 @@ body {
     width: 100%;
     min-height: 100vh;
     padding: 0 4%;
+
     background: var(--background);
     color: var(--text);
+
+    transition:
+        background var(--transition),
+        color var(--transition);
 }
 
 a {
+    color: inherit;
     text-decoration: none;
-    transition: 0.2s ease;
+    transition: var(--transition);
+}
+
+button,
+input {
+    font: inherit;
 }
 
 button {
-    font-family: inherit;
+    cursor: pointer;
 }
 
-/* ==============================
-   MAIN
-============================== */
+img {
+    max-width: 100%;
+}
+
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
 
 #main {
     width: 100%;
@@ -54,15 +133,18 @@ button {
     margin: auto;
 }
 
-/* ==============================
+
+/* ========================================
    TOP HEADER
-============================== */
+======================================== */
 
 #headings {
     min-height: 85px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     gap: 20px;
 }
 
@@ -84,21 +166,78 @@ button {
     display: flex;
     align-items: center;
     gap: 12px;
+
     color: var(--muted);
 }
 
-#icons i {
+#icons > i {
     font-size: 19px;
     cursor: pointer;
+    transition: var(--transition);
+}
+
+#icons > i:hover {
+    color: var(--primary);
 }
 
 #icons img {
     width: 23px;
     height: 17px;
+
     object-fit: cover;
     border-radius: 3px;
+
     cursor: pointer;
 }
+
+.header-divider {
+    color: var(--border);
+}
+
+
+/* ========================================
+   THEME TOGGLE BUTTON
+======================================== */
+
+#theme-toggle {
+    width: 36px;
+    height: 36px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--primary);
+    background: var(--primary-light);
+
+    border: 1px solid var(--border);
+    border-radius: 9px;
+
+    transition: var(--transition);
+}
+
+#theme-toggle i {
+    font-size: 19px;
+    line-height: 1;
+}
+
+#theme-toggle:hover {
+    color: white;
+    background: var(--primary);
+    border-color: var(--primary);
+
+    transform: rotate(-12deg);
+}
+
+#theme-toggle:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   LOGIN
+======================================== */
 
 #login {
     font-size: 13px;
@@ -111,24 +250,31 @@ button {
 }
 
 #login a:hover {
-    color: #172f65;
+    color: var(--primary-hover);
 }
 
-/* ==============================
+
+/* ========================================
    NAVIGATION
-============================== */
+======================================== */
 
 #header {
     min-height: 55px;
     padding: 10px 15px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 15px;
-    background: var(--white);
+
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 10px;
+
     box-shadow: var(--shadow);
+
+    transition: var(--transition);
 }
 
 #texts {
@@ -139,12 +285,15 @@ button {
 }
 
 #texts a {
-    color: #4d5665;
+    padding: 9px 10px;
+
+    color: var(--muted);
+
     font-size: 12px;
     font-weight: 700;
-    padding: 9px 10px;
-    border-radius: 6px;
     letter-spacing: 0.2px;
+
+    border-radius: 6px;
 }
 
 #texts a:hover {
@@ -152,16 +301,31 @@ button {
     background: var(--primary-light);
 }
 
+
+/* ========================================
+   SEARCH BAR
+======================================== */
+
 #search {
     min-width: 175px;
     padding: 9px 11px;
+
     display: flex;
     align-items: center;
     gap: 8px;
-    background: #f6f7fa;
+
+    color: var(--muted);
+    background: var(--input-background);
+
     border: 1px solid var(--border);
     border-radius: 7px;
-    color: var(--muted);
+
+    transition: var(--transition);
+}
+
+#search:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(59, 89, 152, 0.1);
 }
 
 #search i {
@@ -171,20 +335,31 @@ button {
 #search input {
     width: 100%;
     min-width: 0;
+
+    color: var(--text);
+    background: transparent;
+
     border: none;
     outline: none;
-    background: transparent;
+
     font-size: 12px;
 }
 
-/* ==============================
-   MAIN CONTENT
-============================== */
+#search input::placeholder,
+#handle-input::placeholder {
+    color: var(--muted);
+}
+
+
+/* ========================================
+   MAIN CONTENT LAYOUT
+======================================== */
 
 #content {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 310px;
     align-items: start;
+
     gap: 22px;
     margin-top: 22px;
     padding-bottom: 40px;
@@ -193,10 +368,14 @@ button {
 #informations {
     min-width: 0;
     padding: 25px;
-    background: var(--white);
+
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 10px;
+
     box-shadow: var(--shadow);
+
+    transition: var(--transition);
 }
 
 .contest-item {
@@ -204,19 +383,28 @@ button {
 }
 
 #informations h2 {
-    margin: 0 0 12px;
+    margin-bottom: 12px;
+
     color: var(--primary);
+
     font-size: clamp(20px, 2.2vw, 26px);
     line-height: 1.4;
-    font-weight: 600;
+    font-weight: 700;
 }
+
+
+/* ========================================
+   CONTEST BYLINE
+======================================== */
 
 .byline {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 5px;
+
     margin-bottom: 22px;
+
     color: var(--muted);
     font-size: 12px;
 }
@@ -229,37 +417,50 @@ button {
 .byline img {
     width: 17px;
     height: 12px;
+
     margin-left: 3px;
     object-fit: cover;
 }
 
-/* ==============================
-   CONTEST ANNOUNCEMENT
-============================== */
+
+/* ========================================
+   CONTEST IMAGE
+======================================== */
 
 #Neta {
     display: flex;
     justify-content: center;
+
     margin: 20px 0 30px;
 }
 
 #Neta img {
     width: min(100%, 380px);
+
     border-radius: 8px;
     object-fit: contain;
 }
 
+
+/* ========================================
+   CONTEST ANNOUNCEMENT
+======================================== */
+
 .greeting-title {
     margin: 25px 0 15px;
+
+    color: var(--text);
     font-size: 24px;
-    color: #252b36;
+    font-weight: 700;
 }
 
 #informations p {
     margin: 15px 0;
+
+    color: var(--muted);
+
     font-size: 14px;
     line-height: 1.85;
-    color: #505a69;
 }
 
 #informations p span,
@@ -277,7 +478,9 @@ button {
 #informations li {
     padding-left: 4px;
     margin: 9px 0;
-    color: #505a69;
+
+    color: var(--muted);
+
     font-size: 13px;
     line-height: 1.7;
 }
@@ -287,19 +490,33 @@ button {
     font-weight: 700;
 }
 
-/* ==============================
+#informations a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+#informations a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
    SPONSOR SECTION
-============================== */
+======================================== */
 
 #spectral {
     margin: 25px 0;
     padding: 22px;
+
     display: flex;
     align-items: center;
     gap: 25px;
-    background: #f7f9fd;
+
+    background: var(--surface-secondary);
     border: 1px solid var(--border);
     border-radius: 10px;
+
+    transition: var(--transition);
 }
 
 #spectral-content {
@@ -309,8 +526,10 @@ button {
 
 .sponsor-title {
     margin-bottom: 10px;
-    color: #222c42;
+
+    color: var(--text);
     font-size: 19px;
+    font-weight: 700;
 }
 
 #spectral-content p {
@@ -324,45 +543,60 @@ button {
 #spectral-logo img {
     width: 100%;
     max-width: 300px;
+
     display: block;
     object-fit: contain;
 }
 
-/* ==============================
+
+/* ========================================
    APPLY BUTTON
-============================== */
+======================================== */
 
 #btn-box {
     display: flex;
     justify-content: center;
+
     margin: 25px 0;
 }
 
 #apply-btn {
     padding: 12px 38px;
+
     color: white;
     background: var(--primary);
+
     border: none;
     border-radius: 7px;
+
     font-size: 14px;
     font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(59, 89, 152, 0.2);
-    transition: 0.25s ease;
+
+    box-shadow: var(--button-shadow);
+
+    transition: var(--transition);
 }
 
 #apply-btn:hover {
-    background: #263f77;
+    background: var(--primary-hover);
+
     transform: translateY(-2px);
+
     box-shadow: 0 7px 16px rgba(59, 89, 152, 0.25);
 }
 
-/* ==============================
+#apply-btn:active {
+    transform: translateY(0);
+}
+
+
+/* ========================================
    SIDEBAR
-============================== */
+======================================== */
 
 #rankings {
     min-width: 0;
+
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -374,11 +608,17 @@ button {
 #top-contributors,
 #find-user {
     margin: 0;
-    background: var(--white);
+
+    background: var(--surface);
+
     border: 1px solid var(--border);
     border-radius: 10px;
+
     overflow: hidden;
+
     box-shadow: var(--shadow);
+
+    transition: var(--transition);
 }
 
 #pay-heading,
@@ -387,29 +627,35 @@ button {
 #contributors-heading,
 #find-heading {
     padding: 14px 16px;
+
     color: var(--primary);
-    background: #fafbfe;
+    background: var(--surface-secondary);
+
     border-bottom: 1px solid var(--border);
+
     font-size: 14px;
     font-weight: 700;
 }
 
-/* ==============================
+
+/* ========================================
    UPCOMING CONTEST
-============================== */
+======================================== */
 
 #pay-content {
     padding: 20px 15px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
     text-align: center;
     gap: 9px;
 }
 
 #pay-content h2 {
-    font-size: 17px;
     color: var(--text);
+    font-size: 17px;
 }
 
 #pay-content a {
@@ -423,13 +669,14 @@ button {
 }
 
 #days {
-    color: #e58b27;
+    color: var(--orange);
     font-size: 23px;
     font-weight: 800;
 }
 
 #register {
     padding: 9px 18px;
+
     background: var(--primary-light);
     border-radius: 6px;
 }
@@ -439,15 +686,18 @@ button {
     font-size: 11px;
 }
 
-/* ==============================
+
+/* ========================================
    USER PROFILE
-============================== */
+======================================== */
 
 #user-content {
     padding: 15px;
+
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
     gap: 10px;
 }
 
@@ -457,8 +707,9 @@ button {
 
 #user-left p {
     margin: 8px 0;
-    font-size: 12px;
+
     color: var(--muted);
+    font-size: 12px;
 }
 
 #user-left ul {
@@ -472,7 +723,7 @@ button {
 }
 
 #user-left a {
-    color: #4d596c;
+    color: var(--muted);
 }
 
 #user-left a:hover {
@@ -482,27 +733,33 @@ button {
 #user-right {
     width: 95px;
     flex-shrink: 0;
+
     text-align: center;
 }
 
 #user-right img {
     width: 75px;
     height: 75px;
+
     object-fit: cover;
-    border-radius: 9px;
+
     border: 1px solid var(--border);
+    border-radius: 9px;
 }
 
 #user-right h3 {
     margin-top: 7px;
+
     color: var(--primary);
     font-size: 11px;
+
     overflow-wrap: anywhere;
 }
 
-/* ==============================
+
+/* ========================================
    TABLES
-============================== */
+======================================== */
 
 table {
     width: 100%;
@@ -512,54 +769,71 @@ table {
 th,
 td {
     padding: 11px 6px;
-    border-bottom: 1px solid #edf0f5;
+
+    border-bottom: 1px solid var(--table-border);
+
     text-align: center;
     font-size: 12px;
 }
 
 th {
-    color: #737d8c;
-    background: #fcfcfe;
+    color: var(--muted);
+    background: var(--surface-secondary);
+
     font-size: 11px;
     font-weight: 700;
 }
 
 td {
-    color: #4d5665;
+    color: var(--text);
 }
 
 tr:last-child td {
     border-bottom: none;
 }
 
+#top-rated table tr,
+#top-contributors table tr {
+    transition: background var(--transition);
+}
+
 #top-rated table tr:hover,
 #top-contributors table tr:hover {
-    background: #f7f9fd;
+    background: var(--table-hover);
 }
 
 .red {
-    color: #e5484d;
+    color: var(--red);
     font-weight: 700;
 }
 
 .orange {
-    color: #e58b27;
+    color: var(--orange);
     font-weight: 700;
 }
 
 .blue {
-    color: #3878d8;
+    color: var(--blue);
     font-weight: 700;
 }
 
+
+/* ========================================
+   RATING FOOTER LINKS
+======================================== */
+
 #bottom-links {
     padding: 12px;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
     gap: 7px;
+
     border-top: 1px solid var(--border);
+
     font-size: 11px;
 }
 
@@ -575,18 +849,23 @@ tr:last-child td {
 
 #contributors-bottom {
     padding: 12px;
+
     display: flex;
     justify-content: flex-end;
+
     border-top: 1px solid var(--border);
+
     font-size: 12px;
 }
 
-/* ==============================
+
+/* ========================================
    FIND USER
-============================== */
+======================================== */
 
 #find-content {
     padding: 18px 12px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -594,26 +873,38 @@ tr:last-child td {
 
 #handle-box {
     width: 100%;
+
     display: flex;
     align-items: center;
+
     gap: 8px;
 }
 
 #handle-box label {
+    flex-shrink: 0;
+
+    color: var(--text);
     font-size: 12px;
     font-weight: 600;
-    flex-shrink: 0;
 }
 
 #handle-box input {
     width: 100%;
     min-width: 0;
+
     padding: 9px;
+
+    color: var(--text);
+    background: var(--input-background);
+
     border: 1px solid var(--border);
     border-radius: 6px;
+
     outline: none;
+
     font-size: 12px;
-    transition: 0.2s;
+
+    transition: var(--transition);
 }
 
 #handle-box input:focus {
@@ -624,44 +915,88 @@ tr:last-child td {
 #find-btn {
     margin-top: 15px;
     padding: 9px 30px;
+
     color: white;
     background: var(--primary);
+
     border: none;
     border-radius: 6px;
+
     font-size: 12px;
     font-weight: 700;
-    cursor: pointer;
+
+    transition: var(--transition);
 }
 
 #find-btn:hover {
-    background: #263f77;
+    background: var(--primary-hover);
+    transform: translateY(-1px);
 }
 
 .search-result {
-    font-size: 12px;
     color: var(--muted);
+    font-size: 12px;
     overflow-wrap: anywhere;
 }
 
-/* ==============================
+
+/* ========================================
    ACCESSIBILITY
-============================== */
+======================================== */
 
 .visually-hidden {
     position: absolute;
+
     width: 1px;
     height: 1px;
+
     padding: 0;
     margin: -1px;
+
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
+
     white-space: nowrap;
     border: 0;
 }
 
-/* ==============================
+:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   SMOOTH THEME TRANSITIONS
+======================================== */
+
+#main,
+#header,
+#informations,
+#spectral,
+#pay-attention,
+#user-card,
+#top-rated,
+#top-contributors,
+#find-user,
+#pay-heading,
+#user-heading,
+#top-heading,
+#contributors-heading,
+#find-heading,
+th,
+td {
+    transition:
+        background-color var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+
+/* ========================================
    TABLET
-============================== */
+======================================== */
 
 @media (max-width: 1050px) {
 
@@ -692,9 +1027,10 @@ tr:last-child td {
     }
 }
 
-/* ==============================
+
+/* ========================================
    MOBILE / SMALL TABLET
-============================== */
+======================================== */
 
 @media (max-width: 760px) {
 
@@ -713,19 +1049,22 @@ tr:last-child td {
     #header {
         flex-direction: column;
         align-items: stretch;
+
         padding: 12px;
     }
 
     #texts {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
+
         width: 100%;
     }
 
     #texts a {
+        padding: 10px 3px;
+
         text-align: center;
         font-size: 10px;
-        padding: 10px 3px;
     }
 
     #search {
@@ -734,6 +1073,7 @@ tr:last-child td {
 
     #content {
         grid-template-columns: minmax(0, 1fr);
+
         gap: 18px;
         margin-top: 15px;
     }
@@ -745,6 +1085,7 @@ tr:last-child td {
     #rankings {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
+
         gap: 14px;
     }
 
@@ -767,6 +1108,7 @@ tr:last-child td {
 
     #spectral-logo {
         width: 100%;
+
         display: flex;
         justify-content: center;
     }
@@ -776,9 +1118,10 @@ tr:last-child td {
     }
 }
 
-/* ==============================
+
+/* ========================================
    SMALL MOBILE
-============================== */
+======================================== */
 
 @media (max-width: 480px) {
 
@@ -806,6 +1149,15 @@ tr:last-child td {
     #icons img {
         width: 19px;
         height: 14px;
+    }
+
+    #theme-toggle {
+        width: 32px;
+        height: 32px;
+    }
+
+    #theme-toggle i {
+        font-size: 17px;
     }
 
     #login {
@@ -860,5 +1212,21 @@ tr:last-child td {
     td {
         padding: 10px 5px;
         font-size: 11px;
+    }
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
     }
 }

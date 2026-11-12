@@ -23,12 +23,16 @@ Built mainly for improving:
 ## 🚀 Features
 
 - Fully structured homepage layout
-- Sidebar cards like original Codeforces
-- Styled tables for rankings
+- Sidebar cards inspired by the original Codeforces design
+- Styled tables for rankings and top contributors
 - User profile section
 - Sponsor section
-- Custom buttons and forms
-- Flexbox-based layout
+- Custom buttons and search forms
+- Flexbox-based responsive layout
+- Responsive design for different screen sizes
+- Light and dark mode with theme toggle
+- Persistent theme preference using localStorage
+- Interactive contest search and user lookup
 
 ---
 
@@ -81,9 +85,7 @@ This project helped in understanding:
 
 ## ⚡ Future Improvements
 
-- Add responsiveness for mobile devices
 - Add hover effects
-- Add dark mode
 - Add JavaScript interactions
 - Add dropdown menus
 - Convert into React project

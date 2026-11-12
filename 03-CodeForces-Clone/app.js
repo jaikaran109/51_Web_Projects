@@ -37,3 +37,49 @@ findButton.addEventListener("click", findUser);
 handleInput.addEventListener("keydown", (event) => {
   if (event.key === "Enter") findUser();
 });
+
+
+const themeToggle=document.querySelector("#theme-toggle");
+const themeIcon=document.querySelector("#theme-icon");
+
+
+themeToggle.addEventListener('click',(e)=>{
+  if(localStorage.getItem("data-theme")==="light"){
+
+localStorage.setItem("data-theme","dark");
+  document.documentElement.setAttribute("data-theme", localStorage.getItem("data-theme"));
+themeIcon.classList.add("ri-sun-line");
+  themeIcon.classList.remove("ri-moon-line");
+}else{
+  localStorage.setItem("data-theme","light");
+  document.documentElement.setAttribute("data-theme", localStorage.getItem("data-theme"));
+  themeIcon.classList.add("ri-moon-line");
+  themeIcon.classList.remove("ri-sun-line");
+}
+})
+
+
+
+
+function initTheme(){
+
+if(!localStorage.getItem("data-theme")){
+  localStorage.setItem("data-theme","light");
+  document.documentElement.setAttribute("data-theme", localStorage.getItem("data-theme"));
+  return;
+}
+if(localStorage.getItem("data-theme")==="light"){
+    localStorage.setItem("data-theme","light");
+  document.documentElement.setAttribute("data-theme", localStorage.getItem("data-theme"));
+  themeIcon.classList.remove("ri-sun-line");
+  themeIcon.classList.add("ri-moon-line");
+}else{
+   localStorage.setItem("data-theme","dark");
+  document.documentElement.setAttribute("data-theme", localStorage.getItem("data-theme"));
+  themeIcon.classList.remove("ri-moon-line");
+  themeIcon.classList.add("ri-sun-line");
+  }
+}
+
+initTheme();
+
