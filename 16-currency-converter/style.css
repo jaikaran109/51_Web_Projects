@@ -53,20 +53,49 @@ h1 {
     font-family: inherit;
 }
 
+
 .currency-container input {
     width: 45%;
-    border: 0;
-    background-color: transparent;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.12);
     font-family: inherit;
-    font-size: 25px;
+    font-size: 22px;
+    font-weight: 600;
     text-align: right;
     color: #ffffff;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.currency-container input:not(:disabled) {
+    outline: none;
+    cursor: text;
+}
+
+.currency-container input:not(:disabled):hover {
+    outline: none;
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.55);
+}
+
+.currency-container input:not(:disabled):focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #7de8dc;
+    box-shadow: 0 0 0 3px rgba(125, 232, 220, 0.18);
 }
 
 .currency-container input:disabled {
+    outline: none;
     -webkit-text-fill-color: #ffffff;
     opacity: 1;
+    border-color: transparent;
+    background: transparent;
 }
+
 
 .swap-row {
     display: flex;
