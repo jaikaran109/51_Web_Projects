@@ -1,34 +1,54 @@
-name: Feature Request
-description: Suggest a new feature or enhancement
-title: "[FEATURE]: "
-labels: ["enhancement"]
-
+---
+name: '✨ Feature Request'
+description: Suggest a new feature, improvement, or project idea
+title: '[Feature]: '
+labels: ['enhancement']
 body:
-
-* type: textarea
-  id: feature
-  attributes:
-  label: Feature Description
-  description: Describe the feature you'd like to add.
-  validations:
-  required: true
-
-* type: textarea
-  id: reason
-  attributes:
-  label: Why is this feature needed?
-  description: Explain the motivation behind this feature.
-  validations:
-  required: true
-
-* type: textarea
-  id: solution
-  attributes:
-  label: Proposed Solution
-  description: How would you like this feature to work?
-
-* type: textarea
-  id: additional
-  attributes:
-  label: Additional Context
-  description: Add any extra information, screenshots, or references.
+  - type: markdown
+    attributes:
+      value: |
+        Want to add something new? ✨
+        We love feature requests and project ideas! Describe what you'd like below.
+        To add a whole new project, check the [roadmap](https://github.com/jaikaran109/51_Web_Projects/blob/main/GITHUB_ISSUES.md).
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Motivation
+      description: What problem does this feature solve? What can't you do today?
+      placeholder: 'I cannot do X because there is no Y.'
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you'd like. Be as detailed as possible.
+      placeholder: 'Add a dark mode toggle that switches the whole page theme.'
+    validations:
+      required: true
+  - type: input
+    id: project
+    attributes:
+      label: Project
+      description: Which project folder should this apply to? (optional)
+      placeholder: 'e.g. 09-Digital-Clock or a new project'
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What did you consider instead? (optional)
+      placeholder: 'I thought about Z, but that would ...'
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Mockups
+      description: Add mockups, screenshots, or links to similar designs (optional).
+      placeholder: '![Mockup](link-to-mockup)'
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched the existing issues to avoid duplicates
+          required: true
+        - label: I am willing to work on this (comment below and a maintainer will assign you)
