@@ -5,9 +5,11 @@ from __future__ import annotations
 import argparse
 import io
 import os
+import struct
 from pathlib import Path
 
 from PIL import Image
+from PIL.PngImagePlugin import PngInfo
 
 SUPPORTED_FORMATS = {".jpg", ".jpeg", ".png", ".webp"}
 EXCLUDED_DIRS = {".git", "node_modules", "dist", "build", ".venv", "venv"}
@@ -58,12 +60,21 @@ def optimize_image(path: Path, quality: int = 82, dry_run: bool = False):
                     options.pop("icc_profile", None)
                 source.save(output, format="JPEG", **options)
             elif image.format == "PNG":
-                image.save(output, format="PNG", optimize=True, compress_level=9, **metadata)
+                pnginfo = PngInfo()
+                gamma = image.info.get("gamma")
+                if gamma is not None:
+                    pnginfo.add(b"gAMA", struct.pack(">I", round(gamma * 100000)))
+                chromaticity = image.info.get("chromaticity")
+                if chromaticity is not None:
+                    values = tuple(round(value * 100000) for value in chromaticity)
+                    pnginfo.add(b"cHRM", struct.pack(">8I", *values))
+                options = {**metadata, "pnginfo": pnginfo}
+                image.save(output, format="PNG", optimize=True, compress_level=9, **options)
             elif image.format == "WEBP":
                 image.save(output, format="WEBP", quality=quality, method=6, **metadata)
             else:
                 return None
-    except (OSError, ValueError, Image.DecompressionBombError):
+    except (OSError, ValueError, SyntaxError, Image.DecompressionBombError):
         return None
 
     optimized = output.getvalue()
