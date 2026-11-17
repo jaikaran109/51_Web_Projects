@@ -1,47 +1,76 @@
-name: Bug Report
-description: Report a bug or issue in the project
-title: "[BUG]: "
-labels: ["bug"]
-
+---
+name: '🐛 Bug Report'
+description: Report a bug or unexpected behavior in a project
+title: '[Bug]: '
+labels: ['bug']
 body:
-
-* type: textarea
-  id: description
-  attributes:
-  label: Bug Description
-  description: Describe the bug clearly.
-  placeholder: Explain the issue...
-  validations:
-  required: true
-
-* type: textarea
-  id: steps
-  attributes:
-  label: Steps to Reproduce
-  description: How can we reproduce the issue?
-  placeholder: |
-  1. Go to...
-  2. Click on...
-  3. Observe...
-  validations:
-  required: true
-
-* type: textarea
-  id: expected
-  attributes:
-  label: Expected Behavior
-  description: What should happen?
-  validations:
-  required: true
-
-* type: textarea
-  id: screenshots
-  attributes:
-  label: Screenshots
-  description: Add screenshots if applicable.
-
-* type: input
-  id: browser
-  attributes:
-  label: Browser
-  placeholder: Chrome, Firefox, Edge, etc.
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! 🐛
+        Please fill out the information below so we can reproduce and fix the issue.
+        Be sure to search existing issues first.
+  - type: input
+    id: project
+    attributes:
+      label: Project
+      description: Which project folder does this bug affect?
+      placeholder: 'e.g. 03-CodeForces-Clone'
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the bug.
+      placeholder: 'The page does not load on mobile...'
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Go to the project folder
+        2. Open index.html in a browser
+        3. Click 'Play Game'
+        4. Observe the error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: 'The game should start and display the scoreboard.'
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: 'The game crashes immediately on load.'
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, browser, and device size (optional).
+      placeholder: 'Windows 11, Chrome 120, 1920x1080'
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshots / Screencast
+      description: Add screenshots or a short screen recording if applicable (optional).
+      placeholder: '![Screenshot](link-to-screenshot)'
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched the existing issues to make sure this bug was not already reported
+          required: true
+        - label: I have checked that this bug is reproducible in the latest version

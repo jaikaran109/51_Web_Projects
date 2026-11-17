@@ -1,0 +1,22 @@
+---
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-default-community-profile-with-a-pull-request-template-or-issue-template
+# Blank issue template configuration.
+# When contributors open an issue without using a template, they see the
+# options below. This keeps the issue tracker clean while still allowing
+# ad-hoc conversations.
+
+blank_issues_enabled: false
+
+contact_links:
+  - name: 💬 Ask a Question (Discussions)
+    url: https://github.com/jaikaran109/51_Web_Projects/discussions
+    about: Ask questions and discuss ideas with the community in GitHub Discussions.
+  - name: 🛡️ Report a Security Vulnerability
+    url: https://github.com/jaikaran109/51_Web_Projects/blob/main/SECURITY.md
+    about: Report security vulnerabilities responsibly. Please do not open a public issue for security concerns.
+  - name: 📚 Contributing Guide
+    url: https://github.com/jaikaran109/51_Web_Projects/blob/main/CONTRIBUTING.md
+    about: Read before opening a feature request or pull request.
+  - name: 💻 Project Roadmap
+    url: https://github.com/jaikaran109/51_Web_Projects/blob/main/GITHUB_ISSUES.md
+    about: See the planned projects (26-51) and open tasks before requesting new work.
