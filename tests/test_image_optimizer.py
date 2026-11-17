@@ -1,7 +1,7 @@
 import importlib.util
 import tempfile
 import struct
-from unittest.mock import patch
+import zlib
 import unittest
 from pathlib import Path
 
@@ -98,14 +98,23 @@ class ImageOptimizerTests(unittest.TestCase):
                 for actual, expected in zip(optimized.info["chromaticity"], chromaticity):
                     self.assertAlmostEqual(actual, expected, places=5)
 
-    def test_syntax_error_during_decode_leaves_file_unchanged(self):
+    def test_malformed_ztxt_chunk_is_skipped_without_modifying_file(self):
         with tempfile.TemporaryDirectory() as directory:
-            path = Path(directory) / "malformed.png"
-            path.write_bytes(b"not a valid image")
+            path = Path(directory) / "malformed-metadata.png"
+            Image.new("RGB", (32, 32), "red").save(path)
             original = path.read_bytes()
-            with patch.object(optimizer.Image, "open", side_effect=SyntaxError("malformed image")):
-                self.assertIsNone(optimizer.optimize_image(path))
-            self.assertEqual(path.read_bytes(), original)
+            text_data = b"comment\0\1" + zlib.compress(b"malformed metadata")
+            chunk = (
+                struct.pack(">I", len(text_data))
+                + b"zTXt"
+                + text_data
+                + struct.pack(">I", zlib.crc32(b"zTXt" + text_data) & 0xFFFFFFFF)
+            )
+            iend = original.rfind(b"IEND") - 4
+            path.write_bytes(original[:iend] + chunk + original[iend:])
+            malformed = path.read_bytes()
+            self.assertIsNone(optimizer.optimize_image(path))
+            self.assertEqual(path.read_bytes(), malformed)
 
     def test_unsupported_files_are_ignored(self):
         with tempfile.TemporaryDirectory() as directory:
