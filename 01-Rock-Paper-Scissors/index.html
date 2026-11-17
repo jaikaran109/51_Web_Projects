@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
+    <meta name="description" content="Explore Rock-Paper-Scissors in the 51 Web Projects collection. Discover this hands-on web development project and its features.">
     <link rel="stylesheet" href="style.css">
 
     <script>
@@ -25,13 +27,13 @@
 
     <div class="choices">
         <div class="choice" id="rock" aria-keyshortcuts="R">
-            <img src="./images/rock.png" alt="Rock">
+            <img src="./images/rock.png" alt="Rock" decoding="async">
         </div>
         <div class="choice" id="paper" aria-keyshortcuts="P">
-            <img src="./images/paper.png" alt="Paper">
+            <img src="./images/paper.png" alt="Paper" decoding="async">
         </div>
         <div class="choice" id="scissors" aria-keyshortcuts="S">
-            <img src="./images/scissors.png" alt="Scissors">
+            <img src="./images/scissors.png" alt="Scissors" decoding="async">
         </div>
     </div>
     <div class="score-board">
@@ -46,7 +48,14 @@
     </div>
 
     <div class="msg-container">
+        <div class="reset-container">
+    <button id="reset-btn" type="button" aria-label="Reset game">
+        <span class="reset-icon">↻</span>
+        <span>Reset Game</span>
+    </button>
+</div>
         <p id="msg">Pick your Move !</p>
+        
     </div>
 
     <p class="shortcut-hint">Tip: press <kbd>R</kbd>, <kbd>P</kbd> or <kbd>S</kbd> to play</p>

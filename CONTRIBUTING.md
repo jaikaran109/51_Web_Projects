@@ -137,6 +137,38 @@ Issues may be marked with labels such as:
 
 ---
 
+
+## 🎨 Code Formatting with Prettier
+
+We use [Prettier](https://prettier.io/) to maintain consistent code formatting across projects.
+
+The repository includes a `.prettierrc.json` configuration with the following settings:
+
+- Indentation: 2 spaces
+- Tabs: Disabled
+- Line endings: LF
+
+### Check Formatting
+
+From the repository root, run:
+
+```bash
+npx prettier --check path/to/your/file
+```
+
+### Format Files
+
+To automatically format your changed files, run:
+
+```bash
+npx prettier --write path/to/your/file
+```
+
+Replace `path/to/your/file` with the path to the file you want to check or format.
+
+Please format only the files you have changed before submitting a pull request.
+
+
 ## 🤝 Code of Conduct
 
 By participating, you agree to follow our [Code of Conduct](CODE_OF_CONDUCT.md).

@@ -178,5 +178,35 @@
         form.reset();
         touched = {};
         status.textContent = 'Thank you, ' + firstName + '! Your application has been submitted.';
+        showToast();
     });
 })();
+
+
+
+const toast = document.getElementById('form-status');
+const closeToast = document.querySelector('.toast-close');
+
+let toastTimer;
+
+function showToast() {
+    clearTimeout(toastTimer);
+
+    toast.classList.remove('show');
+
+    // Restart progress animation
+    void toast.offsetWidth;
+
+    toast.classList.add('show');
+
+    toastTimer = setTimeout(() => {
+        hideToast();
+    }, 4000);
+}
+
+function hideToast() {
+    toast.classList.remove('show');
+    clearTimeout(toastTimer);
+}
+
+closeToast.addEventListener('click', hideToast);

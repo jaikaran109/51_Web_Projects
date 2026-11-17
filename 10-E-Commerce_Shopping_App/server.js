@@ -13,8 +13,10 @@ const productRoutes = require('./routes/product') ;
 const reviewRoutes = require('./routes/review') ;
 const authRoutes = require('./routes/auth') ;
 
-connectDB() ; // connect DB
-// seedDB() ; // Seeding db
+async function startServer() {
+    await connectDB() ; // connect DB
+    await seedDB() ; // seed db
+}
 
 app.engine('ejs', ejsmate) ; // ejs mate is used for creating inlcude partials and boiler plates for easy readablility
 app.set('view engine', 'ejs') ;  // set view engine to ejs
@@ -29,7 +31,12 @@ app.use(productRoutes) ;
 app.use(reviewRoutes) ;
 app.use(authRoutes) ;
 
-const PORT = 5050 ; 
+const PORT = process.env.PORT || 5050 ;
 app.listen((PORT), ()=> {
     console.log(`Server Listening at Port : ${PORT}...`) ;
 })
+
+startServer().catch((err) => {
+    console.error('Server startup failed:', err) ;
+    process.exitCode = 1 ;
+}) ;

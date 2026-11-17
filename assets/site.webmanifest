@@ -1,0 +1,17 @@
+{
+  "name": "51 Web Projects",
+  "short_name": "51Projects",
+  "description": "A curated collection of 51 beginner to intermediate frontend web development projects.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
+

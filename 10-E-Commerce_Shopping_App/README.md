@@ -36,9 +36,14 @@ git clone https://github.com/ayush-68789/Summer-E-Commerce-Project.git
 # 2. Install dependencies
 npm install
 
-# 3. Start the dev server
+# 3. Configure the environment
+copy .env.example .env
+
+# 4. Start the dev server
 npm run start
 ```
+
+Update `.env` with the connection details for your MongoDB instance before starting the application.
 
 ## 📦 Key Dependencies
 
@@ -53,7 +58,10 @@ nodemon: ^3.1.14
 
 ## 🚀 Available Scripts
 
-- **start** — `npm run start`
+| Script | Command | Description |
+| --- | --- | --- |
+| Start | `npm run start` | Start the development server with Nodemon |
+| Seed | `npm run seed` | Populate MongoDB with the default products |
 
 ## 📁 Project Structure
 

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Form</title>
+    <meta name="description" content="Explore Job Application Form in the 51 Web Projects collection. Discover this hands-on web development project and its features.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,9 +24,6 @@
                 <h2 id="error-summary-title"></h2>
                 <ul id="error-summary-list"></ul>
             </div>
-
-            <!-- Filled in by script.js after a successful submit -->
-            <p id="form-status" class="form-status" role="status"></p>
 
             <form id="application-form" action="" novalidate>
                 <div class="form-container">
@@ -190,6 +189,22 @@
                 </div>
             </form>
         </div>
+
+<div id="form-status" class="toast-notification" role="status" aria-live="polite">
+    <div class="toast-icon">✓</div>
+
+    <div class="toast-content">
+        <h3>Application Submitted!</h3>
+        <p>Your application has been received successfully.</p>
+    </div>
+
+    <button type="button" class="toast-close" aria-label="Close notification">
+        &times;
+    </button>
+
+    <div class="toast-progress"></div>
+</div>
+
     </main>
     <script src="script.js"></script>
 </body>

@@ -43,8 +43,8 @@ pokemon.forEach(({ id, name }) => {
         card.textContent = `${name} image unavailable`;
     });
 
-    img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
-    card.appendChild(img);
+img.src = "https://invalid-image-url.test/pokemon.png";
+  card.appendChild(img);
     main.appendChild(card);
 });
 

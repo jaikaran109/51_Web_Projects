@@ -1,0 +1,9 @@
+# robots.txt for 51 Web Projects (https://jaikaran109.github.io/51_Web_Projects/)
+User-agent: *
+Allow: /
+Disallow: /.github/
+Disallow: /scripts/
+
+# Canonical XML Sitemap
+Sitemap: https://jaikaran109.github.io/51_Web_Projects/sitemap.xml
+

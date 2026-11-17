@@ -8,8 +8,17 @@ const clear = document.querySelector("#clear");
 const equal = document.querySelector(".equal");
 const backspace = document.querySelector("#backspace");
 
+
+let operatorStatus=false;
+let operatorUsage=false;
+
 numbers.forEach(button => {
     button.addEventListener("click", () => {
+            if(operatorStatus){
+            clearAll();
+            operatorStatus=false;
+        }
+        operatorUsage=true;
         expression += button.dataset.number;
         display.value = expression;
     });
@@ -17,21 +26,38 @@ numbers.forEach(button => {
 
 signs.forEach(button => {
     button.addEventListener("click", () => {
+        operatorStatus=false;
         if (button.id === "clear" || button.id === "backspace") return;
-
-        expression += button.dataset.sign;
+if(operatorUsage){
+ expression += button.dataset.sign;
         display.value = expression;
+        operatorUsage=false;
+        }
+       
     });
 });
 
 clear.addEventListener("click", () => {
-    expression = "";
-    display.value = "";
+    clearAll();
 });
 
+function clearAll(){
+    expression = "";
+    display.value = "";
+    operatorStatus=false;
+    operatorUsage=false;
+}
+
 backspace.addEventListener("click", () => {
+    operatorStatus=false;
     expression = expression.slice(0, -1);
+    if (expression === "") {
+    operatorUsage = false;
+} else {
+    operatorUsage = true;
+}
     display.value = expression;
+    
 });
 
 function calculate() {
@@ -48,6 +74,7 @@ function calculate() {
 
         display.value = answer;
         expression = answer.toString();
+        operatorStatus=true;
     } catch (error) {
         display.value = "Error";
         expression = "";
@@ -57,16 +84,27 @@ function calculate() {
 equal.addEventListener("click", calculate);
 
 document.addEventListener("keydown", event => {
+    
     if (/^[0-9.]$/.test(event.key)) {
+        if(operatorStatus){
+            clearAll();
+            operatorStatus=false;
+        }
+        operatorUsage=true;
         expression += event.key;
         display.value = expression;
         return;
     }
 
     if (["+", "-", "*", "/"].includes(event.key)) {
-        expression += event.key;
+        operatorStatus=false;
+        if(operatorUsage){
+expression += event.key;
         display.value = expression;
+        operatorUsage=false;
         return;
+        }
+        
     }
 
     if (event.key === "Enter") {
@@ -78,11 +116,20 @@ document.addEventListener("keydown", event => {
     if (event.key === "Escape") {
         expression = "";
         display.value = "";
+        operatorStatus=false;
+        operatorUsage = false;
         return;
     }
 
     if (event.key === "Backspace") {
+        operatorStatus=false;
         expression = expression.slice(0, -1);
+        if (expression === "") {
+    operatorUsage = false;
+} else {
+    operatorUsage = true;
+}
         display.value = expression;
+        
     }
 });

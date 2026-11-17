@@ -41,35 +41,36 @@ The goal of this repository is to:
 
 ## 📂 Featured Projects
 
-| No. | Project |
-|------|----------|
-| 01 | Rock Paper Scissors |
-| 02 | Tic Tac Toe |
-| 03 | CodeForces Clone |
-| 04 | Job Application Form |
-| 05 | Pokemon Card Game |
-| 06 | Shapes Game |
-| 07 | Tribute Website |
-| 08 | Amazon Clone |
-| 09 | Digital Clock |
-| 10 | E-Commerce Shopping App |
-| 11 | Square Game |
-| 12 | Pokemon Card Collection |
-| 13 | Portfolio |
-| 14 | BMI Calculator |
-| 15 | Calculator |
-| 16 | Currency Converter |
-| 17 | Portfolio (ll) |
-| 18 | Cards Project |
-| 19 | Gallery Project |
-| 20 | Insta App |
-| 21 | Notes API (MongoDB) |
-| 22 | Notes App |
-| 23 | Spotify Project |
-| 24 | Student Management System |
-| 25 | UI Project Using Tailwind |
-| 26 | AI-Powered Smart Food Donation & Distribution System |
+## 📊 Project Table
 
+| No. | Project | Language | Tech Stack | Demo | Status |
+| ----- | --------- | ---------- | ------------ | ------ | -------- |
+| 01 | Rock Paper Scissors | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/51_Web_Projects/01-Rock-Paper-Scissors/) | ✅ Complete |
+| 02 | Tic Tac Toe | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/51_Web_Projects/02-Tic-Tac-Toe/) | ✅ Complete |
+| 03 | CodeForces Clone | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/51_Web_Projects/03-CodeForces-Clone/) | ✅ Complete |
+| 04 | Job Application | HTML, CSS | Vanilla | [Live demo](https://jaikaran109.github.io/51_Web_Projects/04-Job-Application/) | ✅ Complete |
+| 05 | Pokemon Card Game | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/51_Web_Projects/05-Pokemon-Card-Game/) | ✅ Complete |
+| 06 | Shapes Game | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/51_Web_Projects/06-Shapes-Games/) | ✅ Complete |
+| 07 | Tribute Website | HTML, CSS | Vanilla | [Live demo](https://jaikaran109.github.io/51_Web_Projects/07-Tribute-Website/) | ✅ Complete |
+| 08 | Amazon Clone | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/51_Web_Projects/08-Amazon-Clone/) | ✅ Complete |
+| 09 | Digital Clock | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/51_Web_Projects/09-Digital-Clock/) | ✅ Complete |
+| 10 | E-Commerce Shopping App | HTML, CSS, JS, Node.js, MongoDB | Full Stack | — | ✅ Complete |
+| 11 | Square Game | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/51_Web_Projects/11-Square-Game/) | ✅ Complete |
+| 12 | Pokemon Card Collection | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/51_Web_Projects/12-Pokemon-Card-Collection/) | ✅ Complete |
+| 13 | Portfolio | HTML, CSS | Vanilla | [Live demo](https://jaikaran109.github.io/51_Web_Projects/13-Portfolio/) | ✅ Complete |
+| 14 | BMI Calculator | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/51_Web_Projects/14-BMI-Calculator/) | ✅ Complete |
+| 15 | Calculator | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/51_Web_Projects/15-Calculator/) | ✅ Complete |
+| 16 | Currency Converter | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/51_Web_Projects/16-Currency-Converter/) | ✅ Complete |
+| 17 | Portfolio ll | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/51_Web_Projects/17-Portfolio-ll/) | ✅ Complete |
+| 18 | Interactive Quiz App | React | Vite | — | ✅ Complete |
+| 19 | Recipe Finder | React | Vite | — | ✅ Complete |
+| 20 | Expense Tracker | React | Vite | — | ✅ Complete |
+| 21 | Weather App | React | Vite | — | ✅ Complete |
+| 22 | Movie Search App | React | Vite | — | ✅ Complete |
+| 23 | Markdown Editor | React | Vite | — | ✅ Complete |
+| 24 | Chat Application | React, Node.js, Socket.io | Full Stack | — | ✅ Complete |
+| 25 | Blog Platform | React, Node.js, MongoDB | Full Stack | — | ✅ Complete |
+| 26 | Social Media Dashboard | React | Vite | — | ✅ Complete |
 
 ---
 
@@ -146,24 +147,24 @@ Choose any project folder and open the `index.html` file in your browser.
 
 ## 📊 Project Table
 
-| No. | Project | Language | Tech Stack | Status |
-|-----|---------|----------|------------|--------|
-| 01 | Rock Paper Scissors | HTML, CSS, JS | Vanilla | ✅ Complete |
-| 02 | Tic Tac Toe | HTML, CSS, JS | Vanilla | ✅ Complete |
+| No. | Project | Language | Tech Stack | Demo | Status |
+|-----|---------|----------|------------|------|--------|
+| 01 | Rock Paper Scissors | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/Rock-Paper-Scissors/) | ✅ Complete |
+| 02 | Tic Tac Toe | HTML, CSS, JS | Vanilla | [Live demo](https://jaikaran109.github.io/Tic-Tac-Toe/) | ✅ Complete |
 | 03 | CodeForces Clone | HTML, CSS, JS | Vanilla | ✅ Complete |
 | 04 | Job Application | HTML, CSS | Vanilla | ✅ Complete |
 | 05 | Pokemon Card Game | HTML, CSS, JS | Vanilla | ✅ Complete |
 | 06 | Shapes Game | HTML, CSS, JS | Vanilla | ✅ Complete |
 | 07 | Tribute Website | HTML, CSS | Vanilla | ✅ Complete |
-| 08 | Amazon Clone | HTML, CSS | Vanilla | ✅ Complete |
+| 08 | Amazon Clone | HTML, CSS, JS | Vanilla | ✅ Complete |
 | 09 | Digital Clock | HTML, CSS, JS | Vanilla | ✅ Complete |
-| 10 | E-Commerce Shopping App | HTML, CSS, JS, Node.js, MongoDB | Full Stack | ✅ Complete |
+| 10 | E-Commerce Shopping App | HTML, CSS, JS, Node.js, MongoDB | Full Stack | — | ✅ Complete |
 | 11 | Square Game | HTML, CSS, JS | Vanilla | ✅ Complete |
-| 12 | Pokemon Card Collection | HTML, CSS, JS | Vanilla | ✅ Complete |
+| 12 | Pokemon Card Collection | HTML, CSS, JS | ✅ Complete |
 | 13 | Portfolio | HTML, CSS | Vanilla | ✅ Complete |
 | 14 | BMI Calculator | HTML, CSS, JS | Vanilla | ✅ Complete |
 | 15 | Calculator | HTML, CSS, JS | Vanilla | ✅ Complete |
-| 16 | Currency Converter | HTML, CSS, JS | Vanilla | ✅ Complete |
+| 16 | Currency Converter | HTML, CSS, JS | ✅ Complete |
 | 17 | Portfolio ll | HTML, CSS, JS | Vanilla | ✅ Complete |
 | 18 | Cards Project | HTML, CSS, JS, React | React + Vite | ✅ Complete |
 | 19 | Gallery Project | HTML, CSS, JS, React | React + Vite | ✅ Complete |
