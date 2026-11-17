@@ -605,9 +605,10 @@ body {
 
 #spectral-logo img {
     display: block;
-    width: 100%;
+    width: min(400px, 100%);
     max-width: 400px;
-    height: auto;
+    height: 200px;
+    object-fit: contain;
     margin-top: 20px;
 }
 
@@ -882,4 +883,24 @@ body {
 
 .find-result {
     margin-top: 12px;
+}
+/* Reserve space for lazy-loaded Codeforces media to avoid layout shifts. */
+.announcement-author-meta img { width: 16px; height: 12px; flex: 0 0 auto; }
+#user-right img { width: 100px; height: 100px; object-fit: cover; }
+
+/* Reserve intrinsic space for lazy-loaded images before they finish loading. */
+#Neta img {
+    width: min(350px, 100%);
+    height: 197px;
+    object-fit: contain;
+}
+#spectral-logo img {
+    width: min(400px, 100%);
+    height: 200px;
+    object-fit: contain;
+}
+#user-right img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
