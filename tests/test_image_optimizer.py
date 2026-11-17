@@ -1,5 +1,7 @@
 import importlib.util
 import tempfile
+import struct
+from unittest.mock import patch
 import unittest
 from pathlib import Path
 
@@ -78,6 +80,32 @@ class ImageOptimizerTests(unittest.TestCase):
             optimizer.optimize_image(path, quality=70)
             with Image.open(path) as optimized:
                 self.assertEqual(optimized.mode, "CMYK")
+
+    def test_png_preserves_gamma_and_chromaticity_metadata(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "color-profile.png"
+            pnginfo = optimizer.PngInfo()
+            gamma = 0.45455
+            chromaticity = (0.3127, 0.3290, 0.64, 0.33, 0.30, 0.60, 0.15, 0.06)
+            pnginfo.add(b"gAMA", struct.pack(">I", round(gamma * 100000)))
+            pnginfo.add(b"cHRM", struct.pack(">8I", *(round(value * 100000) for value in chromaticity)))
+            image = Image.effect_noise((512, 512), 80).convert("RGB")
+            image.save(path, format="PNG", compress_level=0, pnginfo=pnginfo)
+            result = optimizer.optimize_image(path)
+            self.assertIsNotNone(result)
+            with Image.open(path) as optimized:
+                self.assertAlmostEqual(optimized.info["gamma"], gamma, places=5)
+                for actual, expected in zip(optimized.info["chromaticity"], chromaticity):
+                    self.assertAlmostEqual(actual, expected, places=5)
+
+    def test_syntax_error_during_decode_leaves_file_unchanged(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "malformed.png"
+            path.write_bytes(b"not a valid image")
+            original = path.read_bytes()
+            with patch.object(optimizer.Image, "open", side_effect=SyntaxError("malformed image")):
+                self.assertIsNone(optimizer.optimize_image(path))
+            self.assertEqual(path.read_bytes(), original)
 
     def test_unsupported_files_are_ignored(self):
         with tempfile.TemporaryDirectory() as directory:
