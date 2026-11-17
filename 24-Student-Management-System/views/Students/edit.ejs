@@ -1,30 +1,80 @@
-<% layout('Students/layouts/boilerplate.ejs') %>
+
+<% layout('Students/layouts/boilerPlate.ejs') %>
 <%- include('partials/navbar') %>
 
-<div class="col-6 mx-auto">
-    <form action="/students/<%=stu.id%>?_method=PATCH" method="POST">
-        <div class="mb-3">
-            <label for="name" class="form-label">Name: </label>
-            <input type="text" class="form-control" placeholder="Name of the Student"  id="name" name="name" value="<%=stu.name%>">   <!--provide name attribute as the same name of the schema properites dont use other name like namee or naam-->
+<div class="col-6 mx-auto mt-4">
+    <h3 class="mb-3">Edit Student Details</h3>
+
+    <% if (errors && errors.length > 0) { %>
+        <div class="alert alert-danger">
+            <ul class="mb-0">
+                <% errors.forEach(error => { %>
+                    <li><%= error.msg %></li>
+                <% }) %>
+            </ul>
         </div>
+    <% } %>
+
+    <form action="/students/<%= stu._id %>?_method=PATCH" method="POST">
         <div class="mb-3">
-            <label for="img" class="form-label">Image: </label>
-            <input type="text" class="form-control" placeholder="Image Link of Student" id="img" name="img" value="<%=stu.img%>">
+            <label for="name" class="form-label">Name:</label>
+            <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                value="<%= stu.name %>"
+                minlength="2"
+                maxlength="50"
+                required
+            >
         </div>
-      
+
         <div class="mb-3">
-          <label for="roll" class="form-label">Roll: </label>
-          <input type="number" placeholder="Roll number"  class="form-control" id="roll" name="roll" value="<%=stu.roll%>">
+            <label for="img" class="form-label">Image URL:</label>
+            <input
+                type="url"
+                class="form-control"
+                id="img"
+                name="img"
+                value="<%= stu.img %>"
+                required
+            >
         </div>
-        
+
         <div class="mb-3">
-          <label for="section" class="form-label">Section: </label>
-          <input type="text" class="form-control" placeholder="Section of Student" id="section" name="section" value="<%=stu.section%>">
+            <label for="roll" class="form-label">Roll Number:</label>
+            <input
+                type="number"
+                class="form-control"
+                id="roll"
+                name="roll"
+                value="<%= stu.roll %>"
+                min="1"
+                step="1"
+                required
+            >
         </div>
-    
-      <button type="submit" class="btn btn-outline-success">Save Changes</button>
-    </form> 
-    <a href="/students/<%=stu.id%>">
-      <button class="btn btn-outline-danger">Discard</button>
-    </a>
+
+        <div class="mb-3">
+            <label for="section" class="form-label">Section:</label>
+            <input
+                type="text"
+                class="form-control"
+                id="section"
+                name="section"
+                value="<%= stu.section %>"
+                maxlength="10"
+                required
+            >
+        </div>
+
+        <button type="submit" class="btn btn-outline-success">
+            Save Changes
+        </button>
+
+        <a href="/students/<%= stu._id %>" class="btn btn-outline-danger">
+            Cancel
+        </a>
+    </form>
 </div>
