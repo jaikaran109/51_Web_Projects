@@ -138,6 +138,43 @@ Issues may be marked with labels such as:
 ---
 
 
+## 🧭 Code Style Guide
+
+### Folder naming
+- Each project lives in its own top-level folder named `NN-Project-Name`, with a two-digit number followed by words joined by hyphens, for example `09-Digital-Clock`. Use the next free number.
+- Keep every file a project needs inside its folder, and add a short `README.md` there with what the project does and how to run it.
+- Use one consistent casing for a folder name. Git is case sensitive but Windows and macOS are not, so do not add a folder whose name differs from an existing one only by case.
+
+### HTML
+- Use semantic elements (`header`, `main`, `nav`, `section`, `footer`, `button`) instead of generic `div`s where one fits.
+- Give every `img` an `alt`, every form control a `label`, and set `lang` on the `html` tag.
+- Include the `viewport` meta tag so the page is usable on phones.
+
+### CSS
+- Prefer classes over IDs for styling, and use lowercase names with hyphens (`.card-title`).
+- Put colors and spacing you reuse in CSS variables on `:root`.
+- Write layouts mobile first and check them at 360, 768 and 1024 px wide.
+
+### JavaScript
+- Use `const` and `let`, never `var`, and `===` for comparisons.
+- Name variables and functions in camelCase, and give them names that say what they hold or do.
+- Keep DOM lookups in one place near the top of the file and avoid inline `onclick` handlers.
+- Remove debugging `console.log` calls before you open a PR.
+
+### Branches and commits
+- Branch from `main`, one branch per issue, named after the change (`fix/navbar-overflow`, `feature/dark-mode`).
+- Write commit messages in the imperative with the prefixes shown above (`Fix:`, `Add:`, `Docs:`) and keep the first line short.
+
+### Pull request checklist
+Before you open the PR, check that:
+- [ ] it covers a single issue and links it with `Fixes #<number>`
+- [ ] the project runs locally and you tried the changed behavior by hand
+- [ ] the changed files are formatted with Prettier
+- [ ] UI changes include before and after screenshots, or a short screen recording, in the PR description
+- [ ] the page still works on a phone-sized screen
+
+---
+
 ## 🎨 Code Formatting with Prettier
 
 We use [Prettier](https://prettier.io/) to maintain consistent code formatting across projects.
