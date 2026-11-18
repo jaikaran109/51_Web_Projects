@@ -7,7 +7,7 @@ body{
     text-align: center;
 }
 .container{
-    height: 70vh; /* vh stands for Viewport Height --  relative to screen height */
+    height: 62vh; /* vh stands for Viewport Height --  relative to screen height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,10 +84,18 @@ body{
     color: rgba(255, 255, 199, 0.7);
 }
 
-.score-divider {
+.mode-select {
+    margin-top: 1rem;
     color: #ffffc7;
+    font-weight: 700;
+}
+
+.mode-select select {
+    margin-left: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.5rem;
+    border: none;
     font-size: 1rem;
-    font-weight: 800;
 }
 
 /* Responsive */
