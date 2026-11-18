@@ -23,8 +23,11 @@
         <span class="score-caption">WINS</span>
     </div>
 
-    <div class="score-divider">
-        <span>VS</span>
+    <div class="score-card draws">
+        <span class="player-label">DRAWS</span>
+
+        <span class="score" id="score-draw">0</span>
+        <span class="score-caption">GAMES</span>
     </div>
 
     <div class="score-card player-x">
@@ -34,6 +37,13 @@
         <span class="score-caption">WINS</span>
     </div>
 </div>
+        <div class="mode-select">
+            <label for="mode">Mode</label>
+            <select id="mode">
+                <option value="two">Two players</option>
+                <option value="computer">Vs computer (you are O)</option>
+            </select>
+        </div>
         <div class="container">
             <div class="game">
                 <button class="box"></button>
