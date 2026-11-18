@@ -904,3 +904,80 @@ body {
     height: 100px;
     object-fit: cover;
 }
+
+
+
+/* =========================================
+   8. Responsive tables
+   ========================================= */
+
+.table-responsive {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive table {
+    width: 100%;
+    min-width: 420px;
+    border-collapse: collapse;
+}
+
+.table-responsive th,
+.table-responsive td {
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.table-responsive th {
+    background-color: #f2f4f8;
+    font-weight: bold;
+}
+
+.table-responsive tr:hover {
+    background-color: #f5f8fc;
+}
+
+/* =========================================
+   9. Sidebar card improvements
+   ========================================= */
+
+#pay-attention,
+#user-card,
+#top-rated,
+#top-contributors,
+#find-user {
+    background-color: #fff;
+    border: 1px solid #d5d5d5;
+    border-radius: 8px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#pay-attention:hover,
+#user-card:hover,
+#top-rated:hover,
+#top-contributors:hover,
+#find-user:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.10);
+}
+
+/* Keep cards comfortable on smaller screens */
+@media (max-width: 700px) {
+    .table-responsive {
+        width: 100%;
+    }
+
+    .table-responsive table {
+        min-width: 420px;
+    }
+
+    #pay-attention,
+    #user-card,
+    #top-rated,
+    #top-contributors,
+    #find-user {
+        margin-top: 15px;
+    }
+}
