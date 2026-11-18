@@ -1463,3 +1463,53 @@ input:checked + .toggle-slider:before {
   height: fit-content;
 }
 
+
+/* Stopwatch and timer */
+.tool-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tool-display {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  margin: 16px 0;
+}
+
+.tool-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tool-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+.tool-inputs input {
+  width: 70px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--accent-border);
+}
+
+.tool-status {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.lap-list {
+  margin: 12px 0 0 20px;
+  max-height: 140px;
+  overflow-y: auto;
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+}
