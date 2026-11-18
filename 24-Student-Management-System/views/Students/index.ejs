@@ -1,20 +1,88 @@
-<% layout('Students/layouts/boilerplate.ejs') %>
+
+<% layout('Students/layouts/boilerPlate.ejs') %>
 <%- include('partials/navbar') %>
-    <div class="row">
-        <% for(let x of data){ %>
-            <div class="col-2">
-                <div class="card" style="width: 18rem;">
-                    <img src="<%=x.img%>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Name : <%=x.name%></h5>
-                        <p class="card-text">Roll : <%=x.roll%></p>
-                        <p class="card-text">Section : <%=x.section%></p>
-                        <a href="/students/<%=x.id%>" class="btn btn-primary">View Student</a>
-                        <form action="/students/<%=x.id%>?_method=DELETE" method="POST">
-                            <button class="submit btn btn-danger">Delete</button>
-                        </form>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Student Management System</h2>
+        <a href="/student/new" class="btn btn-success">Add Student</a>
+    </div>
+
+    <p class="text-muted">
+        Total Students: <%= totalStudents %>
+    </p>
+
+    <% if (data.length > 0) { %>
+        <div class="row">
+            <% for (let x of data) { %>
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img
+                            src="<%= x.img %>"
+                            class="card-img-top"
+                            alt="Photo of <%= x.name %>"
+                            style="height: 200px; object-fit: cover;"
+                        >
+
+                        <div class="card-body">
+                            <h5 class="card-title"><%= x.name %></h5>
+                            <p class="card-text">Roll: <%= x.roll %></p>
+                            <p class="card-text">Section: <%= x.section %></p>
+
+                            <a href="/students/<%= x._id %>"
+                               class="btn btn-primary btn-sm">
+                                View Student
+                            </a>
+
+                            <form
+                                action="/students/<%= x._id %>?_method=DELETE"
+                                method="POST"
+                                class="mt-2"
+                                onsubmit="return confirm('Are you sure you want to delete this student?');"
+                            >
+                                <button type="submit" class="btn btn-danger btn-sm">
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <% } %>
-    </div>
+            <% } %>
+        </div>
+    <% } else { %>
+        <div class="alert alert-info">
+            No students found.
+        </div>
+    <% } %>
+
+    <% if (totalPages > 1) { %>
+        <nav aria-label="Student pagination">
+            <ul class="pagination justify-content-center">
+
+                <li class="page-item <%= currentPage === 1 ? 'disabled' : '' %>">
+                    <a class="page-link"
+                       href="/students?page=<%= currentPage - 1 %>&search=<%= encodeURIComponent(search) %>">
+                        Previous
+                    </a>
+                </li>
+
+                <% for (let page = 1; page <= totalPages; page++) { %>
+                    <li class="page-item <%= currentPage === page ? 'active' : '' %>">
+                        <a class="page-link"
+                           href="/students?page=<%= page %>&search=<%= encodeURIComponent(search) %>">
+                            <%= page %>
+                        </a>
+                    </li>
+                <% } %>
+
+                <li class="page-item <%= currentPage === totalPages ? 'disabled' : '' %>">
+                    <a class="page-link"
+                       href="/students?page=<%= currentPage + 1 %>&search=<%= encodeURIComponent(search) %>">
+                        Next
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    <% } %>
+</div>
