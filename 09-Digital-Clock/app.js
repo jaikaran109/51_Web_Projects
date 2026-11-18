@@ -806,3 +806,135 @@ function toggleHistoryLogs() {
         : "rotate(180deg)";
   }
 }
+
+
+// ================= STOPWATCH & TIMER =================
+(function () {
+  const $ = (id) => document.getElementById(id);
+  if (!$("tab-stopwatch")) return;
+
+  function fmt(ms, withCentis) {
+    const total = Math.max(0, ms);
+    const h = Math.floor(total / 3600000);
+    const m = Math.floor((total % 3600000) / 60000);
+    const s = Math.floor((total % 60000) / 1000);
+    const base = [h, m, s].map((n) => String(n).padStart(2, "0")).join(":");
+    if (!withCentis) return base;
+    return base + "." + String(Math.floor((total % 1000) / 10)).padStart(2, "0");
+  }
+
+  // Tabs
+  function showTab(name) {
+    const sw = name === "stopwatch";
+    $("panel-stopwatch").hidden = !sw;
+    $("panel-timer").hidden = sw;
+    [["stopwatch", sw], ["timer", !sw]].forEach(([n, on]) => {
+      const tab = $("tab-" + n);
+      tab.setAttribute("aria-selected", String(on));
+      tab.classList.toggle("btn-primary", on);
+      tab.classList.toggle("btn-outline", !on);
+    });
+  }
+  $("tab-stopwatch").addEventListener("click", () => showTab("stopwatch"));
+  $("tab-timer").addEventListener("click", () => showTab("timer"));
+
+  // Stopwatch: elapsed is measured from timestamps so it stays accurate
+  // when the tab is throttled in the background.
+  let swElapsed = 0;
+  let swStart = 0;
+  let swTimer = null;
+  let lastLap = 0;
+  const swNow = () => swElapsed + (swTimer ? Date.now() - swStart : 0);
+  const swRender = () => { $("stopwatch-display").textContent = fmt(swNow(), true); };
+
+  $("stopwatch-toggle").addEventListener("click", () => {
+    if (swTimer) {
+      swElapsed += Date.now() - swStart;
+      clearInterval(swTimer);
+      swTimer = null;
+      $("stopwatch-toggle").textContent = "Start";
+      $("stopwatch-lap").disabled = true;
+    } else {
+      swStart = Date.now();
+      swTimer = setInterval(swRender, 30);
+      $("stopwatch-toggle").textContent = "Stop";
+      $("stopwatch-lap").disabled = false;
+    }
+    swRender();
+  });
+
+  $("stopwatch-lap").addEventListener("click", () => {
+    const now = swNow();
+    const li = document.createElement("li");
+    li.textContent = fmt(now - lastLap, true) + "  (total " + fmt(now, true) + ")";
+    $("lap-list").prepend(li);
+    lastLap = now;
+  });
+
+  $("stopwatch-reset").addEventListener("click", () => {
+    clearInterval(swTimer);
+    swTimer = null;
+    swElapsed = 0;
+    lastLap = 0;
+    $("stopwatch-toggle").textContent = "Start";
+    $("stopwatch-lap").disabled = true;
+    $("lap-list").innerHTML = "";
+    swRender();
+  });
+
+  // Countdown timer
+  let tmEnd = 0;
+  let tmRemaining = 0;
+  let tmTimer = null;
+
+  function tmInput() {
+    const m = Math.min(999, Math.max(0, parseInt($("timer-minutes").value, 10) || 0));
+    const s = Math.min(59, Math.max(0, parseInt($("timer-seconds").value, 10) || 0));
+    return (m * 60 + s) * 1000;
+  }
+  const tmRender = (ms) => { $("timer-display").textContent = fmt(Math.ceil(ms / 1000) * 1000, false); };
+
+  function tmTick() {
+    const left = tmEnd - Date.now();
+    if (left <= 0) {
+      clearInterval(tmTimer);
+      tmTimer = null;
+      tmRemaining = 0;
+      tmRender(0);
+      $("timer-toggle").textContent = "Start";
+      $("timer-status").textContent = "Time is up";
+      return;
+    }
+    tmRender(left);
+  }
+
+  $("timer-toggle").addEventListener("click", () => {
+    if (tmTimer) {
+      tmRemaining = tmEnd - Date.now();
+      clearInterval(tmTimer);
+      tmTimer = null;
+      $("timer-toggle").textContent = "Resume";
+      return;
+    }
+    if (tmRemaining <= 0) tmRemaining = tmInput();
+    if (tmRemaining <= 0) return;
+    $("timer-status").textContent = "";
+    tmEnd = Date.now() + tmRemaining;
+    tmTimer = setInterval(tmTick, 200);
+    $("timer-toggle").textContent = "Pause";
+    tmTick();
+  });
+
+  function tmReset() {
+    clearInterval(tmTimer);
+    tmTimer = null;
+    tmRemaining = 0;
+    $("timer-toggle").textContent = "Start";
+    $("timer-status").textContent = "";
+    tmRender(tmInput());
+  }
+  $("timer-reset").addEventListener("click", tmReset);
+  ["timer-minutes", "timer-seconds"].forEach((id) =>
+    $(id).addEventListener("input", () => { if (!tmTimer && tmRemaining <= 0) tmRender(tmInput()); })
+  );
+})();

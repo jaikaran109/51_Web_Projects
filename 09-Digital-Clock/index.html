@@ -307,6 +307,44 @@
   </div>
 </section>
 
+<!-- Stopwatch and Timer -->
+<section class="card" aria-labelledby="tools-heading">
+  <header class="card-header">
+    <h2 class="card-title" id="tools-heading">
+      <span class="card-title-dot" aria-hidden="true"></span>
+      Stopwatch &amp; Timer
+    </h2>
+  </header>
+
+  <div class="tool-tabs" role="tablist" aria-label="Stopwatch or timer">
+    <button type="button" class="btn btn-sm btn-primary" id="tab-stopwatch" role="tab" aria-selected="true" aria-controls="panel-stopwatch">Stopwatch</button>
+    <button type="button" class="btn btn-sm btn-outline" id="tab-timer" role="tab" aria-selected="false" aria-controls="panel-timer">Timer</button>
+  </div>
+
+  <div id="panel-stopwatch" role="tabpanel" aria-labelledby="tab-stopwatch">
+    <div class="tool-display" id="stopwatch-display" aria-live="off">00:00:00.00</div>
+    <div class="tool-controls">
+      <button type="button" class="btn btn-primary" id="stopwatch-toggle">Start</button>
+      <button type="button" class="btn btn-outline" id="stopwatch-lap" disabled>Lap</button>
+      <button type="button" class="btn btn-danger" id="stopwatch-reset">Reset</button>
+    </div>
+    <ol class="lap-list" id="lap-list" aria-label="Laps"></ol>
+  </div>
+
+  <div id="panel-timer" role="tabpanel" aria-labelledby="tab-timer" hidden>
+    <div class="tool-display" id="timer-display" aria-live="off">00:05:00</div>
+    <div class="tool-inputs">
+      <label>Min <input type="number" id="timer-minutes" min="0" max="999" value="5" /></label>
+      <label>Sec <input type="number" id="timer-seconds" min="0" max="59" value="0" /></label>
+    </div>
+    <div class="tool-controls">
+      <button type="button" class="btn btn-primary" id="timer-toggle">Start</button>
+      <button type="button" class="btn btn-danger" id="timer-reset">Reset</button>
+    </div>
+    <p class="tool-status" id="timer-status" role="status"></p>
+  </div>
+</section>
+
 <!-- Pomodoro Timer -->
 <section class="card" aria-labelledby="pomodoro-heading">
   <header class="card-header">
