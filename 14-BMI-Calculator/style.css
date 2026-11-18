@@ -35,6 +35,13 @@ h1 {
     line-height: 1.3;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .input-group {
     display: flex;
     flex-direction: column;
@@ -42,6 +49,10 @@ h1 {
     width: 100%;
     margin-bottom: 16px;
     gap: 8px;
+}
+
+.input-group label {
+    align-self: flex-start;
 }
 
 .input-group label {
@@ -76,6 +87,10 @@ h1 {
 
 .input:focus {
     box-shadow: 0 0 0 3px rgba(82, 141, 170, 0.3);
+}
+
+.input[aria-invalid="true"] {
+    border: 2px solid #c62828;
 }
 
 .input::placeholder {
@@ -138,6 +153,75 @@ button#calc-btn:active {
     gap: 8px;
 }
 
+.field-error {
+    align-self: flex-start;
+    width: 100%;
+    max-width: 400px;
+    color: #b71c1c;
+    font-size: 0.875rem;
+    text-align: left;
+}
+
+.field-error:empty,
+.history-status:empty {
+    display: none;
+}
+
+.bmi-gauge {
+    width: 100%;
+    padding: 8px 0 0;
+}
+
+.bmi-gauge-track {
+    position: relative;
+    height: 14px;
+    border-radius: 999px;
+    background: linear-gradient(
+        to right,
+        #1976d2 0%,
+        #1976d2 28.33%,
+        #2e7d32 28.33%,
+        #2e7d32 50%,
+        #f57f17 50%,
+        #f57f17 66.67%,
+        #c62828 66.67%,
+        #c62828 100%
+    );
+}
+
+.bmi-gauge-marker {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background: #263238;
+    box-shadow: 0 0 0 2px #263238;
+    transform: translate(-50%, -50%);
+}
+
+.bmi-gauge-labels {
+    position: relative;
+    height: 1.25em;
+    margin-top: 8px;
+    color: #455a64;
+    font-size: 0.75rem;
+}
+
+.bmi-gauge-labels span {
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.bmi-gauge-labels span:first-child {
+    transform: none;
+}
+
+.bmi-gauge-labels span:last-child {
+    transform: translateX(-100%);
+}
+
 .bmi-value {
     font-size: 2.5rem;
     font-weight: 700;
@@ -149,25 +233,18 @@ button#calc-btn:active {
     font-weight: 600;
     padding: 6px 16px;
     border-radius: 20px;
-    text-transform: capitalize;
 }
 
-/* WHO BMI Category Colors */
-.category-severe-thinness { background-color: #1a237e; color: white; }
-.category-moderate-thinness { background-color: #283593; color: white; }
-.category-mild-thinness { background-color: #303f9f; color: white; }
+/* WHO adult BMI category colors */
+.category-underweight { background-color: #1976d2; color: white; }
 .category-normal { background-color: #2e7d32; color: white; }
-.category-overweight { background-color: #f57f17; color: white; }
-.category-obese-I { background-color: #e65100; color: white; }
-.category-obese-II { background-color: #bf360c; color: white; }
-.category-obese-III { background-color: #b71c1c; color: white; }
+.category-overweight { background-color: #b45309; color: white; }
+.category-obesity { background-color: #c62828; color: white; }
 
-.error-message {
-    color: #c62828;
-    background-color: #ffebee;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ef9a9a;
+.history-status {
+    margin: 0 0 10px;
+    color: #b71c1c;
+    font-size: 0.875rem;
 }
 
 /* History Section */
@@ -250,7 +327,6 @@ button#calc-btn:active {
     font-weight: 600;
     padding: 4px 10px;
     border-radius: 12px;
-    text-transform: capitalize;
     white-space: nowrap;
 }
 
@@ -279,6 +355,10 @@ button#calc-btn:active {
     .input-wrapper {
         flex-direction: column;
         align-items: stretch;
+    }
+
+    .input-group label {
+        align-self: center;
     }
 
     .input, select {
