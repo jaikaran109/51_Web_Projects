@@ -12,12 +12,11 @@ Not currently published.
 https://github.com/jaikaran109/51_Web_Projects/tree/main/14-BMI-Calculator
 
 ## Features
-- Height input.
-- Weight input.
-- BMI calculation.
-- Dynamic result display.
-- Interactive calculator interface.
-- Input validation where implemented.
+- Height and weight inputs with metric and imperial unit options.
+- Positive, numeric measurement validation with inline accessible feedback.
+- BMI classification using WHO adult categories and a dynamically positioned, color-coded gauge.
+- Calculation history saved in browser localStorage, with an option to clear it.
+- Responsive calculator interface.
 
 ## Technologies Used
 - HTML5
@@ -29,6 +28,17 @@ https://github.com/jaikaran109/51_Web_Projects/tree/main/14-BMI-Calculator
 BMI is calculated using the following formula:
 
 BMI = Weight (kg) / Height (m)²
+
+## Input Validation
+
+- Weight must be between 10 and 500 kg, inclusive.
+- Height must be between 0.5 and 2.5 metres, inclusive.
+- Imperial measurements are converted to metric units before these limits are checked.
+- Invalid inputs display inline validation messages and are not saved to calculation history.
+
+## BMI Categories
+
+BMI categories follow standard adult classifications and are intended for adults only. They are not intended for interpreting BMI in children or teenagers.
 
 ## Project Structure
 - HTML file – Calculator interface.
@@ -48,12 +58,6 @@ BMI = Weight (kg) / Height (m)²
 - Reading user input.
 - DOM manipulation.
 - Form validation.
-
-## Future Improvements
-- Add BMI category indicators.
-- Improve input validation.
-- Add calculation history.
-- Improve responsive design.
 
 ## Author
 Jai Karan Gupta

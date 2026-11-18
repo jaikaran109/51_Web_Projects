@@ -12,36 +12,43 @@
     <main>
         <h1>Body Mass Index (BMI) Calculator</h1>
         <div class="container">
-            <div class="input-group" id="wts">
-                <label for="wt">Weight <span class="required">*</span></label>
-                <div class="input-wrapper">
-                    <input type="number" class="input" id="wt" placeholder="Enter weight" min="0" step="0.1">
-                    <select id="wt-unit">
-                        <option value="kgs">kg</option>
-                        <option value="lbs">lbs</option>
-                    </select>
+            <form id="bmi-form" novalidate>
+                <div class="input-group" id="wts">
+                    <label for="wt">Weight <span class="required">*</span></label>
+                    <div class="input-wrapper">
+                        <input type="text" class="input" id="wt" placeholder="Enter weight" inputmode="decimal" required
+                            aria-required="true" aria-describedby="wt-error">
+                        <select id="wt-unit" aria-label="Weight unit">
+                            <option value="kgs">kg</option>
+                            <option value="lbs">lbs</option>
+                        </select>
+                    </div>
+                    <p class="field-error" id="wt-error" role="alert"></p>
                 </div>
-            </div>
 
-            <div class="input-group" id="hgt">
-                <label for="ht">Height <span class="required">*</span></label>
-                <div class="input-wrapper">
-                    <input type="text" class="input" id="ht" placeholder="Enter height">
-                    <select id="ht-unit">
-                        <option value="m">m</option>
-                        <option value="cm">cm</option>
-                        <option value="ft/in">ft/in</option>
-                    </select>
+                <div class="input-group" id="hgt">
+                    <label for="ht">Height <span class="required">*</span></label>
+                    <div class="input-wrapper">
+                        <input type="text" class="input" id="ht" placeholder="Enter height" inputmode="decimal" required
+                            aria-required="true" aria-describedby="ht-error">
+                        <select id="ht-unit" aria-label="Height unit">
+                            <option value="m">m</option>
+                            <option value="cm">cm</option>
+                            <option value="ft/in">ft/in</option>
+                        </select>
+                    </div>
+                    <p class="field-error" id="ht-error" role="alert"></p>
                 </div>
-            </div>
-            <button id="calc-btn">Calculate</button>
-            <div id="res"></div>
+                <button id="calc-btn" type="submit">Calculate</button>
+            </form>
+            <div id="res" role="status" aria-live="polite" aria-atomic="true"></div>
 
             <div class="history-section">
                 <div class="history-header">
                     <h2>Calculation History</h2>
-                    <button id="clear-history" class="clear-btn">Clear History</button>
+                    <button id="clear-history" class="clear-btn" type="button">Clear History</button>
                 </div>
+                <p id="history-status" class="history-status" role="status" aria-live="polite"></p>
                 <div id="history-list"></div>
             </div>
         </div>
