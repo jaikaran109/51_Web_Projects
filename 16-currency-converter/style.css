@@ -1,20 +1,8 @@
-* {
-    box-sizing: border-box;
-}
 
-body {
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
-    color: #ffffff;
-    background:
-        radial-gradient(circle at 15% 20%, #3fb5a8 0%, transparent 45%),
-        radial-gradient(circle at 85% 80%, #5b6ee1 0%, transparent 45%),
-        #14363a;
 }
 
 /* Frosted-glass card */
@@ -53,58 +41,14 @@ h1 {
     font-family: inherit;
 }
 
-
 .currency-container input {
-    width: 45%;
-    min-width: 0;
-    height: 48px;
-    padding: 10px 14px;
 
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-
-    background: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-
+    border: 0;
+    background-color: transparent;
     font-family: inherit;
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 25px;
     text-align: right;
 
-    outline: none;
-    transition: 0.25s ease;
-}
-
-.currency-container input:focus {
-    border-color: #ffffff;
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
-    outline: none;
-}
-
-.currency-container input:disabled {
-    -webkit-text-fill-color: #ffffff;
-    opacity: 1;
-    cursor: not-allowed;
-}
-
-
-.currency-container input:disabled {
-    -webkit-text-fill-color: #ffffff;
-    opacity: 1;
-}
-
-.swap-row {
-    display: flex;
-    justify-content: center;
-}
-
-.swap-button {
-    width: 44px;
-    height: 44px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
     color: #ffffff;
     font-size: 22px;
     line-height: 1;
@@ -197,9 +141,4 @@ button:focus-visible,
     }
 }
 
-/* Browsers without backdrop-filter get a more opaque card so the text stays readable */
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-    .container {
-        background: rgba(20, 54, 58, 0.85);
-    }
-}
+
