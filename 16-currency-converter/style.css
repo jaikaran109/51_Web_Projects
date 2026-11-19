@@ -53,15 +53,41 @@ h1 {
     font-family: inherit;
 }
 
+
 .currency-container input {
     width: 45%;
-    border: 0;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: 25px;
-    text-align: right;
+    min-width: 0;
+    height: 48px;
+    padding: 10px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.2);
     color: #ffffff;
+
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: right;
+
+    outline: none;
+    transition: 0.25s ease;
 }
+
+.currency-container input:focus {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+    outline: none;
+}
+
+.currency-container input:disabled {
+    -webkit-text-fill-color: #ffffff;
+    opacity: 1;
+    cursor: not-allowed;
+}
+
 
 .currency-container input:disabled {
     -webkit-text-fill-color: #ffffff;
