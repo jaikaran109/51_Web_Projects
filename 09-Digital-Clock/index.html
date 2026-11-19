@@ -321,18 +321,32 @@
     <button type="button" class="btn btn-sm btn-outline" id="tab-timer" role="tab" aria-selected="false" aria-controls="panel-timer">Timer</button>
   </div>
 
-  <div id="panel-stopwatch" role="tabpanel" aria-labelledby="tab-stopwatch">
-    <div class="tool-display" id="stopwatch-display" aria-live="off">00:00:00.00</div>
-    <div class="tool-controls">
-      <button type="button" class="btn btn-primary" id="stopwatch-toggle">Start</button>
-      <button type="button" class="btn btn-outline" id="stopwatch-lap" disabled>Lap</button>
-      <button type="button" class="btn btn-danger" id="stopwatch-reset">Reset</button>
-    </div>
-    <ol class="lap-list" id="lap-list" aria-label="Laps"></ol>
+ 
+<div id="panel-stopwatch" role="tabpanel" aria-labelledby="tab-stopwatch">
+
+  <div class="tool-display" id="stopwatch-display" aria-live="off">
+    00:00:00:00
   </div>
 
+  <div class="stopwatch-units">
+    <span>HRS</span>
+    <span>MINS</span>
+    <span>SECS</span>
+    <span>MSEC</span>
+  </div>
+
+  <div class="tool-controls stopwatch-controls">
+    <button type="button" class="btn btn-primary" id="stopwatch-toggle">Start</button>
+    <button type="button" class="btn btn-outline" id="stopwatch-lap" disabled>Lap</button>
+    <button type="button" class="btn btn-danger" id="stopwatch-reset">Reset</button>
+  </div>
+
+  <ol class="lap-list" id="lap-list" aria-label="Laps"></ol>
+
+</div>
   <div id="panel-timer" role="tabpanel" aria-labelledby="tab-timer" hidden>
-    <div class="tool-display" id="timer-display" aria-live="off">00:05:00</div>
+    <div class="tool-display" id="timer-display" aria-live="off">00:00:00</div>
+    
     <div class="tool-inputs">
       <label>Min <input type="number" id="timer-minutes" min="0" max="999" value="5" /></label>
       <label>Sec <input type="number" id="timer-seconds" min="0" max="59" value="0" /></label>

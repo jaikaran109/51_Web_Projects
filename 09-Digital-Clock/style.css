@@ -98,7 +98,24 @@ body {
   align-items: flex-start;
   transition: all 0.8s ease-in-out;
 }
+#panel-stopwatch .stopwatch-units {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  max-width: 520px;
+  margin: -8px auto 24px;
+}
 
+#panel-stopwatch .stopwatch-units span {
+  flex: 1;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+}
 .clock-app {
   width: 100%;
   max-width: 860px;
@@ -123,6 +140,142 @@ body {
   letter-spacing: 0.3px;
   width: fit-content;
   border: 1px solid rgba(0, 0, 0, 0.04);
+   margin-left: auto;
+}
+
+
+/* ===== Stopwatch & Timer Button Fix ===== */
+
+#panel-stopwatch .tool-controls,
+#panel-timer .tool-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+#panel-stopwatch .tool-controls button,
+#panel-timer .tool-controls button {
+  flex: 0 1 130px;
+  width: 130px;
+  min-width: 110px;
+  max-width: 150px;
+  min-height: 44px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* Lap button */
+#stopwatch-lap {
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+}
+
+#stopwatch-lap:not(:disabled):hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* Disabled buttons */
+#panel-stopwatch button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #panel-stopwatch .tool-controls,
+  #panel-timer .tool-controls {
+    gap: 8px;
+  }
+
+  #panel-stopwatch .tool-controls button,
+  #panel-timer .tool-controls button {
+    flex: 1 1 100px;
+    min-width: 0;
+    padding: 11px 8px;
+    font-size: 11px;
+  }
+}
+
+
+/* Stopwatch unit labels */
+.stopwatch-units {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 520px;
+  margin: 8px auto 24px;
+  text-align: center;
+  gap: 4px;
+}
+
+.stopwatch-units span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+}
+
+/* Stopwatch buttons */
+.stopwatch-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.stopwatch-controls button {
+  flex: 1 1 100px;
+  min-width: 0;
+  max-width: 150px;
+  min-height: 44px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.stopwatch-controls button:not(:disabled):hover {
+  transform: translateY(-2px);
+}
+
+.stopwatch-controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .stopwatch-controls {
+    gap: 8px;
+  }
+
+  .stopwatch-controls button {
+    flex: 1 1 90px;
+    padding: 11px 8px;
+    font-size: 12px;
+  }
+
+  .stopwatch-units span {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
 }
 
 .status-dot {
@@ -1512,4 +1665,27 @@ input:checked + .toggle-slider:before {
   overflow-y: auto;
   font-variant-numeric: tabular-nums;
   font-size: 13px;
+}
+
+/* Lap Button */
+#stopwatch-lap {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-weight: 600;
+  min-height: 44px;
+  transition: all 0.25s ease;
+}
+
+#stopwatch-lap:not(:disabled):hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+#stopwatch-lap:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
