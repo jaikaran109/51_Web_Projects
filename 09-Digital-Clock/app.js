@@ -820,7 +820,7 @@ function toggleHistoryLogs() {
     const s = Math.floor((total % 60000) / 1000);
     const base = [h, m, s].map((n) => String(n).padStart(2, "0")).join(":");
     if (!withCentis) return base;
-    return base + "." + String(Math.floor((total % 1000) / 10)).padStart(2, "0");
+    return base + ":" + String(Math.floor((total % 1000) / 10)).padStart(2, "0");
   }
 
   // Tabs
