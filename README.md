@@ -1,4 +1,4 @@
-# 🚀 51 Web Projects  
+# 🚀 51 Web Projects - Nexus Spring of Code  
 
 ![GitHub stars](https://img.shields.io/github/stars/jaikaran109/51_Web_Projects?style=for-the-badge) 
 ![GitHub forks](https://img.shields.io/github/forks/jaikaran109/51_Web_Projects?style=for-the-badge)

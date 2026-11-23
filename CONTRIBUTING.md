@@ -169,9 +169,49 @@ Replace `path/to/your/file` with the path to the file you want to check or forma
 Please format only the files you have changed before submitting a pull request.
 
 
-## 🤝 Code of Conduct
+## 🤝 Nexus Spring of Code (NSoC)
 
-By participating, you agree to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+By participating in Nexus Spring of Code, you agree to follow our [Code of Conduct](CODE_OF_CONDUCT.md) and use the mandatory NSoC labels as described in this guide.
+
+### 💯 Points System
+
+| **Label** | **Points** | **Used for** |
+| --- | --- | --- |
+| nsoc26 | Mandatory tag | Every NSoC issue and PR |
+| level1 | 3 points | Documentation, typo fixes and other small work |
+| level2 | 5 points | UI and frontend work: layouts, components, styling and page-level changes |
+| level3 | 10 points | Core logic, database changes and complex features |
+
+**The nsoc26 tag is mandatory. Points are assigned strictly according to the Level label on the PR.**
+
+Optional helpful labels: *good first issue, help wanted, bug, feature, docs*.
+
+### 🏷️ Labels
+
+Issues may be marked with labels such as:
+
+- `nsoc26` - Mandatory NSoC tag
+- `level1` - 3 points: Documentation, typo fixes and other small work
+- `level2` - 5 points: UI and frontend work
+- `level3` - 10 points: Core logic, database changes
+- `good first issue` - Beginner-friendly issues
+- `beginner` - Beginner-friendly tags
+- `hacktoberfest` - Hacktoberfest participation
+
+### 📋 Labelling Rules
+
+- Every issue must have the nsoc26 label and exactly one Level label
+- Admins decide the Level. Be honest and consistent with the definitions above
+- Not every issue or PR is Level 3. Very small changes (for example 10-20 line edits) must not be labelled Level 2 or Level 3
+- Add labels on time. Do not leave merged PRs unlabelled
+- If nsoc26 is missing from a PR, ask the contributor to update it
+
+### 📝 Before You Start
+
+- ⭐ Star the repository
+- 📖 Read the [README.md](README.md)
+- 🔍 Check existing [Issues](https://github.com/jaikaran109/51_Web_Projects/issues) and [PRs](https://github.com/jaikaran109/51_Web_Projects/pulls)
+- 📁 Follow the repository structure and coding standards
 
 ---
 
