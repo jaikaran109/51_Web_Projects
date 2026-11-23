@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Amazon Clone | Online Shopping</title>
-    <meta name="description" content="Explore Amazon Clone | Online Shopping in the 51 Web Projects collection. Discover this hands-on web development project and its features.">
+    <meta name="description" content="Explore Amazon Clone | Online Shopping. Discover shopping categories and save your favourites with the wishlist feature.">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -33,7 +33,6 @@
             </div>
 
             <form class="search-bar">
-
                 <select aria-label="Search category">
                     <option>All</option>
                     <option>Electronics</option>
@@ -48,10 +47,7 @@
                     aria-label="Search Amazon"
                 >
 
-                <button type="submit" aria-label="Search">
-                    🔍
-                </button>
-
+                <button type="submit" aria-label="Search">🔍</button>
             </form>
 
             <div class="nav-language nav-border">
@@ -75,6 +71,19 @@
                 <strong>Cart</strong>
             </div>
 
+            <!-- NEW: Wishlist Navigation -->
+            <button
+                type="button"
+                class="nav-wishlist nav-border"
+                id="wishlist-toggle"
+                aria-label="Open wishlist">
+
+                <span class="wishlist-nav-icon">♡</span>
+                <strong>Wishlist</strong>
+                <span id="wishlist-count">0</span>
+
+            </button>
+
         </nav>
 
         <!-- Secondary Navbar -->
@@ -92,12 +101,18 @@
     </header>
 
 
-    <!-- Hero Section -->
+    <!-- Main Content -->
     <main>
 
+        <!-- Hero Section -->
         <section class="hero">
 
-            <img src="image/hero_image.jpg" alt="Explore amazing shopping deals" decoding="async" fetchpriority="high">
+            <img
+                src="image/hero_image.jpg"
+                alt="Explore amazing shopping deals"
+                decoding="async"
+                fetchpriority="high"
+            >
 
             <div class="hero-message">
                 <p>
@@ -110,98 +125,205 @@
 
 
         <!-- Shopping Categories -->
-        <section class="shopping-section">
+        <section class="shopping-section" id="shopping-section">
 
             <div class="shopping-grid">
 
+                <!-- Clothes -->
                 <article class="product-card">
 
                     <h2>Clothes</h2>
 
-                    <img src="image/box1_image.jpg" alt="Clothing collection" decoding="async" loading="lazy">
+                    <button
+                        type="button"
+                        class="wishlist-btn"
+                        data-category="Clothes"
+                        aria-label="Add Clothes to wishlist"
+                        aria-pressed="false">
+                        ♡ Add to Wishlist
+                    </button>
+
+                    <img src="image/box1_image.jpg" alt="Clothing collection" loading="lazy">
 
                     <a href="#">See more</a>
 
                 </article>
 
 
+                <!-- Health & Personal Care -->
                 <article class="product-card">
 
-                    <h2>Health & Personal Care</h2>
+                    <h2>Health &amp; Personal Care</h2>
 
-                    <img src="image/box2_image.jpg" alt="Health and personal care products" decoding="async" loading="lazy">
+                    <button
+                        type="button"
+                        class="wishlist-btn"
+                        data-category="Health & Personal Care"
+                        aria-label="Add Health and Personal Care to wishlist"
+                        aria-pressed="false">
+                        ♡ Add to Wishlist
+                    </button>
+
+                    <img src="image/box2_image.jpg" alt="Health and personal care products" loading="lazy">
 
                     <a href="#">See more</a>
 
                 </article>
 
 
+                <!-- Furniture -->
                 <article class="product-card">
 
                     <h2>Furniture</h2>
 
-                    <img src="image/box3_image.jpg" alt="Furniture collection" decoding="async" loading="lazy">
+                    <button
+                        type="button"
+                        class="wishlist-btn"
+                        data-category="Furniture"
+                        aria-label="Add Furniture to wishlist"
+                        aria-pressed="false">
+                        ♡ Add to Wishlist
+                    </button>
+
+                    <img src="image/box3_image.jpg" alt="Furniture collection" loading="lazy">
 
                     <a href="#">See more</a>
 
                 </article>
 
 
+                <!-- Electronics -->
                 <article class="product-card">
 
                     <h2>Electronics</h2>
 
-                    <img src="image/box4_image.jpg" alt="Electronic products" decoding="async" loading="lazy">
+                    <button
+                        type="button"
+                        class="wishlist-btn"
+                        data-category="Electronics"
+                        aria-label="Add Electronics to wishlist"
+                        aria-pressed="false">
+                        ♡ Add to Wishlist
+                    </button>
+
+                    <img src="image/box4_image.jpg" alt="Electronic products" loading="lazy">
 
                     <a href="#">See more</a>
 
                 </article>
 
 
+                <!-- Beauty Picks -->
                 <article class="product-card">
 
                     <h2>Beauty Picks</h2>
 
-                    <img src="image/box5_image.jpg" alt="Beauty products" decoding="async" loading="lazy">
+                    <button
+                        type="button"
+                        class="wishlist-btn"
+                        data-category="Beauty Picks"
+                        aria-label="Add Beauty Picks to wishlist"
+                        aria-pressed="false">
+                        ♡ Add to Wishlist
+                    </button>
+
+                    <img src="image/box5_image.jpg" alt="Beauty products" loading="lazy">
 
                     <a href="#">See more</a>
 
                 </article>
 
 
+                <!-- Pet Care -->
                 <article class="product-card">
 
                     <h2>Pet Care</h2>
 
-                    <img src="image/box6_image.jpg" alt="Pet care products" decoding="async" loading="lazy">
+                    <button
+                        type="button"
+                        class="wishlist-btn"
+                        data-category="Pet Care"
+                        aria-label="Add Pet Care to wishlist"
+                        aria-pressed="false">
+                        ♡ Add to Wishlist
+                    </button>
+
+                    <img src="image/box6_image.jpg" alt="Pet care products" loading="lazy">
 
                     <a href="#">See more</a>
 
                 </article>
 
 
+                <!-- New Arrivals in Toys -->
                 <article class="product-card">
 
                     <h2>New Arrivals in Toys</h2>
 
-                    <img src="image/box7_image.jpg" alt="New toys" decoding="async" loading="lazy">
+                    <button
+                        type="button"
+                        class="wishlist-btn"
+                        data-category="New Arrivals in Toys"
+                        aria-label="Add New Arrivals in Toys to wishlist"
+                        aria-pressed="false">
+                        ♡ Add to Wishlist
+                    </button>
+
+                    <img src="image/box7_image.jpg" alt="New toys" loading="lazy">
 
                     <a href="#">See more</a>
 
                 </article>
 
 
+                <!-- Discover Fashion Trends -->
                 <article class="product-card">
 
                     <h2>Discover Fashion Trends</h2>
 
-                    <img src="image/box8_image.jpg" alt="Fashion trends" decoding="async" loading="lazy">
+                    <button
+                        type="button"
+                        class="wishlist-btn"
+                        data-category="Discover Fashion Trends"
+                        aria-label="Add Discover Fashion Trends to wishlist"
+                        aria-pressed="false">
+                        ♡ Add to Wishlist
+                    </button>
+
+                    <img src="image/box8_image.jpg" alt="Fashion trends" loading="lazy">
 
                     <a href="#">See more</a>
 
                 </article>
 
             </div>
+
+        </section>
+
+
+        <!-- NEW: Wishlist Section -->
+        <section class="wishlist-section" id="wishlist-section" hidden>
+
+            <div class="wishlist-header">
+                <h2>My Wishlist <span id="wishlist-heading-count">(0)</span></h2>
+
+                <button
+                    type="button"
+                    id="back-to-shopping"
+                    class="back-shopping-btn">
+                    ← Continue Shopping
+                </button>
+            </div>
+
+            <div id="wishlist-items" class="wishlist-grid">
+
+                <!-- Saved wishlist items will be added here using JavaScript -->
+
+            </div>
+
+            <p id="wishlist-empty" class="wishlist-empty">
+                Your wishlist is empty. Start saving your favourite categories!
+            </p>
 
         </section>
 
@@ -220,53 +342,38 @@
         <div class="footer-content">
 
             <div class="footer-column">
-
                 <h3>Get to Know Us</h3>
-
                 <a href="#">Careers</a>
                 <a href="#">Blog</a>
                 <a href="#">About Amazon</a>
                 <a href="#">Investor Relations</a>
                 <a href="#">Amazon Devices</a>
-
             </div>
 
-
             <div class="footer-column">
-
                 <h3>Make Money with Us</h3>
-
                 <a href="#">Sell products</a>
                 <a href="#">Sell on Amazon Business</a>
                 <a href="#">Become an Affiliate</a>
                 <a href="#">Advertise Your Products</a>
                 <a href="#">Self-Publish with Us</a>
-
             </div>
 
-
             <div class="footer-column">
-
                 <h3>Amazon Payment Products</h3>
-
                 <a href="#">Amazon Business Card</a>
                 <a href="#">Shop with Points</a>
                 <a href="#">Reload Your Balance</a>
                 <a href="#">Amazon Currency Converter</a>
-
             </div>
 
-
             <div class="footer-column">
-
                 <h3>Let Us Help You</h3>
-
                 <a href="#">Your Account</a>
                 <a href="#">Your Orders</a>
                 <a href="#">Shipping Rates & Policies</a>
                 <a href="#">Returns & Replacements</a>
                 <a href="#">Help</a>
-
             </div>
 
         </div>
@@ -282,6 +389,9 @@
 
     </footer>
 
-</body>
 
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
 </html>
